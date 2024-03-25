@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://baltig.infn.it/epics-containers/epik8-sparc.git'
+    repoURL: 'https://baltig.infn.it/lnf-da-control/epik8-sparc.git'
     path: deploy
     targetRevision: HEAD
     helm:
