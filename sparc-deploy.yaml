@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sparc-start-epik8-deploy
+  namespace: argocd
+  labels:
+      deploy: sparc
+spec:
+  project: default
+  source:
+    repoURL: 'https://baltig.infn.it/epics-containers/epik8-sparc.git'
+    path: deploy
+    targetRevision: HEAD
+    helm:
+      parameters:
+        - name: beamline
+          value: sparc
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: sparc
+  syncPolicy:
+    automated:
+      prune: true  # Optional: Automatically remove resources not specified in Helm chart
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true 
+      - Prune=true
