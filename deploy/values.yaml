@@ -5,7 +5,7 @@ ingressClassName: # OKD doesnt create route if set
 targetRevision: "devel"
 serviceAccountName: "default"
 giturl: https://baltig.infn.it/epics-containers/epik8-sparc.git
-openshift: false
+openshift: true
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
   address_list: "plsparcmrf001.lnf.infn.it
@@ -35,6 +35,7 @@ epicsConfiguration:
       loadbalancer: 192.168.36.201
       replicaCount: 2
       exec: start.sh
+      auto_security: true
 
     archiver: 
       name: "archiver"
