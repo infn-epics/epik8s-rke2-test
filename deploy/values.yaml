@@ -171,7 +171,16 @@ epicsConfiguration:
       user: "root"
       workdir: "sparc"
       exec: "start.sh"
-      
+
+    - name: "rdsparcpitaia002"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "pitaya"
+      iocprefix: "SR00RPA02"
+      host: "rdsparcpitaya002.lnf.infn.it"
+      user: "root"
+      workdir: "sparc"
+      exec: "start.sh"  
 applications:
     - name: "icpdastemp01"
       image:
