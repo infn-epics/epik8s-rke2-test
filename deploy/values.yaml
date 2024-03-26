@@ -24,9 +24,7 @@ epicsConfiguration:
     bdsparcplxbpm003
     bdsparcplxbpm004
     bdsparcplxbpm005
-    bdsparcplxbpm006
-    rdsparcpitaya001.lnf.infn.it
-    rdsparcpitaya002.lnf.infn.it"
+    bdsparcplxbpm006"
     
   max_array_bytes: "10000000"
   services:
@@ -153,7 +151,9 @@ epicsConfiguration:
   iocs:
     - name: "temp01" 
       asset: "https://confluence.infn.it/x/nYD8DQ"
-      image: 'baltig.infn.it:4567/epics-containers/infn-epics-ioc:1.0' ## dls image
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:DIA"
+      iocroot: ""
       securityContext:
             privileged: true
             runAsUser: 0
@@ -162,18 +162,16 @@ epicsConfiguration:
         size: 8Mi
       gitinit: true
         
-
-  externalIoc:
-    - name: "SR00RPA02"
+    - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
-      gitRepoConfig:
-        url: https://baltig.infn.it/lnf-da-control/ecs-jupyter-control.git
-        path: .
-        branch: main
-        exec: 'start.sh'
-      ssh:
-        host: "rdsparcpitaia002.lnf.infn.it"
-        user: "root"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "pitaya"
+      iocprefix: "SR00RPA01"
+      host: "rdsparcpitaia001.lnf.infn.it"
+      user: "root"
+      workdir: "sparc"
+      exec: "start.sh"
+      
 applications:
     - name: "icpdastemp01"
       image:
