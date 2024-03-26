@@ -167,7 +167,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "pitaya"
       iocprefix: "SR00RPA01"
-      host: "rdsparcpitaia001.lnf.infn.it"
+      host: "rdsparcpitaya001.lnf.infn.it"
       user: "root"
       workdir: "sparc"
       exec: "start.sh"
