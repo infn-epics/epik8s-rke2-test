@@ -4,7 +4,10 @@ epik8namespace: "apps.okd-datest.lnf.infn.it"
 ingressClassName: # OKD doesnt create route if set
 targetRevision: "devel"
 serviceAccountName: "default"
-giturl: https://baltig.infn.it/epics-containers/epik8-sparc.git
+## starting point
+giturl: https://baltig.infn.it/lnf-da-control/epik8-sparc.git
+gitrev: master
+
 openshift: true
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
@@ -36,6 +39,7 @@ epicsConfiguration:
       replicaCount: 2
       exec: start.sh
       auto_security: true
+      gitinit: true
 
     archiver: 
       name: "archiver"
@@ -155,10 +159,8 @@ epicsConfiguration:
       dataVolume:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
-      gitRepoConfig:
-        url: "https://baltig.infn.it/lnf-da-control/epik8-sparc.git"
-        path: config/ioc/temp01
-        branch: master
+      gitinit: true
+        
 
   externalIoc:
     - name: "SR00RPA02"
@@ -181,10 +183,7 @@ applications:
         url: "https://baltig.infn.it/chaos-lnf-control/py-modbus-device-simulator.git"
         path: .
         branch: main
-      gitRepoConfig:
-        url: "https://baltig.infn.it/epics-containers/epik8-sparc.git"
-        path: config/simulator/icpdastemp01
-        branch: main
+      gitinit: true
       exec: "pip install --user $USER -r /app/requirements.txt;python /app/modbusDeviceSimulator.py -p 5020 -d icpconet72xx -c /config/config.json"
       service:
         type: ClusterIP
