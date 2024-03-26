@@ -1,7 +1,7 @@
 beamline: sparc
 namespace: sparc
 epik8namespace: "apps.okd-datest.lnf.infn.it"
-ingressClassName: "nginx"
+# ingressClassName: "nginx"
 targetRevision: "devel"
 serviceAccountName: "default"
 giturl: https://baltig.infn.it/epics-containers/epik8-sparc.git
