@@ -25,7 +25,7 @@ epicsConfiguration:
     bdsparcplxbpm004
     bdsparcplxbpm005
     bdsparcplxbpm006
-    rdsparcpitaia001.lnf.infn.it
+    rdsparcpitaya001.lnf.infn.it
     rdsparcpitaya002.lnf.infn.it"
     
   max_array_bytes: "10000000"
@@ -70,10 +70,11 @@ epicsConfiguration:
         replicaCount: 1
         charturl: https://baltig.infn.it/epics-containers/epics-console-chart.git
         enable_ingress: true
+        gitpath: opi
         gitRepoConfig:
-          url: https://baltig.infn.it/lnf-da-control/sparc-k8s-ecs.git
+          url: https://baltig.infn.it/lnf-da-control/epik8-sparc.git
           path: opi
-          branch: main
+          branch: master
           
     notebook: 
       name: "notebook"
