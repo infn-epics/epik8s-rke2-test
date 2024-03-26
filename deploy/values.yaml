@@ -184,11 +184,11 @@ epicsConfiguration:
 applications:
     - name: "flame-state-import"
       image:
-        repository: baltig.infn.it:4567/lnf-da-control/memcached2influx:1.1
-        tag: "latest"
+        repository: baltig.infn.it:4567/lnf-da-control/memcached2influx
+        tag: "1.1"
       gitinit: true
       exec: "python memcached2Influx.py -is vldantemon003.lnf.infn.it -ms plsparcmem001.lnf.infn.it -id dcsMemDb -f /config/flame.json"
-      
+
     - name: "icpdastemp01"
       image:
         repository: baltig.infn.it:4567/epics-containers/epics-py-base
