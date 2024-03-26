@@ -1,0 +1,17 @@
+{
+    "dataset":[
+    {
+    "name":"FLAME_STATE",
+    "type":"json", 
+    "description":"Flame state",
+    "offset":0,
+    "len":512,
+    "keybind":"FLAME_STATE"
+    },{
+    "name":"FLAME_STATE_STR",
+    "type":"json", 
+    "description":"Flame state STR",
+    "offset":0,
+    "len":512,
+    "keybind":"FLAME_STATE_STR"
+    }]}
