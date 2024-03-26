@@ -1,0 +1,3 @@
+[submodule "opi"]
+	path = opi
+	url = https://baltig.infn.it/lnf-da-control/sparc-epics-opi.git
