@@ -156,9 +156,9 @@ epicsConfiguration:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
       gitRepoConfig:
-        url: https://baltig.infn.it/epics-containers/epik8-sparc.git
+        url: "https://baltig.infn.it/epics-containers/epik8-sparc.git"
         path: config/ioc/temp01
-        branch: main
+        branch: master
 
   externalIoc:
     - name: "SR00RPA02"
