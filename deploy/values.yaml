@@ -108,15 +108,16 @@ epicsConfiguration:
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
     
-    alarmserver: 
-      name: "alarmserver"
-      loglevel: DEBUG
-      charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
-      phoebusservice: "alarmserver"
-      auto_security: true
-      enable_ingress: true
-      mongodb: "sparc-ologAttachments"
-    
+    # alarmserver: 
+    #   name: "alarmserver"
+    #   loglevel: DEBUG
+    #   charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
+    #   phoebusservice: "alarmserver"
+    #   auto_security: true
+    #   enable_ingress: true
+    #   mongodb: "sparc-ologAttachments"
+    #   info: |
+    #     not working properly at the moment
     channelfinder: 
       name: "channelfinder"
       loglevel: DEBUG
@@ -212,13 +213,7 @@ applications:
             runAsUser: 1000
             runAsGroup: 1000
             fsGroup: 1000
-      resources:
-        limits:
-          cpu: 100m
-          memory: 128Mi
-        requests:
-            cpu: 50m
-            memory: 64Mi
+      
 
 backend:
   namespace: "backend"

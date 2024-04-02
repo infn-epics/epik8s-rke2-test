@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sparc-deploy-all
+  name: {{.Values.beamline}}-deploy-all
   namespace: argocd
   labels:
     deploy: {{ .Values.beamline }}
@@ -17,7 +17,12 @@ spec:
 
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: sparc
+    {{- if .Values.namespace }}
+    namespace: {{.Values.namespace}}
+
+    {{- else }}
+    namespace: {{.Values.beamline}}
+    {{- end}}
   syncPolicy:
     automated:
       prune: true  # Optional: Automatically remove resources not specified in Helm chart
