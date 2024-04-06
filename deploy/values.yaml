@@ -69,6 +69,13 @@ epicsConfiguration:
         charturl: https://baltig.infn.it/epics-containers/epics-console-chart.git
         enable_ingress: true
         gitpath: opi
+        resources:
+            limits:
+              cpu: 2000m
+              memory: 4Gi
+            requests:
+              cpu: 1000m
+              memory: 1Gi
         gitRepoConfig:
           url: https://baltig.infn.it/lnf-da-control/epik8-sparc.git
           path: opi
