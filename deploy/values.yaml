@@ -11,7 +11,7 @@ gitrev: master
 openshift: true
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
-  address_list: "plsparcmrf001.lnf.infn.it
+  address_list: "
     bdsparcplxbpm007
     bdsparcplxbpm001
     bdsparcac3bpm001
@@ -169,7 +169,18 @@ epicsConfiguration:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
       gitinit: true
-        
+
+       
+    - name: "mrf01"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "mrf01"
+      iocprefix: "MRF01"
+      host: "plsparcmrf001.lnf.infn.it"
+      user: "root"
+      workdir: "/home/nat/progetti/mrfioc2/iocBoot/epik8s"
+      exec: "start.sh"
+
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
