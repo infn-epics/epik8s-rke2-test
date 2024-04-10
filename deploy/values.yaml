@@ -12,6 +12,8 @@ openshift: true
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
   address_list: "
+    gen-cs-gp09-ioc01
+    gen-cs-gp08-ioc06
     bdsparcplxbpm007
     bdsparcplxbpm001
     bdsparcac3bpm001
@@ -61,7 +63,6 @@ epicsConfiguration:
             privileged: true
             runAsUser: 0
             runAsGroup: 1000
-            fsGroup: 1000
 
     console: 
         name: "console"
