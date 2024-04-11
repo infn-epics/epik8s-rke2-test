@@ -36,7 +36,7 @@ epicsConfiguration:
       ingress:
         enabled: false
       loadbalancer: 192.168.36.201
-      replicaCount: 2
+      replicaCount: 1
       exec: start.sh
       auto_security: true
       gitinit: true
