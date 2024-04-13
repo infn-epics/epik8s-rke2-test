@@ -9,8 +9,8 @@ epicsEnvSet("AUTOSAVE", "/mnt/iocdata/autosave/mtca01")
 epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES","10000000")
 
 epicsEnvSet("AUTOSAVE", "/mnt/iocdata/autosave/mtca01-evr")
-mrmEvrSetupPCI("EVR0","06:00.0")
-mrmEvrSetupPCI("EVR1","0e:00.0")
+mrmEvrSetupPCI("EVR0","06:00.0","UNIV")
+mrmEvrSetupPCI("EVR1","0e:00.0","UNIV")
 mrmEvgSetupPCI("EVG","0c:00.0")
 
 dbLoadRecords("../../db/evr-mtca-300u.uv.db","P=__IOC_PREFIX__:evr:, EVR=EVR0")
