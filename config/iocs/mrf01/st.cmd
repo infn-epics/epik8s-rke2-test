@@ -15,8 +15,8 @@ mrmEvgSetupPCI("EVG","0c:00.0")
 
 #dbLoadRecords("../../db/evr-mtca-300u.uv.db","P=__IOC_PREFIX__:evr:, EVR=EVR0")
 #dbLoadRecords("../../db/evr-mtca-300u.uv.db","P=__IOC_PREFIX__:evr1:, EVR=EVR1")
-dbLoadRecords("../../db/evr-mtca-300u.db","SYS=__IOC_PREFIX__,D=evr, EVR=EVR0")
-dbLoadRecords("../../db/evr-mtca-300u.db","SYS=__IOC_PREFIX__,D=evr:, EVR=EVR1")
+dbLoadRecords("../../db/evr-mtca-300.db","SYS=__IOC_PREFIX__,D=evr, EVR=EVR0")
+dbLoadRecords("../../db/evr-mtca-300.db","SYS=__IOC_PREFIX__,D=evr:, EVR=EVR1")
 
 dbeLoadRecords("../../db/evm-mtca-300.uv.db","P=__IOC_PREFIX__:evg:, EVG=EVG")
 # save_restoreDebug(2)
