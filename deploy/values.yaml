@@ -181,6 +181,7 @@ epicsConfiguration:
       user: "root"
       workdir: "/home/nat/progetti/mrfioc2/iocBoot/epik8s"
       exec: "start.sh"
+      deploy: false ## dont deploy
 
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
