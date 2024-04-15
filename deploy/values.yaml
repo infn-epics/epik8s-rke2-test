@@ -183,7 +183,7 @@ epicsConfiguration:
       exec: "start.sh"
       # disable: true ## dont deploy
 
-    - name: "newportrf001"
+    - name: "newport"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocprefix: "SPARC:RF"
