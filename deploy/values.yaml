@@ -183,6 +183,18 @@ epicsConfiguration:
       exec: "start.sh"
       # disable: true ## dont deploy
 
+    - name: "newportrf001"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocprefix: "SPARC:RF"
+      securityContext:
+            privileged: true
+            runAsUser: 0
+      dataVolume:
+        accessMode: 'ReadWriteOnce' ## until not enabled shared
+        size: 8Mi
+      gitinit: true
+
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
