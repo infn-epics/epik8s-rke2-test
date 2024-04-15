@@ -171,7 +171,6 @@ epicsConfiguration:
         size: 8Mi
       gitinit: true
 
-       
     - name: "mrf01"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
