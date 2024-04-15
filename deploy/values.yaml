@@ -184,7 +184,7 @@ epicsConfiguration:
 
     - name: "newport"
       asset: "https://confluence.infn.it/x/nYD8DQ"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "SPARC:RF"
       securityContext:
             privileged: true
