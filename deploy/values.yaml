@@ -195,7 +195,6 @@ epicsConfiguration:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
       gitinit: true
-      disable: true
 
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"

@@ -13,7 +13,7 @@ entities:
   
   - type: motorNewport.motorAxis
     controller: NEWPORT001
-    M: "MOT01"
+    M: "m0"
     DESC: "Axis"
     ADDR: 0
     DLLM: -25
