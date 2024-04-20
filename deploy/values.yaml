@@ -180,7 +180,7 @@ epicsConfiguration:
       user: "root"
       workdir: "/home/nat/progetti/mrfioc2/iocBoot/epik8s"
       exec: "start.sh"
-      # disable: true ## dont deploy
+      disable: true ## dont deploy
 
     - name: "newport"
       asset: "https://confluence.infn.it/x/nYD8DQ"
