@@ -15,6 +15,7 @@ epicsConfiguration:
     gen-cs-gp09-ioc01.lnf.infn.it
     gen-cs-gp08-ioc06.lnf.infn.it
     bdsparcplxbpm007.lnf.infn.it
+    bdsparcspebpm008.lnf.infn.it
     bdsparcplxbpm001.lnf.infn.it
     bdsparcac3bpm001.lnf.infn.it
     bdsparcptlbpm001.lnf.infn.it
@@ -158,6 +159,18 @@ epicsConfiguration:
         name: "default"
   
   iocs:
+    - name: "bdsparcac1bpm001"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "libera-sppp"
+      iocprefix: "cac1bpm001"
+      host: "bdsparcac1bpm001.lnf.infn.it"
+      ssh:
+        options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      user: "root"
+      workdir: "sparc"
+      exec: "start.sh"
+
     - name: "temp01" 
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
