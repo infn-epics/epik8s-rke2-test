@@ -165,7 +165,7 @@ epicsConfiguration:
       iocname: "libera-sppp"
       iocprefix: "cac1bpm001"
       host: "bdsparcac1bpm001.lnf.infn.it"
-      ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa -O"
       user: "root"
       workdir: "/opt/sparc"
       exec: "start.sh"
