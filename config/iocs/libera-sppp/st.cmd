@@ -32,5 +32,5 @@ cd db
 dbLoadTemplate("libera.substitutions")
 
 cd ${TOP}
-
 iocInit()
+dbl > pvlist.txt
