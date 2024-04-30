@@ -13,21 +13,7 @@ epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
   address_list: "
     gen-cs-gp09-ioc01.lnf.infn.it
-    gen-cs-gp08-ioc06.lnf.infn.it
-    bdsparcplxbpm007.lnf.infn.it
-    bdsparcspebpm008.lnf.infn.it
-    bdsparcplxbpm001.lnf.infn.it
-    bdsparcac3bpm001.lnf.infn.it
-    bdsparcptlbpm001.lnf.infn.it
-    bdsparcutlbpm001.lnf.infn.it
-    bdsparcdlgbpm001.lnf.infn.it
-    bdsparcdlgbpm002.lnf.infn.it
-    bdsparcdlgbpm003.lnf.infn.it
-    bdsparcplxbpm002.lnf.infn.it
-    bdsparcplxbpm003.lnf.infn.it
-    bdsparcplxbpm004.lnf.infn.it
-    bdsparcplxbpm005.lnf.infn.it
-    bdsparcplxbpm006.lnf.infn.it"
+    gen-cs-gp08-ioc06.lnf.infn.it"
     
   max_array_bytes: "10000000"
   services:
