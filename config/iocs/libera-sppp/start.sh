@@ -1,4 +1,6 @@
 #!/bin/sh
+/etc/init.d/libera restart
+
 if [ -n "$__IOC_PREFIX__" ];then
     echo "patching __IOC_PREFIX__ $__IOC_PREFIX__ "
     sed  -i "s/__IOC_PREFIX__/$__IOC_PREFIX__/g" db/* *.cmd
