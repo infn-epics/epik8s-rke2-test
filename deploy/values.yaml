@@ -194,6 +194,18 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+    
+    - name: "bdsparcptlbpm001"
+      asset: "https://confluence.infn.it/x/doKBBg"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "libera-sppp"
+      iocprefix: "cptlbpm001"
+      host: "bdsparcptlbpm001.lnf.infn.it"
+      ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      user: "root"
+      scpoptions: "-O"
+      workdir: "/opt/sparc"
+      exec: "start.sh"
 
     - name: "temp01" 
       asset: "https://confluence.infn.it/x/nYD8DQ"
