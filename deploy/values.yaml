@@ -163,7 +163,7 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
-      iocprefix: "cac1bpm001"
+      iocprefix: "AC1BPM01"
       host: "bdsparcac1bpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -175,7 +175,7 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
-      iocprefix: "cac2bpm001"
+      iocprefix: "AC2BPM01"
       host: "bdsparcac2bpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -187,7 +187,7 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
-      iocprefix: "cac3bpm001"
+      iocprefix: "AC3BPM01"
       host: "bdsparcac3bpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -199,7 +199,7 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
-      iocprefix: "cptlbpm001"
+      iocprefix: "PTLBPM01"
       host: "bdsparcptlbpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -211,8 +211,44 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
-      iocprefix: "utlbpm001"
+      iocprefix: "UTLBPM01"
       host: "bdsparcutlbpm001.lnf.infn.it"
+      ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      user: "root"
+      scpoptions: "-O"
+      workdir: "/opt/sparc"
+      exec: "start.sh"
+
+    - name: "bdsparcdglbpm001"
+      asset: "https://confluence.infn.it/x/doKBBg"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "libera-sppp"
+      iocprefix: "DGLBPM01"
+      host: "bdsparcdglbpm001.lnf.infn.it"
+      ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      user: "root"
+      scpoptions: "-O"
+      workdir: "/opt/sparc"
+      exec: "start.sh"
+
+    - name: "bdsparcdglbpm002"
+      asset: "https://confluence.infn.it/x/doKBBg"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "libera-sppp"
+      iocprefix: "DGLBPM02"
+      host: "bdsparcdglbpm002.lnf.infn.it"
+      ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      user: "root"
+      scpoptions: "-O"
+      workdir: "/opt/sparc"
+      exec: "start.sh"
+    
+    - name: "bdsparcdglbpm003"
+      asset: "https://confluence.infn.it/x/doKBBg"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "libera-sppp"
+      iocprefix: "DGLBPM03"
+      host: "bdsparcdglbpm003.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
       scpoptions: "-O"
