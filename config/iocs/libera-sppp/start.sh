@@ -1,4 +1,5 @@
 #!/bin/sh
+mount -o remount ,rw /
 /etc/init.d/libera restart
 
 if [ -n "$__IOC_PREFIX__" ];then
