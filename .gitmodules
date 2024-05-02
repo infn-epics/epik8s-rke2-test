@@ -1,3 +1,6 @@
 [submodule "opi"]
 	path = opi
 	url = https://baltig.infn.it/lnf-da-control/sparc-epics-opi.git
+[submodule "config/iocs/orbit/scripts"]
+	path = config/iocs/orbit/scripts
+	url = https://baltig.infn.it/infn-epics/py-ioc-collector.git

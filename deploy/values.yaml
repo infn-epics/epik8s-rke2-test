@@ -145,6 +145,14 @@ epicsConfiguration:
         name: "default"
   
   iocs:
+    - name: "orbit"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:ORBIT"
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+
     - name: "bdsparcac1bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
