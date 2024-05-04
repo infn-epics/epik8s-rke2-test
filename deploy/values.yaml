@@ -171,6 +171,7 @@ epicsConfiguration:
       ssh_options: "-o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
       workdir: "/opt/sparc"
+      scpoptions: "-O"
       exec: "start.sh"
 
     - name: "bdsparcac1bpm001"
