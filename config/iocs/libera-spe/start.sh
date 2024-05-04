@@ -1,4 +1,5 @@
 #!/bin/bash
+kill -9 "$(pidof procServ)" 2>/dev/null >/dev/null
 /etc/init.d/libera-ioc stop
 
 variables=( "__IOC_PREFIX__" "__IOC_TOP__" "__IOC_NAME__" "__BPM1__" "__BPM2__" "__BPM3__" "__BPM4__")
@@ -61,7 +62,7 @@ fi
 
 # production:
 export EPICS_CA_MAX_ARRAY_BYTES=5000000
-exec $PROCSERV $PROCARGS $PORT $TOP/st.cmd
+$PROCSERV $PROCARGS $PORT $TOP/st.cmd
 
 # debug:
 # export EPICS_CA_MAX_ARRAY_BYTES=35000000

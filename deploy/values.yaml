@@ -50,6 +50,13 @@ epicsConfiguration:
             privileged: true
             runAsUser: 0
             runAsGroup: 1000
+      resources:
+            limits:
+              cpu: 999m
+              memory: 3Gi
+            requests:
+              cpu: 100m
+              memory: 2Gi
 
     console: 
         name: "console"
