@@ -153,6 +153,26 @@ epicsConfiguration:
       start: "/epics/ioc/config/start.sh"
       gitinit: true
 
+    - name: "bdsparcplxbpm007"
+      asset: "https://confluence.infn.it/x/doKBBg"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocname: "libera-spe"
+      iocprefix: "PLXSPE"
+      iocparam:
+        - name: "__BPM1__"
+          value: "PLXBPM07"
+        - name: "__BPM2__"
+          value: "PLXBPM08"
+        - name: "__BPM3__"
+          value: "PLXBPM09"
+        - name: "__BPM4__"
+          value: "PLXBPM10"
+      host: "bdsparcplxbpm007.lnf.infn.it"
+      ssh_options: "-o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      user: "root"
+      workdir: "/opt/sparc"
+      exec: "start.sh"
+
     - name: "bdsparcac1bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
