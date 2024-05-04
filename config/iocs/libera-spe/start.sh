@@ -30,7 +30,7 @@ PROCSERV=/usr/bin/procServ
 PORT=4050
 NAME=$__IOC_NAME__
 PID=/var/run/libera-ioc.pid
-PROCARGS="-q -c $TOP -i ^D^C^] -p $PID -n $NAME --restrict"
+PROCARGS="-q -c $TOP -i ^D^C^] -p $PID -n $NAME --restrict -f"
 LI="/opt/libera/bin/libera-ireg"
 
 [ ! -d "$TOP" ] && exit 1
