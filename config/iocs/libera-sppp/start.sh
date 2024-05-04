@@ -2,25 +2,18 @@
 mount -o remount ,rw /
 /etc/init.d/libera restart
 
-if [ -n "$__IOC_PREFIX__" ];then
-    echo "patching __IOC_PREFIX__ $__IOC_PREFIX__ "
-    sed  -i "s/__IOC_PREFIX__/$__IOC_PREFIX__/g" db/* *.cmd
-else
-    echo "%%Warning no __IOC_PREFIX__ defined"
-fi
+variables=( "__IOC_PREFIX__" "__IOC_TOP__" "__IOC_NAME__" "__BPM1__" "__BPM2__" "__BPM3__" "__BPM4__")
 
-if [ -n "$__IOC_TOP__" ];then
-    echo "patching __IOC_TOP__ $__IOC_TOP__ "
-    sed  -i "s|__IOC_TOP__|$__IOC_TOP__|g" db/* *.cmd
-else
-    echo "%%Warning no __IOC_TOP__ defined"
-fi
-
-if [ -n "$__IOC_NAME__" ];then
-    echo "patching __IOC_NAME__ $__IOC_NAME__ "
-    sed  -i "s/__IOC_NAME__/$__IOC_NAME__/g" db/* *.cmd
-else
-    echo "%%Warning no __IOC_NAME__ defined"
-fi
+# Loop through each variable
+for var in "${variables[@]}"; do
+    # Check if the variable is defined and non-empty
+    if [ -n "${!var}" ]; then
+        echo "patching $var ${!var}"
+        # Use sed to replace the variable in the specified files
+        sed -i "s|$var|${!var}|g" db/* *.cmd
+    else
+        echo "%%Warning no $var defined"
+    fi
+done
 
 ./st.cmd
