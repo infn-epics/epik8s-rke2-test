@@ -354,9 +354,6 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:DIA"
       iocroot: ""
-      securityContext:
-            privileged: true
-            runAsUser: 0
       dataVolume:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
