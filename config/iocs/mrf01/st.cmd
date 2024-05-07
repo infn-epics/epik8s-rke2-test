@@ -34,13 +34,13 @@ var(mrmGTIFEnable, 0)
 
 iocInit()
 
-# makeAutosaveFileFromDbInfo("${AUTOSAVE}/mrf_settings.req", "autosaveFields_pass0")
-# makeAutosaveFileFromDbInfo("${AUTOSAVE}/mrf_values.req", "autosaveFields")
-# makeAutosaveFileFromDbInfo("${AUTOSAVE}/mrf_waveforms.req", "autosaveFields_pass1")
+makeAutosaveFileFromDbInfo("${AUTOSAVE}/mrf_settings.req", "autosaveFields_pass0")
+makeAutosaveFileFromDbInfo("${AUTOSAVE}/mrf_values.req", "autosaveFields")
+makeAutosaveFileFromDbInfo("${AUTOSAVE}/mrf_waveforms.req", "autosaveFields_pass1")
 
-# create_monitor_set("mrf_settings.req", 5 , "")
-# create_monitor_set("mrf_values.req", 5 , "")
-# create_monitor_set("mrf_waveforms.req", 30 , "")
+create_monitor_set("mrf_settings.req", 5 , "")
+create_monitor_set("mrf_values.req", 5 , "")
+create_monitor_set("mrf_waveforms.req", 30 , "")
 
 dbl > pvlist.txt
 # end
