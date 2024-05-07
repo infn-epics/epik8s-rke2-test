@@ -24,12 +24,12 @@ dbLoadRecords("../../db/save_restoreStatus.db", "P=MRF01-AS:")
 save_restoreSet_status_prefix("MRF01-AS:")
 
 set_savefile_path("${AUTOSAVE}")
-# set_requestfile_path("${AUTOSAVE}")
+set_requestfile_path("${AUTOSAVE}")
 
-# set_pass0_restoreFile("mrf_settings.sav")
-# set_pass0_restoreFile("mrf_values.sav")
-# set_pass1_restoreFile("mrf_values.sav")
-# set_pass1_restoreFile("mrf_waveforms.sav")
+set_pass0_restoreFile("mrf_settings.sav")
+set_pass0_restoreFile("mrf_values.sav")
+set_pass1_restoreFile("mrf_values.sav")
+set_pass1_restoreFile("mrf_waveforms.sav")
 # disable use of current time until validation is implemented
 var(mrmGTIFEnable, 0)
 
