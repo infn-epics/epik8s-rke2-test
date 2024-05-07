@@ -3,12 +3,11 @@
 ## Register all support components
 dbLoadDatabase("../../dbd/mrf.dbd")
 mrf_registerRecordDeviceDriver(pdbbase)
-epicsEnvSet("AUTOSAVE", "/mnt/iocdata/autosave/mtca01")
+epicsEnvSet("AUTOSAVE", "/mnt/autosave/mtca01")
 
 
 epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES","10000000")
 
-epicsEnvSet("AUTOSAVE", "mtca01-evr")
 mrmEvrSetupPCI("EVR0","06:00.0","UNIV")
 mrmEvrSetupPCI("EVR1","0e:00.0","UNIV")
 mrmEvgSetupPCI("EVG","0c:00.0")
