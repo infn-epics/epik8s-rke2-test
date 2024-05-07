@@ -4,10 +4,10 @@ echo "* removing pci and mrf linux drivers"
 rmmod pci_mrfevg
 rmmod pci_mrfevr
 rmmod mrf
-echo "* readding pci and mrf linux drivers"
+echo "* readding mrf linux drivers"
 
-modprobe pci_mrfevg
-modprobe pci_mrfevr
+# modprobe pci_mrfevg
+# modprobe pci_mrfevr
 sleep 1
 modprobe mrf
 echo "* starting ioc"
