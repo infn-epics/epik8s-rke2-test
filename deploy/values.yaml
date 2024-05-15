@@ -382,6 +382,21 @@ epicsConfiguration:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
       gitinit: true
+    
+    - name: "tml-test"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.0
+      iocprefix: "SPARC:TML"
+      serial:
+        ip: 192.168.190.55
+        port: 4001
+        ptty: /var/tmp/ttyV0
+        baud: 9600
+      dataVolume:
+        accessMode: 'ReadWriteOnce' ## until not enabled shared
+        size: 8Mi
+      gitinit: true
 
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
