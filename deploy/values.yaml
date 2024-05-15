@@ -386,7 +386,7 @@ epicsConfiguration:
     - name: "tml-test"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.0
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.1
       iocprefix: "SPARC:TML"
       serial:
         ip: 192.168.190.55
