@@ -1,19 +1,18 @@
 ioc_name: yag
-description: YAG motors 
+description: YAG motors
 
 entities:
-
   - type: motorTML.CreateController
     controllerName: TML
     P: "SPARC:TML"
     TTY: /var/tmp/ttyV0
     numAxes: 1
-    axid: 15
     hostid: 15
 
-  
   - type: motorTML.motorAxis
     controller: TML
+    axid: 15
+
     NSTEPS: 200
     NMICROSTEPS: 256
     VELO: 20
@@ -31,6 +30,25 @@ entities:
     ENABLED: 1
     TIMEOUT: 0
 
+  - type: motorTML.motorAxis
+    controller: TML
+    axid: 17
 
+    NSTEPS: 200
+    NMICROSTEPS: 256
+    VELO: 20
+    VELO_MAX: 50
+    VELO_MIN: 0.1
+    ACCL: 0.5
+    ACCL_MAX: 1.5
+    ACCL_MIN: 0.01
+    HAR: 0.5
+    HVEL: 10
+    JAR: 1
+    JVEL: 5
+    EGU: "ustep"
+    SLSP: 0.8
+    ENABLED: 1
+    TIMEOUT: 0
 
-      
+  - type: motorTML.close
