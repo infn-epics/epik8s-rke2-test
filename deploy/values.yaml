@@ -29,6 +29,7 @@ epicsConfiguration:
       exec: start.sh
       auto_security: true
       gitinit: true
+      autosync: true ## restart automatically on changes
 
     archiver: 
       name: "archiver"
@@ -77,7 +78,8 @@ epicsConfiguration:
           url: https://baltig.infn.it/lnf-da-control/epik8-sparc.git
           path: opi
           branch: master
-          
+        autosync: true ## restart automatically on changes
+         
     notebook: 
       name: "notebook"
       charturl: 'https://baltig.infn.it/epics-containers/jupyter-control-notebook-chart.git'
