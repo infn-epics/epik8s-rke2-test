@@ -79,7 +79,7 @@ epicsConfiguration:
           path: opi
           branch: master
         autosync: true ## restart automatically on changes
-         
+
     notebook: 
       name: "notebook"
       charturl: 'https://baltig.infn.it/epics-containers/jupyter-control-notebook-chart.git'
@@ -184,6 +184,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       scpoptions: "-O"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
 
     - name: "bdsparcac1bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -196,7 +197,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-    
+      autosync: true ## restart automatically on changes
+
     - name: "bdsparcac2bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
@@ -208,6 +210,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
     
     - name: "bdsparcac3bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -220,6 +224,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
     
     - name: "bdsparcptlbpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -232,6 +238,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcutlbpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -244,6 +252,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcdglbpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -256,6 +266,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcdglbpm002"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -268,6 +280,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
     
     - name: "bdsparcdglbpm003"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -280,6 +294,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcplxbpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -292,6 +308,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcplxbpm002"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -304,6 +322,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcplxbpm003"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -316,6 +336,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcplxbpm004"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -328,6 +350,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcplxbpm005"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -340,6 +364,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "bdsparcplxbpm006"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -352,6 +378,8 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
+      autosync: true ## restart automatically on changes
+
 
     - name: "temp01" 
       asset: "https://confluence.infn.it/x/nYD8DQ"
