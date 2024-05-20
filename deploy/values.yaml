@@ -452,7 +452,19 @@ epicsConfiguration:
       host: "rdsparcpitaya002.lnf.infn.it"
       user: "root"
       workdir: "sparc"
-      exec: "start.sh"  
+      exec: "start.sh"
+
+    - name: "camera"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      host: "chaost-camera01.chaos.lnf.infn.it"
+      user: "chaos"
+      workdir: "epik8s-deploy"
+      docker:
+        enable: true
+        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.1
+      # args: "-p 5064:5064/udp -p 5064:5064/tcp -p 5065:5065/udp -p 5065:5065/tcp -p 5075:5075/tcp  -p 5076:5076/udp -it -v .:/epics/ioc/config --network host"
+
 applications:
     - name: "flame-state-import"
       image:
