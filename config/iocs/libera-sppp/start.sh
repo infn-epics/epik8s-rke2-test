@@ -1,5 +1,9 @@
 #!/bin/sh
 mount -o remount ,rw /
+echo "server 193.206.84.121" > /openntpd/ntpd.conf
+echo "server 193.206.84.122" >> /openntpd/ntpd.conf
+echo "server 193.206.84.123" >> /openntpd/ntpd.conf
+ntpd -s
 /etc/init.d/libera restart
 
 variables=( "__IOC_PREFIX__" "__IOC_TOP__" "__IOC_NAME__" "__BPM1__" "__BPM2__" "__BPM3__" "__BPM4__")

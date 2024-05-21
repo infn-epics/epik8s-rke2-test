@@ -1,10 +1,6 @@
 #!/bin/bash
 mount -o remount ,rw /
 kill -9 "$(pidof procServ)" 2>/dev/null >/dev/null
-echo "server 193.206.84.121" > /openntpd/ntpd.conf
-echo "server 193.206.84.122" >> /openntpd/ntpd.conf
-echo "server 193.206.84.123" >> /openntpd/ntpd.conf
-ntpd -s
 /etc/init.d/libera-ioc stop
 
 variables=( "__IOC_PREFIX__" "__IOC_TOP__" "__IOC_NAME__" "__BPM1__" "__BPM2__" "__BPM3__" "__BPM4__")
