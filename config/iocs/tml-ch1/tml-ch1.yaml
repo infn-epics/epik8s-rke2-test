@@ -34,41 +34,41 @@ entities:
 
   - <<: *motor
     axid: 3
-    CHANNEL_ID: AC1FLG01
+    name: AC1FLG01
 
   - <<: *motor
     axid: 4
-    CHANNEL_ID: AC2FLG01
+    name: AC2FLG01
   - <<: *motor
     axid: 5
-    CHANNEL_ID: AC3FLG03
+    name: AC3FLG03
 
   - <<: *motor
     axid: 10
-    CHANNEL_ID: GUNFLG01
+    name: GUNFLG01
   - <<: *motor
     axid: 8
-    CHANNEL_ID: GUNHOR01
+    name: GUNHOR01
   - <<: *motor
     axid: 7
-    CHANNEL_ID: GUNVER01
+    name: GUNVER01
   
   - <<: *motor
     axid: 11
-    CHANNEL_ID: DGLFLG00
+    name: DGLFLG00
 
   - <<: *motor
     axid: 23
-    CHANNEL_ID: AC1BAM01
+    name: AC1BAM01
 
   - <<: *motor
     axid: 12
-    CHANNEL_ID: UTLFLG01
+    name: UTLFLG01
 
   - <<: *motor
     axid: 13
-    CHANNEL_ID: UTLFLG02
+    name: UTLFLG02
 
   - <<: *motor
     axid: 14
-    CHANNEL_ID: DGLFLG01
+    name: DGLFLG01
