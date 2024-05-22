@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../schemas/technosoft.ibek.ioc.schema.json
 
-ioc_name: yag
-description: YAG motors
+ioc_name: test-motor
+description: test motor DAFNE
 
 shared:
   - &motor
@@ -27,13 +27,14 @@ shared:
 entities:
   - type: motorTML.CreateController
     controllerName: TML
-    P: "SPARC:TML"
+    P: "DAFNE:TEST"
     TTY: /var/tmp/ttyV0
     numAxes: 1
     hostid: 15
 
   - <<: *motor
     axid: 15
+    name: LAB
 
   - type: epics.PostStartupCommand 
     command: |
