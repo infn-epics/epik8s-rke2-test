@@ -453,7 +453,7 @@ epicsConfiguration:
         baud: 9600
       gitinit: true
       autosync: true ## restart automatically on changes
-      carepeater: true ## launch ca repeater, this ioc needs it
+      # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "tml-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -467,7 +467,7 @@ epicsConfiguration:
         baud: 9600
       gitinit: true
       autosync: true ## restart automatically on changes
-      carepeater: true ## launch ca repeater, this ioc needs it
+      # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
