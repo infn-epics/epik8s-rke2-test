@@ -415,6 +415,8 @@ epicsConfiguration:
       iocprefix: "LEL:DIA"
       iocroot: ""
       gitinit: true
+      devtype: sensor
+      devgroup: test
       autosync: true ## restart automatically on changes
 
     - name: "mrf01"
@@ -422,6 +424,8 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "mrf01"
       iocprefix: "MRF01"
+      devtype: timing
+      devgroup: timing
       host: "plsparcmrf001.lnf.infn.it"
       user: "root"
       workdir: "/home/nat/progetti/mrfioc2/iocBoot/epik8s"
@@ -436,6 +440,8 @@ epicsConfiguration:
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.0
 
       iocprefix: "SPARC:RF"
+      devtype: motor
+      devgroup: rf
       dataVolume:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
@@ -446,6 +452,8 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
       iocprefix: "SPARC:TML"
+      devtype: motor
+      devgroup: test
       serial:
         ip: 192.168.190.55
         port: 4001
@@ -457,6 +465,8 @@ epicsConfiguration:
 
     - name: "tml-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
+      devtype: motor
+      devgroup: diag
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
       iocprefix: "SPARC:TML"
@@ -473,6 +483,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "pitaya"
+      devtype: daq
+      devgroup: rf
       iocprefix: "SR00RPA01"
       host: "rdsparcpitaya001.lnf.infn.it"
       user: "root"
@@ -483,6 +495,7 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "pitaya"
+      devgroup: rf
       iocprefix: "SR00RPA02"
       host: "rdsparcpitaya002.lnf.infn.it"
       user: "root"
@@ -495,6 +508,8 @@ epicsConfiguration:
       host: "chaost-camera01.chaos.lnf.infn.it"
       user: "chaos"
       workdir: "epik8s-deploy"
+      devtype: camera
+      devgroup: test
       docker:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.1
