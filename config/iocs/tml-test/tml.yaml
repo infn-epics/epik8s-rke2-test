@@ -35,10 +35,6 @@ entities:
   - <<: *motor
     axid: 15
 
-  # - <<: *motor
-  #   axid: 17
-  #   # example of overriding a value from the shared dictionary merge
-  #   ACCL_MIN: 0.011
-  #   # (UNREALISTIC) example of using Jinja expression in an arg value
-  #   EGU: |-
-  #     {{controller.P}}
+  - type: epics.PostStartupCommand 
+    command: |
+          dbl

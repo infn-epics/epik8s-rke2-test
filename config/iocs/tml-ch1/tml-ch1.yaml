@@ -74,5 +74,5 @@ entities:
     name: DGLFLG01
 
   - type: epics.PostStartupCommand 
-      command: |
-            dbl
+    command: |
+          dbl
