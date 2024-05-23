@@ -26,7 +26,7 @@ epicsConfiguration:
       ingress:
         enabled: false
       loadbalancer: 192.168.36.201
-      replicaCount: 2
+      replicaCount: 1
       exec: start.sh
       auto_security: true
       gitinit: true
@@ -508,6 +508,21 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
+
+    - name: "tml-ch3"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      devtype: motor
+      devgroup: diag
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
+      iocprefix: "SPARC:TML"
+      serial:
+        ip: 192.168.197.232
+        port: 4003
+        ptty: /var/tmp/ttyV0
+        baud: 9600
+      gitinit: true
+      autosync: true ## restart automatically on changes
 
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"

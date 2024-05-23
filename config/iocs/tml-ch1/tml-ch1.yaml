@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../schemas/technosoft.ibek.ioc.schema.json
 
-ioc_name: tmlgun
-description: tmlgun
+ioc_name: tmlch1
+description: tmlch1
 
 shared:
   - &motor
