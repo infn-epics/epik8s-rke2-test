@@ -166,6 +166,7 @@ epicsConfiguration:
       devgroup: diag
       start: "/epics/ioc/config/start.sh"
       gitinit: true
+      autosync: true ## restart automatically on changes
     
     - name: "flags-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -176,6 +177,7 @@ epicsConfiguration:
       devgroup: motor
       start: "/epics/ioc/config/start.sh"
       gitinit: true
+      autosync: true ## restart automatically on changes
 
     - name: "bdsparcplxbpm007"
       asset: "https://confluence.infn.it/x/doKBBg"
