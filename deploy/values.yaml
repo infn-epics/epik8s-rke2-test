@@ -162,6 +162,18 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/epics-py-base
       iocprefix: "SPARC:ORBIT"
+      devtype: softioc
+      devgroup: diag
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+    
+    - name: "flags-ch1"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:CH1"
+      devtype: softioc
+      devgroup: motor
       start: "/epics/ioc/config/start.sh"
       gitinit: true
 
