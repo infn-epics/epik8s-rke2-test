@@ -50,7 +50,6 @@ epicsConfiguration:
             user: arcappl
             pass: arcappl
       enable_ingress: true
-      usegateway: true
       securityContext:
             privileged: true
             runAsUser: 0
@@ -81,7 +80,6 @@ epicsConfiguration:
           path: opi
           branch: master
         autosync: true ## restart automatically on changes
-        usegateway: true
 
     notebook: 
       name: "notebook"
@@ -98,6 +96,7 @@ epicsConfiguration:
           accessMode: ReadWriteOnce
       auto_security: true
       enable_ingress: true
+      usegateway: false
 
     olog: 
       name: "olog"
@@ -116,7 +115,6 @@ epicsConfiguration:
       auto_security: true
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
-      usegateway: true
     
     # alarmserver: 
     #   name: "alarmserver"
@@ -170,6 +168,8 @@ epicsConfiguration:
       start: "/epics/ioc/config/start.sh"
       gitinit: true
       autosync: true ## restart automatically on changes
+      usegateway: false
+
     
     - name: "flags-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -181,6 +181,8 @@ epicsConfiguration:
       start: "/epics/ioc/config/start.sh"
       gitinit: true
       autosync: true ## restart automatically on changes
+      usegateway: false
+
 
     - name: "bdsparcplxbpm007"
       asset: "https://confluence.infn.it/x/doKBBg"
