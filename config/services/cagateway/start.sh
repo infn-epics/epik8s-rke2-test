@@ -3,7 +3,8 @@ name=`hostname`
 echo "Starting CA Gateway $EPICS_CA_ADDR_LIST on $EPICS_GATEWAY_ADDR_LIST ($name)"
 # -debug 1
 echo "Starting caRepeater"
-
+unset EPICS_CAS_BEACON_ADDR_LIST
+unset EPICS_CAS_AUTO_BEACON_ADDR_LIST
 /epics/epics-base/bin/linux-x86_64/caRepeater&
 sleep 1
 defaults="-connect_timeout 30 -inactive_timeout 300 -dead_timeout 300 -disconnect_timeout 30 -reconnect_inhibit 300 -prefix gateway"
