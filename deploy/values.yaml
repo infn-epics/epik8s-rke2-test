@@ -31,6 +31,13 @@ epicsConfiguration:
       auto_security: true
       gitinit: true
       autosync: true ## restart automatically on changes
+      resources:
+            limits:
+              cpu: 999m
+              memory: 2Gi
+            requests:
+              cpu: 400m
+              memory: 500Mi
 
     archiver: 
       name: "archiver"
