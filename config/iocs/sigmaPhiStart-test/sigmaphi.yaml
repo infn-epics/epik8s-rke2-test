@@ -1,0 +1,28 @@
+
+ioc_name: sigmaPhiStart-test
+description: sigmaPhiStart test
+
+entities:
+
+  - type: sigmaPhiStart.configure
+    controllerName: START01
+    P: "ELI:START2"
+    IP: pselistart2001.lnf.infn.it
+    TCPPORT: 502
+
+  - type: sigmaPhiStart.device
+    controller: START01
+    P: "MEA1"
+    max: 1
+
+  - type: sigmaPhiStart.configure
+    controllerName: START11
+    P: "ELI:START11"
+    IP: pselistart1101.lnf.infn.it
+    TCPPORT: 502
+
+  - type: sigmaPhiStart.device
+    controller: START11
+    P: "MEA1"
+    max: 1
+  
