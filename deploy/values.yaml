@@ -540,17 +540,17 @@ epicsConfiguration:
       devtype: mag
       devgroup: magnets
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       gitinit: true
       autosync: true ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
-    - name: "sigmaPhiStart-test"
+    - name: "sigmaphistart-test"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       devtype: mag
       devgroup: magnets
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       gitinit: true
       autosync: true ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
