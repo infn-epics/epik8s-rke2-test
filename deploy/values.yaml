@@ -18,6 +18,7 @@ epicsConfiguration:
     mikelinux.lnf.infn.it"
     
   max_array_bytes: "10000000"
+  conn_tmo: 120
   services:
     gateway:
       name: "cagateway"
@@ -30,6 +31,13 @@ epicsConfiguration:
       auto_security: true
       gitinit: true
       autosync: true ## restart automatically on changes
+      resources:
+            limits:
+              cpu: 999m
+              memory: 2Gi
+            requests:
+              cpu: 400m
+              memory: 500Mi
 
     archiver: 
       name: "archiver"
@@ -95,6 +103,7 @@ epicsConfiguration:
           accessMode: ReadWriteOnce
       auto_security: true
       enable_ingress: true
+      usegateway: false
 
     olog: 
       name: "olog"
@@ -161,13 +170,33 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/epics-py-base
       iocprefix: "SPARC:ORBIT"
+      devtype: softioc
+      devgroup: diag
       start: "/epics/ioc/config/start.sh"
       gitinit: true
+      autosync: true ## restart automatically on changes
+      usegateway: false
+
+    
+    - name: "flags-ch1"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:CH1"
+      devtype: softioc
+      devgroup: motor
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+      autosync: true ## restart automatically on changes
+      usegateway: false
+
 
     - name: "bdsparcplxbpm007"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-spe"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "PLXSPE"
       iocparam:
         - name: "__BPM1__"
@@ -190,6 +219,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "AC1BPM01"
       host: "bdsparcac1bpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -198,12 +229,14 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
     - name: "bdsparcac2bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "AC2BPM01"
       host: "bdsparcac2bpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -212,7 +245,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
     
@@ -220,6 +253,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "AC3BPM01"
       host: "bdsparcac3bpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -228,7 +263,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
     
@@ -236,6 +271,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "PTLBPM01"
       host: "bdsparcptlbpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -244,7 +281,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -252,6 +289,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "UTLBPM01"
       host: "bdsparcutlbpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -260,7 +299,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -268,6 +307,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "DGLBPM01"
       host: "bdsparcdglbpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -276,7 +317,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -284,6 +325,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "DGLBPM02"
       host: "bdsparcdglbpm002.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -292,7 +335,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
     
@@ -300,6 +343,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "DGLBPM03"
       host: "bdsparcdglbpm003.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -308,7 +353,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -316,6 +361,8 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
+      devtype: bpm
+      devgroup: diag
       iocprefix: "PLXBPM01"
       host: "bdsparcplxbpm001.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
@@ -324,7 +371,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -333,6 +380,8 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
       iocprefix: "PLXBPM02"
+      devtype: bpm
+      devgroup: diag
       host: "bdsparcplxbpm002.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -340,7 +389,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -349,6 +398,8 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
       iocprefix: "PLXBPM03"
+      devtype: bpm
+      devgroup: diag
       host: "bdsparcplxbpm003.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -356,7 +407,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -365,6 +416,8 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
       iocprefix: "PLXBPM04"
+      devtype: bpm
+      devgroup: diag
       host: "bdsparcplxbpm004.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -372,7 +425,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -381,6 +434,8 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
       iocprefix: "PLXBPM05"
+      devtype: bpm
+      devgroup: diag
       host: "bdsparcplxbpm005.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -388,7 +443,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -397,6 +452,8 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "libera-sppp"
       iocprefix: "PLXBPM06"
+      devtype: bpm
+      devgroup: diag
       host: "bdsparcplxbpm006.lnf.infn.it"
       ssh_options: "-o KexAlgorithms=diffie-hellman-group1-sha1 -o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       user: "root"
@@ -404,7 +461,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       exec: "start.sh"
       autosync: true ## restart automatically on changes
-      initcmd: "mount -o remount ,rw /"
+      initcmd: "mount -o remount,rw /"
 
 
 
@@ -414,6 +471,8 @@ epicsConfiguration:
       iocprefix: "LEL:DIA"
       iocroot: ""
       gitinit: true
+      devtype: sensor
+      devgroup: test
       autosync: true ## restart automatically on changes
 
     - name: "mrf01"
@@ -421,6 +480,8 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "mrf01"
       iocprefix: "MRF01"
+      devtype: timing
+      devgroup: timing
       host: "plsparcmrf001.lnf.infn.it"
       user: "root"
       workdir: "/home/nat/progetti/mrfioc2/iocBoot/epik8s"
@@ -435,6 +496,8 @@ epicsConfiguration:
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.0
 
       iocprefix: "SPARC:RF"
+      devtype: motor
+      devgroup: rf
       dataVolume:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
@@ -443,8 +506,10 @@ epicsConfiguration:
     - name: "tml-test"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.1
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
       iocprefix: "SPARC:TML"
+      devtype: motor
+      devgroup: test
       serial:
         ip: 192.168.190.55
         port: 4001
@@ -452,26 +517,45 @@ epicsConfiguration:
         baud: 9600
       gitinit: true
       autosync: true ## restart automatically on changes
-      carepeater: true ## launch ca repeater, this ioc needs it
+      # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "tml-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
+      devtype: motor
+      devgroup: diag
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.1
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
       iocprefix: "SPARC:TML"
       serial:
-        ip: 192.168.197.232
+        ip: scsparcmoxa001.lnf.infn.it
         port: 4001
         ptty: /var/tmp/ttyV0
         baud: 9600
       gitinit: true
       autosync: true ## restart automatically on changes
-      carepeater: true ## launch ca repeater, this ioc needs it
+      # carepeater: true ## launch ca repeater, this ioc needs it
+
+    - name: "tml-ch3"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      devtype: motor
+      devgroup: diag
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
+      iocprefix: "SPARC:TML"
+      serial:
+        ip: scsparcmoxa001.lnf.infn.it
+        port: 4003
+        ptty: /var/tmp/ttyV0
+        baud: 9600
+      gitinit: true
+      autosync: true ## restart automatically on changes
 
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "pitaya"
+      devtype: daq
+      devgroup: rf
       iocprefix: "SR00RPA01"
       host: "rdsparcpitaya001.lnf.infn.it"
       user: "root"
@@ -482,6 +566,7 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocname: "pitaya"
+      devgroup: rf
       iocprefix: "SR00RPA02"
       host: "rdsparcpitaya002.lnf.infn.it"
       user: "root"
@@ -494,6 +579,8 @@ epicsConfiguration:
       host: "chaost-camera01.chaos.lnf.infn.it"
       user: "chaos"
       workdir: "epik8s-deploy"
+      devtype: camera
+      devgroup: test
       docker:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.1

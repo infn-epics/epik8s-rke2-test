@@ -4,3 +4,6 @@
 [submodule "config/iocs/orbit/scripts"]
 	path = config/iocs/orbit/scripts
 	url = https://baltig.infn.it/infn-epics/py-ioc-collector.git
+[submodule "config/iocs/flags-ch1/scripts"]
+	path = config/iocs/flags-ch1/scripts
+	url = https://baltig.infn.it/infn-epics/pymotflag.git
