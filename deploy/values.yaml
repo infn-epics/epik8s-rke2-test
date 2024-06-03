@@ -18,7 +18,7 @@ epicsConfiguration:
     mikelinux.lnf.infn.it"
     
   max_array_bytes: "10000000"
-  conn_tmo: 120
+  # conn_tmo: 120
   services:
     gateway:
       name: "cagateway"
