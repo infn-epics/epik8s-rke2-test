@@ -177,7 +177,7 @@ epicsConfiguration:
       autosync: true ## restart automatically on changes
       usegateway: false
     
-    - name: "klyloop_S1"
+    - name: "klyloop-s1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/epics-py-base
