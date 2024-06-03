@@ -17,4 +17,17 @@ dbLoadTemplate("${currdir}/redpitaya.substitutions")
 
 iocInit()
 dbl
+dbpf("RESET_ACQ_CMD","1")
+dbpf("ACQ_TRIGGER_SRC_CMD","EXT_PE")
+dbpf("ACQ_SAMPL_RATE_CMD","125 MHz")
+dbpf("ACQ_AVERAGING_CMD","Off")
+dbpf("IN2_GAIN_CMD","High")
+dbpf("OUT1_FREQ_SP","0")
+dbpf("OUT2_FREQ_SP","0")
+dbpf("OUT1_FREQ_SP","0")
+dbpf("OUT2_FREQ_SP","0")
+dbpf("OUT1_ENABLE_CMD","1")
+dbpf("OUT2_ENABLE_CMD","1")
+dbpf("OUT1_ENABLE_CMD","1")
+dbpf("OUT2_ENABLE_CMD","1")
 # end
