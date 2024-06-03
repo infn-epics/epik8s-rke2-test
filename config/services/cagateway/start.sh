@@ -7,7 +7,7 @@ unset EPICS_CAS_BEACON_ADDR_LIST
 unset EPICS_CAS_AUTO_BEACON_ADDR_LIST
 /epics/epics-base/bin/linux-x86_64/caRepeater&
 sleep 1
-defaults="-connect_timeout 600 -inactive_timeout 300 -dead_timeout 300 -disconnect_timeout 300 -reconnect_inhibit 300"
+defaults="-connect_timeout 600 -inactive_timeout 300 -dead_timeout 300 -disconnect_timeout 10 -reconnect_inhibit 60"
 #options="-dead_timeout 10 -disconnect_timeout 5 -reconnect_inhibit 2 -connect_timeout 5 -prefix gateway"
 options=$defaults
 echo "Gateway options: $options"
