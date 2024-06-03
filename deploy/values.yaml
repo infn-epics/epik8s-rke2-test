@@ -38,6 +38,7 @@ epicsConfiguration:
             requests:
               cpu: 400m
               memory: 500Mi
+      targetRevision: "devel-stateful"
 
     archiver: 
       name: "archiver"
