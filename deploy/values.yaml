@@ -176,6 +176,7 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
       usegateway: false
+      targetRevision: "devel-stateful"
     
     - name: "klyloop-s1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
