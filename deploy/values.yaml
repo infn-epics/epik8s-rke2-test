@@ -176,7 +176,24 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
       usegateway: false
-
+    
+    - name: "klyloop_S1"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:KLYLOOP_S1"
+      iocname: "klyloop"
+      iocparam:
+        - name: "__RP1_PREFIX__"
+          value: "SR00RPA01"
+        - name: "__RP2_PREFIX__"
+          value: "SR00RPA02"
+      devtype: softioc
+      devgroup: rf
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+      autosync: true ## restart automatically on changes
+      usegateway: false
     
     - name: "flags-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
