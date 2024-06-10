@@ -250,7 +250,6 @@ epicsConfiguration:
       exec: "start.sh"
       autosync: true ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
-      targetRevision: "devel-stateful"
 
     - name: "bdsparcac2bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
