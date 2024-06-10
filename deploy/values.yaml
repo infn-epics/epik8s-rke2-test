@@ -31,6 +31,7 @@ epicsConfiguration:
       auto_security: true
       gitinit: true
       autosync: true ## restart automatically on changes
+      staticIp: true
       resources:
             limits:
               cpu: 999m
@@ -38,7 +39,6 @@ epicsConfiguration:
             requests:
               cpu: 400m
               memory: 500Mi
-      targetRevision: "devel-stateful"
 
     archiver: 
       name: "archiver"
@@ -177,7 +177,6 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
       usegateway: false
-      targetRevision: "devel-stateful"
     
     - name: "klyloop-s1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
