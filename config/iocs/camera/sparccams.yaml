@@ -46,11 +46,8 @@ entities:
   - type: ADCore.NDFileTIFF
     PORT: ACE01.TIFF
     NDARRAY_PORT: ACE01
-    HIST_SIZE: 50
     P: "SPARC:ACE01:"
     R: "TIFF1:"
-    XSIZE: 1400
-    YSIZE: 768
     ENABLED: 1
     
 
