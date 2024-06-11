@@ -560,7 +560,7 @@ epicsConfiguration:
       devtype: timing
       devgroup: rf
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       iocprefix: "SPARC:MENLO"
       gitinit: true
       autosync: true ## restart automatically on changes
