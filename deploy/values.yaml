@@ -634,7 +634,7 @@ epicsConfiguration:
       devgroup: test
       docker:
         enable: true
-        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.1
+        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       # args: "-p 5064:5064/udp -p 5064:5064/tcp -p 5065:5065/udp -p 5065:5065/tcp -p 5075:5075/tcp  -p 5076:5076/udp -it -v .:/epics/ioc/config --network host"
 
 applications:
