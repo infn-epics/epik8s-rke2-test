@@ -8,7 +8,7 @@ entities:
     controllerName: MSYNCH
     P: "__IOC_PREFIX__:SYNCHRO"
     IP:  scsparcmoxa002.lnf.infn.it
-    TCPPORT: 4003
+    TCPPORT: 4004
     HOSTID: 17
     DEVICEID: 66
 
@@ -24,7 +24,7 @@ entities:
     controllerName: MLFC
     P: "__IOC_PREFIX__:LFC"
     IP:  scsparcmoxa002.lnf.infn.it
-    TCPPORT: 4004
+    TCPPORT: 4003
     HOSTID: 17
     DEVICEID: 66
 
