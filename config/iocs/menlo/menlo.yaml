@@ -22,7 +22,7 @@ entities:
   
   - type: menlolfc.device
     controllerName: MLFC
-    P: "__IOC_PREFIX__:LFC"
+    P: "__IOC_PREFIX__:SYNCHROMO"
     IP:  scsparcmoxa002.lnf.infn.it
     TCPPORT: 4003
     HOSTID: 17
