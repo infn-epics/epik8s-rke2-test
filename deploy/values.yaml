@@ -181,11 +181,11 @@ epicsConfiguration:
       usegateway: false
       targetRevision: nfs-mounts
       nfsMounts:
-        - name: nfsdata
+        - name: nfsimage
           server: 192.168.197.157
           path: /data_epik8s/camera
           mountPath: /images
-        - name: nfsdata
+        - name: nfsautosave
           server: 192.168.197.157
           path: /data_epik8s/autosave
           mountPath: /autosave
