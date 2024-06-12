@@ -180,15 +180,7 @@ epicsConfiguration:
       autosync: true ## restart automatically on changes
       usegateway: false
       targetRevision: nfs-mounts
-      nfsMounts:
-        - name: nfsimage
-          server: 192.168.197.157
-          path: /data_epik8s/camera
-          mountPath: /images
-        - name: nfsautosave
-          server: 192.168.197.157
-          path: /data_epik8s/autosave
-          mountPath: /autosave
+      
     
     - name: "klyloop-s1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -702,4 +694,18 @@ syncPolicy:
     syncOptions:
       - CreateNamespace=true 
       - Prune=true
+
+nfsMounts:
+    - name: data
+      server: 192.168.197.157
+      path: /data_epik8s
+      mountPath: /nfs/data
+    - name: autosave
+      server: 192.168.197.157
+      path: /data_epik8s/autosave
+      mountPath: /nfs/autosave
+    - name: config
+      server: 192.168.197.157
+      path: /data_epik8s/config
+      mountPath: /nfs/config
     
