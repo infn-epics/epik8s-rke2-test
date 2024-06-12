@@ -508,7 +508,7 @@ epicsConfiguration:
       user: "root"
       workdir: "/home/nat/progetti/mrfioc2/iocBoot/epik8s"
       exec: "start.sh"
-      # autosync: true ## restart automatically on changes
+      autosync: false 
 
       # disable: true ## dont deploy
 
