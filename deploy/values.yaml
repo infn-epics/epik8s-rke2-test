@@ -700,12 +700,5 @@ nfsMounts:
       server: 192.168.197.157
       path: /data_epik8s
       mountPath: /nfs/data
-    - name: autosave
-      server: 192.168.197.157
-      path: /data_epik8s/autosave
-      mountPath: /nfs/autosave
-    - name: config
-      server: 192.168.197.157
-      path: /data_epik8s/config
-      mountPath: /nfs/config
+    
     
