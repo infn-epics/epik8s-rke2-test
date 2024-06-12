@@ -179,6 +179,12 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
       usegateway: false
+      targetRevision: nfs-mounts
+      nfsMounts:
+        - name: nfsdata
+          server: 192.168.197.157
+          path: /data_epik8s
+          mountPath: /nfsdata
     
     - name: "klyloop-s1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -636,7 +642,7 @@ epicsConfiguration:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       # args: "-p 5064:5064/udp -p 5064:5064/tcp -p 5065:5065/udp -p 5065:5065/tcp -p 5075:5075/tcp  -p 5076:5076/udp -it -v .:/epics/ioc/config --network host"
-
+      
 applications:
     - name: "flame-state-import"
       image:
