@@ -17,6 +17,9 @@ epicsConfiguration:
     gen-cs-gp09-ioc01.lnf.infn.it
     gen-cs-gp08-ioc06.lnf.infn.it
     plelillrf001.lnf.infn.it
+    plsparcllrfs001.lnf.infn.it
+    plsparcllrfs002.lnf.infn.it
+    plsparcllrfc001.lnf.infn.it
     mikelinux.lnf.infn.it"
     
   max_array_bytes: "10000000"
@@ -633,7 +636,7 @@ epicsConfiguration:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       targetRevision: nfs-mounts
-      
+
 applications:
     - name: "flame-state-import"
       image:
