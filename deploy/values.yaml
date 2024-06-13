@@ -632,7 +632,8 @@ epicsConfiguration:
       docker:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
-
+      targetRevision: nfs-mounts
+      
 applications:
     - name: "flame-state-import"
       image:
