@@ -1,0 +1,106 @@
+# yaml-language-server: $schema=../schemas/ibek.support.schema.json
+ioc_name: __IOC_NAME__
+description: Sparc camera
+
+entities:
+  
+  - type: ADAravis.aravisCamera
+    P: "SPARC:CAM:"
+    R: "TESTACE01:"
+    PORT: TESTACE01
+    ID: "Basler-a2A1920-51gcBAS-40204275"
+    CLASS: Basler-a2A2600-20gmBAS
+
+  
+  # Want to have also high throuput PVA protocol
+  - type: ADCore.NDPvaPlugin
+    PORT: TESTACE01.PVA
+    PVNAME: "SPARC:CAM:TESTACE01:PVA:OUTPUT"
+    P: "SPARC:CAM:TESTACE01"
+    R: ":Pva1:"
+    NDARRAY_PORT: TESTACE01
+    ENABLED: 1
+
+  
+  - type: ADCore.NDStdArrays
+    P: "SPARC:CAM:TESTACE01"
+    R: ":image1:"
+    PORT: TESTACE01.NTD
+    NDARRAY_PORT: TESTACE01
+    TYPE: "Int8"
+    FTVL: UCHAR
+    NELEMENTS: 0
+    ENABLED: 1
+
+
+  - type: ADCore.NDStats
+    PORT: TESTACE01.STATS
+    NDARRAY_PORT: TESTACE01
+    HIST_SIZE: 50
+    P: "SPARC:CAM:TESTACE01:"
+    R: "Stats1:"
+    XSIZE: 1400
+    YSIZE: 768
+    ENABLED: 1
+
+  - type: ADCore.NDFileTIFF
+    PORT: TESTACE01.TIFF
+    NDARRAY_PORT: TESTACE01
+    P: "SPARC:CAM:TESTACE01:"
+    R: "TIFF1:"
+    ENABLED: 1
+    
+
+  - type: ADAravis.aravisCamera
+    P: "SPARC:CAM:"
+    R: "TESTSCOUT01:"
+    PORT: TESTSCOUT01
+    ID: Basler-scA640-70gm-23665718
+    CLASS: Basler-scA640-70gm
+
+  
+  # Want to have also high throuput PVA protocol
+  - type: ADCore.NDPvaPlugin
+    PORT: TESTSCOUT01.PVA
+    PVNAME: "SPARC:CAM:TESTSCOUT01:PVA:OUTPUT"
+    P: "SPARC:CAM:TESTSCOUT01"
+    R: ":Pva1:"
+    NDARRAY_PORT: TESTSCOUT01
+    ENABLED: 1
+
+  
+  - type: ADCore.NDStdArrays
+    P: "SPARC:CAM:TESTSCOUT01"
+    R: ":image1:"
+    PORT: TESTSCOUT01.NTD
+    NDARRAY_PORT: TESTSCOUT01
+    TYPE: "Int8"
+    FTVL: UCHAR
+    NELEMENTS: 0
+    ENABLED: 1
+
+
+  - type: ADCore.NDStats
+    PORT: TESTSCOUT01.STATS
+    NDARRAY_PORT: TESTSCOUT01
+    HIST_SIZE: 50
+    P: "SPARC:CAM:TESTSCOUT01:"
+    R: "Stats1:"
+    XSIZE: 1400
+    YSIZE: 768
+    ENABLED: 1
+
+  - type: ADCore.NDFileTIFF
+    PORT: TESTSCOUT01.TIFF
+    NDARRAY_PORT: TESTSCOUT01
+    P: "SPARC:CAM:TESTSCOUT01:"
+    R: "TIFF1:"
+    ENABLED: 1
+    
+
+
+  - type: epics.PostStartupCommand 
+    command: dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
+    
+  - type: epics.EpicsCaMaxArrayBytes 
+    max_bytes: 10000000
