@@ -54,7 +54,7 @@ entities:
 
 
   - type: epics.PostStartupCommand 
-    command: dbl              ## dumps PV NAMES
+    command: dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
     
   - type: epics.EpicsCaMaxArrayBytes 
     max_bytes: 10000000
