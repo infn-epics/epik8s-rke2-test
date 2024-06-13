@@ -1,0 +1,33 @@
+
+ioc_name: menlo
+description: menlo devices
+
+entities:
+
+  - type: menlosyncro.device
+    controllerName: MSYNCH
+    P: "__IOC_PREFIX__:SYNCHRO"
+    IP:  scsparcmoxa002.lnf.infn.it
+    TCPPORT: 4004
+    HOSTID: 17
+    DEVICEID: 66
+
+  - type: menlolac.device
+    controllerName: MLAC
+    P: "__IOC_PREFIX__:LAC"
+    IP:  scsparcmoxa002.lnf.infn.it
+    TCPPORT: 4001
+    HOSTID: 17
+    DEVICEID: 66
+  
+  - type: menlolfc.device
+    controllerName: MLFC
+    P: "__IOC_PREFIX__:SYNCHROMO"
+    IP:  scsparcmoxa002.lnf.infn.it
+    TCPPORT: 4003
+    HOSTID: 17
+    DEVICEID: 66
+
+  - type: epics.PostStartupCommand 
+    command: |
+          dbl

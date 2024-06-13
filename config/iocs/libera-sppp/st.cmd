@@ -3,6 +3,7 @@
 epicsEnvSet(ARCH,"linux-arm")
 epicsEnvSet(IOC,"__IOC_NAME__")
 epicsEnvSet(TOP,"__IOC_TOP__")
+epicsEnvSet(CONFIG,"__CONFIG_DIR__")
 epicsEnvSet(EPICS_BASE,"/opt/epics-libera")
 cd ${TOP}
 
@@ -33,4 +34,4 @@ dbLoadTemplate("libera.substitutions")
 
 cd ${TOP}
 iocInit()
-dbl > pvlist.txt
+dbl > ${CONFIG}/pvlist.txt

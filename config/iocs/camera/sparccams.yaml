@@ -19,6 +19,7 @@ entities:
     P: "SPARC:ACE01"
     R: ":Pva1:"
     NDARRAY_PORT: ACE01
+    ENABLED: 1
 
   
   - type: ADCore.NDStdArrays
@@ -32,15 +33,25 @@ entities:
     ENABLED: 1
 
 
-  # - type: ADCore.NDStats
-  #   PORT: ACE01.STATS
-  #   NDARRAY_PORT: ACE01
-  #   HIST_SIZE: 50
-  #   P: "SPARC:ACE01:"
-  #   R: "Stats1:"
-  #   XSIZE: 1400
-  #   YSIZE: 768
-  #   ENABLED: 1
+  - type: ADCore.NDStats
+    PORT: ACE01.STATS
+    NDARRAY_PORT: ACE01
+    HIST_SIZE: 50
+    P: "SPARC:ACE01:"
+    R: "Stats1:"
+    XSIZE: 1400
+    YSIZE: 768
+    ENABLED: 1
+
+  - type: ADCore.NDFileTIFF
+    PORT: ACE01.TIFF
+    NDARRAY_PORT: ACE01
+    P: "SPARC:ACE01:"
+    R: "TIFF1:"
+    ENABLED: 1
+    
+
+
 
   - type: epics.PostStartupCommand 
     command: dbl              ## dumps PV NAMES
