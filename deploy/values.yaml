@@ -252,6 +252,8 @@ epicsConfiguration:
       exec: "start.sh"
       autosync: true ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
+      targetRevision: nfs-mounts
+
 
     - name: "bdsparcac2bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -698,7 +700,7 @@ syncPolicy:
 nfsMounts:
     - name: data
       server: 192.168.197.157
-      path: /data_epik8s
+      path: /data_epik8s/data
       mountPath: /nfs/data
     - name: autosave
       server: 192.168.197.157
