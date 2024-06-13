@@ -100,7 +100,11 @@ entities:
 
 
   - type: epics.PostStartupCommand 
-    command: dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
+    command: |
+      dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
+      dbpf("SPARC:CAM:TESTSCOUT01:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:TESTSCOUT01:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:TESTSCOUT01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
     
   - type: epics.EpicsCaMaxArrayBytes 
     max_bytes: 10000000
