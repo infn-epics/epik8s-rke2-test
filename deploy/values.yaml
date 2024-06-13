@@ -187,7 +187,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/epics-py-base
       iocprefix: "SPARC:KLYLOOP_S1"
-      iocname: "klyloop"
+      iocdir: "klyloop"
       iocparam:
         - name: "__RP1_PREFIX__"
           value: "SR00RPA01"
@@ -216,7 +216,7 @@ epicsConfiguration:
     - name: "bdsparcplxbpm007"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-spe"
+      iocdir: "libera-spe"
       devtype: bpm
       devgroup: diag
       iocprefix: "PLXSPE"
@@ -240,7 +240,7 @@ epicsConfiguration:
     - name: "bdsparcac1bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "AC1BPM01"
@@ -258,7 +258,7 @@ epicsConfiguration:
     - name: "bdsparcac2bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "AC2BPM01"
@@ -276,7 +276,7 @@ epicsConfiguration:
     - name: "bdsparcac3bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "AC3BPM01"
@@ -294,7 +294,7 @@ epicsConfiguration:
     - name: "bdsparcptlbpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "PTLBPM01"
@@ -312,7 +312,7 @@ epicsConfiguration:
     - name: "bdsparcutlbpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "UTLBPM01"
@@ -330,7 +330,7 @@ epicsConfiguration:
     - name: "bdsparcdglbpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "DGLBPM01"
@@ -348,7 +348,7 @@ epicsConfiguration:
     - name: "bdsparcdglbpm002"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "DGLBPM02"
@@ -366,7 +366,7 @@ epicsConfiguration:
     - name: "bdsparcdglbpm003"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "DGLBPM03"
@@ -384,7 +384,7 @@ epicsConfiguration:
     - name: "bdsparcplxbpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       devtype: bpm
       devgroup: diag
       iocprefix: "PLXBPM01"
@@ -402,7 +402,7 @@ epicsConfiguration:
     - name: "bdsparcplxbpm002"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       iocprefix: "PLXBPM02"
       devtype: bpm
       devgroup: diag
@@ -420,7 +420,7 @@ epicsConfiguration:
     - name: "bdsparcplxbpm003"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       iocprefix: "PLXBPM03"
       devtype: bpm
       devgroup: diag
@@ -438,7 +438,7 @@ epicsConfiguration:
     - name: "bdsparcplxbpm004"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       iocprefix: "PLXBPM04"
       devtype: bpm
       devgroup: diag
@@ -456,7 +456,7 @@ epicsConfiguration:
     - name: "bdsparcplxbpm005"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       iocprefix: "PLXBPM05"
       devtype: bpm
       devgroup: diag
@@ -474,7 +474,7 @@ epicsConfiguration:
     - name: "bdsparcplxbpm006"
       asset: "https://confluence.infn.it/x/doKBBg"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "libera-sppp"
+      iocdir: "libera-sppp"
       iocprefix: "PLXBPM06"
       devtype: bpm
       devgroup: diag
@@ -502,7 +502,7 @@ epicsConfiguration:
     - name: "mrf01"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "mrf01"
+      iocdir: "mrf01"
       iocprefix: "MRF01"
       devtype: timing
       devgroup: timing
@@ -608,7 +608,7 @@ epicsConfiguration:
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "pitaya"
+      iocdir: "pitaya"
       devtype: daq
       devgroup: rf
       iocprefix: "SR00RPA01"
@@ -620,7 +620,7 @@ epicsConfiguration:
     - name: "rdsparcpitaia002"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocname: "pitaya"
+      iocdir: "pitaya"
       devgroup: rf
       iocprefix: "SR00RPA02"
       host: "rdsparcpitaya002.lnf.infn.it"
