@@ -25,6 +25,29 @@ epicsConfiguration:
   max_array_bytes: "10000000"
   # conn_tmo: 120
   services:
+    pvagateway:
+      name: "pvagateway"
+      charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
+      image:
+        repository: baltig.infn.it:4567/epics-containers/docker-pva-gateway
+        tag: "latest"
+      ingress:
+        enabled: false
+      loadbalancer: 192.168.36.204
+      replicaCount: 1
+      exec: start.sh
+      auto_security: true
+      gitinit: true
+      autosync: true ## restart automatically on changes
+      staticIp: true
+      resources:
+            limits:
+              cpu: 999m
+              memory: 2Gi
+            requests:
+              cpu: 400m
+              memory: 500Mi
+
     gateway:
       name: "cagateway"
       charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
