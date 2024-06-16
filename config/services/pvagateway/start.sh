@@ -26,7 +26,7 @@ JSON_CONTENT=$(cat <<EOF
         {
             "name": "$SERVER_NAME-external",
             "clients": [],
-            "interface": ["192.168.36.204"]
+            "interface": ["192.168.36.204"],
             "autoaddrlist": false,
             "statusprefix": "PVA:STS:"
         }
