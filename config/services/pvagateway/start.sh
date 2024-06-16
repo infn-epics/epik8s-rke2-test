@@ -22,7 +22,14 @@ JSON_CONTENT=$(cat <<EOF
             "addrlist": "$EPICS_CA_ADDR_LIST",
             "autoaddrlist": false,
             "statusprefix": "GW:STS:"
-        }
+        },
+        {
+            "name": "$SERVER_NAME-external",
+            "clients": [],
+            "interface": ["192.168.36.204"]
+            "autoaddrlist": false,
+            "statusprefix": "PVA:STS:"
+        },
     ]
 }
 EOF
