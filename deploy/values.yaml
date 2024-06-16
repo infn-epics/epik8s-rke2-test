@@ -47,6 +47,7 @@ epicsConfiguration:
             requests:
               cpu: 400m
               memory: 500Mi
+      targetRevision: volume-template
 
     gateway:
       name: "cagateway"
@@ -67,7 +68,7 @@ epicsConfiguration:
             requests:
               cpu: 400m
               memory: 500Mi
-      targetRevision: volume-template
+      
     archiver: 
       name: "archiver"
       charturl: 'https://baltig.infn.it/epics-containers/epics-archiver-chart.git'
