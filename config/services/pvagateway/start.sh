@@ -29,7 +29,7 @@ JSON_CONTENT=$(cat <<EOF
             "interface": ["192.168.36.204"]
             "autoaddrlist": false,
             "statusprefix": "PVA:STS:"
-        },
+        }
     ]
 }
 EOF
