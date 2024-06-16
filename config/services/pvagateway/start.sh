@@ -12,6 +12,7 @@ JSON_CONTENT=$(cat <<EOF
     "clients":[
         {
             "name":"$CLIENT_NAME",
+            "addrlist":"192.255.255.255",
             "autoaddrlist":false
         }
     ],
@@ -20,7 +21,6 @@ JSON_CONTENT=$(cat <<EOF
             "name": "$SERVER_NAME",
             "clients": ["$CLIENT_NAME"],
             "addrlist": "$EPICS_CA_ADDR_LIST",
-            "interface":["192.168.36.204"],
             "autoaddrlist": false,
             "statusprefix": "GW:STS:"
         }
@@ -33,6 +33,6 @@ EOF
 # Output the JSON content to a file
 echo "$JSON_CONTENT" > gateway_config.json
 
-echo "Generated gateway_config.json:"
+echo "Generated gateway_config.json: $JSON_CONTENT"
 
 python3 -m p4p.gw --debug gateway_config.json
