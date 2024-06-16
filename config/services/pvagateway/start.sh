@@ -3,6 +3,7 @@ name=`hostname`
 echo "Starting PVA Gateway $EPICS_CA_ADDR_LIST on $EPICS_GATEWAY_ADDR_LIST ($name)"
 # -debug 1
 CLIENT_NAME="$name"
+export EPICS_PVA_ADDR_LIST 192.168.36.204
 
 # Generate JSON content
 JSON_CONTENT=$(cat <<EOF
