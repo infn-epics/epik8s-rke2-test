@@ -29,7 +29,6 @@ entities:
     NDARRAY_PORT: ACE01
     TYPE: "Int8"
     FTVL: UCHAR
-    NELEMENTS: 0
     ENABLED: 1
 
 
