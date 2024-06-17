@@ -4,51 +4,51 @@ description: Sparc camera
 
 entities:
   
-  # - type: ADAravis.aravisCamera
-  #   P: "SPARC:CAM:"
-  #   R: "TESTACE01:"
-  #   PORT: TESTACE01
-  #   ID: "Basler-a2A1920-51gcBAS-40204275"
-  #   CLASS: Basler-a2A2600-20gmBAS
+  - type: ADAravis.aravisCamera
+    P: "SPARC:CAM:"
+    R: "TESTACE01:"
+    PORT: TESTACE01
+    ID: "Basler-a2A1920-51gcBAS-40204275"
+    CLASS: Basler-a2A2600-20gmBAS
 
   
-  # # Want to have also high throuput PVA protocol
-  # - type: ADCore.NDPvaPlugin
-  #   PORT: TESTACE01.PVA
-  #   PVNAME: "SPARC:CAM:TESTACE01:PVA:OUTPUT"
-  #   P: "SPARC:CAM:TESTACE01"
-  #   R: ":Pva1:"
-  #   NDARRAY_PORT: TESTACE01
-  #   ENABLED: 1
+  # Want to have also high throuput PVA protocol
+  - type: ADCore.NDPvaPlugin
+    PORT: TESTACE01.PVA
+    PVNAME: "SPARC:CAM:TESTACE01:PVA:OUTPUT"
+    P: "SPARC:CAM:TESTACE01"
+    R: ":Pva1:"
+    NDARRAY_PORT: TESTACE01
+    ENABLED: 1
 
   
-  # - type: ADCore.NDStdArrays
-  #   P: "SPARC:CAM:TESTACE01"
-  #   R: ":image1:"
-  #   PORT: TESTACE01.NTD
-  #   NDARRAY_PORT: TESTACE01
-  #   TYPE: "Int8"
-  #   FTVL: UCHAR
-  #   NELEMENTS: 0
-  #   ENABLED: 1
+  - type: ADCore.NDStdArrays
+    P: "SPARC:CAM:TESTACE01"
+    R: ":image1:"
+    PORT: TESTACE01.NTD
+    NDARRAY_PORT: TESTACE01
+    TYPE: "Int8"
+    FTVL: UCHAR
+    NELEMENTS: 0
+    ENABLED: 1
 
 
-  # - type: ADCore.NDStats
-  #   PORT: TESTACE01.STATS
-  #   NDARRAY_PORT: TESTACE01
-  #   HIST_SIZE: 50
-  #   P: "SPARC:CAM:TESTACE01:"
-  #   R: "Stats1:"
-  #   XSIZE: 1400
-  #   YSIZE: 768
-  #   ENABLED: 1
+  - type: ADCore.NDStats
+    PORT: TESTACE01.STATS
+    NDARRAY_PORT: TESTACE01
+    HIST_SIZE: 50
+    P: "SPARC:CAM:TESTACE01:"
+    R: "Stats1:"
+    XSIZE: 1400
+    YSIZE: 768
+    ENABLED: 1
 
-  # - type: ADCore.NDFileTIFF
-  #   PORT: TESTACE01.TIFF
-  #   NDARRAY_PORT: TESTACE01
-  #   P: "SPARC:CAM:TESTACE01:"
-  #   R: "TIFF1:"
-  #   ENABLED: 1
+  - type: ADCore.NDFileTIFF
+    PORT: TESTACE01.TIFF
+    NDARRAY_PORT: TESTACE01
+    P: "SPARC:CAM:TESTACE01:"
+    R: "TIFF1:"
+    ENABLED: 1
     
 
   - type: ADAravis.aravisCamera
