@@ -6,7 +6,7 @@ entities:
 
   - type: menlosyncro.device
     controllerName: MSYNCH
-    P: "__IOC_PREFIX__:SYNCHRO"
+    P: "__IOC_PREFIX__:SYNCOMO"
     IP:  scsparcmoxa002.lnf.infn.it
     TCPPORT: 4004
     HOSTID: 17
@@ -22,7 +22,7 @@ entities:
   
   - type: menlolfc.device
     controllerName: MLFC
-    P: "__IOC_PREFIX__:SYNCHROMO"
+    P: "__IOC_PREFIX__:SYNCTHETA"
     IP:  scsparcmoxa002.lnf.infn.it
     TCPPORT: 4003
     HOSTID: 17
@@ -31,3 +31,4 @@ entities:
   - type: epics.PostStartupCommand 
     command: |
           dbl
+          dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
