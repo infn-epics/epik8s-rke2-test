@@ -80,15 +80,15 @@ entities:
     ENABLED: 1
 
 
-  - type: ADCore.NDStats
-    PORT: TESTSCOUT01.STATS
-    NDARRAY_PORT: TESTSCOUT01
-    HIST_SIZE: 50
-    P: "SPARC:CAM:TESTSCOUT01:"
-    R: "Stats1:"
-    XSIZE: 694
-    YSIZE: 490
-    ENABLED: 1
+  # - type: ADCore.NDStats
+  #   PORT: TESTSCOUT01.STATS
+  #   NDARRAY_PORT: TESTSCOUT01
+  #   HIST_SIZE: 50
+  #   P: "SPARC:CAM:TESTSCOUT01:"
+  #   R: "Stats1:"
+  #   XSIZE: 694
+  #   YSIZE: 490
+  #   ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: TESTSCOUT01.TIFF
