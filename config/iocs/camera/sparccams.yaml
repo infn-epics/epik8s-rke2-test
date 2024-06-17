@@ -27,8 +27,8 @@ entities:
     R: ":image1:"
     PORT: ACE01.NTD
     NDARRAY_PORT: ACE01
-    TYPE: "Int8"
-    FTVL: UCHAR
+    TYPE: "UInt16"
+    FTVL: USHORT
     NELEMENTS: 5616000
     ENABLED: 1
 
