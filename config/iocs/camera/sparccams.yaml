@@ -29,8 +29,7 @@ entities:
     NDARRAY_PORT: ACE01
     TYPE: "Int16"
     FTVL: USHORT
-    # NELEMENTS: 5616000
-    NELEMENTS: 0
+    NELEMENTS: 5616000
     ENABLED: 1
 
 
