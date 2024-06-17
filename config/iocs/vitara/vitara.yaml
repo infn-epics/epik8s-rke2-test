@@ -21,3 +21,8 @@ entities:
     home: 1
     start: 10
     VELO: 1
+
+  - type: epics.PostStartupCommand 
+    command: |
+      dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
+      

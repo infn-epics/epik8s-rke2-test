@@ -529,7 +529,7 @@ epicsConfiguration:
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
-      iocprefix: "SPARC:MOT:VITARA01"
+      iocprefix: "SPARC:MOT:VITARA01:"
       devtype: motor
       devgroup: rf
       dataVolume:
