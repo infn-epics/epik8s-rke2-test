@@ -74,9 +74,9 @@ entities:
     R: ":image1:"
     PORT: TESTSCOUT01.NTD
     NDARRAY_PORT: TESTSCOUT01
-    TYPE: "Int8"
-    FTVL: UCHAR
-    NELEMENTS: 0
+    TYPE: "Int16"
+    FTVL: USHORT
+    NELEMENTS: 325546
     ENABLED: 1
 
 
