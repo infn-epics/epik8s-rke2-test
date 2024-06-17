@@ -86,8 +86,8 @@ entities:
     HIST_SIZE: 50
     P: "SPARC:CAM:TESTSCOUT01:"
     R: "Stats1:"
-    XSIZE: 1400
-    YSIZE: 768
+    XSIZE: 694
+    YSIZE: 490
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
