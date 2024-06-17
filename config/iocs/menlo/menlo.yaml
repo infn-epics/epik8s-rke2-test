@@ -4,13 +4,13 @@ description: menlo devices
 
 entities:
 
-  # - type: menlosyncro.device
-  #   controllerName: MSYNCH
-  #   P: "__IOC_PREFIX__:SYNCOMO"
-  #   IP:  scsparcmoxa002.lnf.infn.it
-  #   TCPPORT: 4004
-  #   HOSTID: 17
-  #   DEVICEID: 66
+  - type: menlosyncro.device
+    controllerName: MSYNCH
+    P: "__IOC_PREFIX__:SYNCOMO"
+    IP:  scsparcmoxa002.lnf.infn.it
+    TCPPORT: 4003
+    HOSTID: 17
+    DEVICEID: 66
 
   - type: menlolac.device
     controllerName: MLAC
@@ -24,7 +24,7 @@ entities:
     controllerName: MLFC
     P: "__IOC_PREFIX__:SYNCTHETA"
     IP:  scsparcmoxa002.lnf.infn.it
-    TCPPORT: 4003
+    TCPPORT: 4004
     HOSTID: 17
     DEVICEID: 66
 
