@@ -6,23 +6,23 @@ entities:
 
   - type: menlosyncro.device
     controllerName: MSYNCH
-    P: "__IOC_PREFIX__:SYNCTHETA"
+    P: "SPARC:MENLO:SYNCTHETA"
     IP:  scsparcmoxa002.lnf.infn.it
     TCPPORT: 4004
-    HOSTID: 17
-    DEVICEID: 66
+    HOSTID: 0
+    DEVICEID: 255
 
   - type: menlolac.device
     controllerName: MLAC
-    P: "__IOC_PREFIX__:LAC"
+    P: "SPARC:MENLO:LAC"
     IP:  scsparcmoxa002.lnf.infn.it
     TCPPORT: 4001
-    HOSTID: 17
-    DEVICEID: 66
+    HOSTID: 0
+    DEVICEID: 255
   
   - type: menlolfc.device
     controllerName: MLFC
-    P: "__IOC_PREFIX__:SYNCOMO"
+    P: "SPARC:MENLO:SYNCOMO"
     IP:  scsparcmoxa002.lnf.infn.it
     TCPPORT: 4003
     HOSTID: 17

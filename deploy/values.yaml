@@ -577,7 +577,7 @@ epicsConfiguration:
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       iocprefix: "SPARC:MENLO"
       gitinit: true
-      autosync: false ## restart automatically on changes
+      autosync: true ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "ibilt-test"
@@ -587,7 +587,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "sigmaphi-test"
@@ -597,7 +597,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "tml-ch3"
@@ -613,7 +613,7 @@ epicsConfiguration:
         ptty: /var/tmp/ttyV0
         baud: 9600
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
 
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
