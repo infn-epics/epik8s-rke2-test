@@ -313,7 +313,7 @@ entities:
     R: "PLVCAMO1:"
     PORT: PLVCAMO1
     ID: Basler-scA640-74gm-21002010
-    CLASS: Basler-scA640-74gm
+    CLASS: Basler-scA640-70gm
 
   - type: ADCore.NDPvaPlugin
     PORT: PLVCAMO1.PVA
@@ -351,7 +351,7 @@ entities:
     R: "UTLCAMO2:"
     PORT: UTLCAMO2
     ID: Basler-scA640-74gm-21290828
-    CLASS: Basler-scA640-74gm
+    CLASS: Basler-scA640-70gm
 
   - type: ADCore.NDPvaPlugin
     PORT: UTLCAMO2.PVA
@@ -389,7 +389,7 @@ entities:
     R: "OSCAMO2:"
     PORT: OSCAMO2
     ID: Basler-scA640-74gm-21290841
-    CLASS: Basler-scA640-74gm
+    CLASS: Basler-scA640-70gm
 
   - type: ADCore.NDPvaPlugin
     PORT: OSCAMO2.PVA
@@ -427,7 +427,7 @@ entities:
     R: "OSCAMO1:"
     PORT: OSCAMO1
     ID: Basler-scA640-74gm-21751350
-    CLASS: Basler-scA640-74gm
+    CLASS: Basler-scA640-70gm
 
   - type: ADCore.NDPvaPlugin
     PORT: OSCAMO1.PVA
@@ -465,7 +465,7 @@ entities:
     R: "AC3CAM01:"
     PORT: AC3CAM01
     ID: Basler-scA640-74gm-21751352
-    CLASS: Basler-scA640-74gm
+    CLASS: Basler-scA640-70gm
 
   - type: ADCore.NDPvaPlugin
     PORT: AC3CAM01.PVA
