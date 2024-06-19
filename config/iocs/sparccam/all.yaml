@@ -17,7 +17,7 @@ entities:
   #   P: "SPARC:CAM:TestEpics"
   #   R: ":Pva1:"
   #   NDARRAY_PORT: TestEpics
-  #   ENABLED: 0
+  #   ENABLED: 1
 
   # - type: ADCore.NDStdArrays
   #   P: "SPARC:CAM:TestEpics"
@@ -27,14 +27,14 @@ entities:
   #   TYPE: "Int16"
   #   FTVL: USHORT
   #   NELEMENTS: 325546
-  #   ENABLED: 0
+  #   ENABLED: 1
 
   # - type: ADCore.NDFileTIFF
   #   PORT: TestEpics.TIFF
   #   NDARRAY_PORT: TestEpics
   #   P: "SPARC:CAM:TestEpics:"
   #   R: "TIFF1:"
-  #   ENABLED: 0
+  #   ENABLED: 1
 
   # - type: epics.PostStartupCommand
   #   command: |
@@ -48,6 +48,7 @@ entities:
     PORT: AC1CAMO1
     ID: Basler-scA640-70gm-21273723
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: AC1CAMO1.PVA
@@ -55,7 +56,7 @@ entities:
     P: "SPARC:CAM:AC1CAMO1"
     R: ":Pva1:"
     NDARRAY_PORT: AC1CAMO1
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:AC1CAMO1"
@@ -65,14 +66,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: AC1CAMO1.TIFF
     NDARRAY_PORT: AC1CAMO1
     P: "SPARC:CAM:AC1CAMO1:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -86,6 +87,7 @@ entities:
     PORT: THVCAMO1
     ID: Basler-scA640-70gm-21290809
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: THVCAMO1.PVA
@@ -93,7 +95,7 @@ entities:
     P: "SPARC:CAM:THVCAMO1"
     R: ":Pva1:"
     NDARRAY_PORT: THVCAMO1
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:THVCAMO1"
@@ -103,14 +105,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: THVCAMO1.TIFF
     NDARRAY_PORT: THVCAMO1
     P: "SPARC:CAM:THVCAMO1:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -124,6 +126,7 @@ entities:
     PORT: UTLCAMO1
     ID: Basler-scA640-70gm-21732890
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: UTLCAMO1.PVA
@@ -131,7 +134,7 @@ entities:
     P: "SPARC:CAM:UTLCAMO1"
     R: ":Pva1:"
     NDARRAY_PORT: UTLCAMO1
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:UTLCAMO1"
@@ -141,14 +144,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: UTLCAMO1.TIFF
     NDARRAY_PORT: UTLCAMO1
     P: "SPARC:CAM:UTLCAMO1:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -162,6 +165,7 @@ entities:
     PORT: PLVCAMO2
     ID: Basler-scA640-70gm-21732894
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: PLVCAMO2.PVA
@@ -169,7 +173,7 @@ entities:
     P: "SPARC:CAM:PLVCAMO2"
     R: ":Pva1:"
     NDARRAY_PORT: PLVCAMO2
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:PLVCAMO2"
@@ -179,14 +183,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: PLVCAMO2.TIFF
     NDARRAY_PORT: PLVCAMO2
     P: "SPARC:CAM:PLVCAMO2:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -200,6 +204,7 @@ entities:
     PORT: AC2CAM01
     ID: Basler-scA640-70gm-21732900
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: AC2CAM01.PVA
@@ -207,7 +212,7 @@ entities:
     P: "SPARC:CAM:AC2CAM01"
     R: ":Pva1:"
     NDARRAY_PORT: AC2CAM01
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:AC2CAM01"
@@ -217,14 +222,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: AC2CAM01.TIFF
     NDARRAY_PORT: AC2CAM01
     P: "SPARC:CAM:AC2CAM01:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -238,6 +243,7 @@ entities:
     PORT: DGLCAMO0
     ID: Basler-scA640-70gm-23665716
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: DGLCAMO0.PVA
@@ -245,7 +251,7 @@ entities:
     P: "SPARC:CAM:DGLCAMO0"
     R: ":Pva1:"
     NDARRAY_PORT: DGLCAMO0
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:DGLCAMO0"
@@ -255,14 +261,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: DGLCAMO0.TIFF
     NDARRAY_PORT: DGLCAMO0
     P: "SPARC:CAM:DGLCAMO0:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -276,6 +282,7 @@ entities:
     PORT: GUNCAMO1
     ID: Basler-scA640-70gm-23665718
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: GUNCAMO1.PVA
@@ -283,7 +290,7 @@ entities:
     P: "SPARC:CAM:GUNCAMO1"
     R: ":Pva1:"
     NDARRAY_PORT: GUNCAMO1
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:GUNCAMO1"
@@ -293,14 +300,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: GUNCAMO1.TIFF
     NDARRAY_PORT: GUNCAMO1
     P: "SPARC:CAM:GUNCAMO1:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -314,6 +321,7 @@ entities:
     PORT: PLVCAMO1
     ID: Basler-scA640-74gm-21002010
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: PLVCAMO1.PVA
@@ -321,7 +329,7 @@ entities:
     P: "SPARC:CAM:PLVCAMO1"
     R: ":Pva1:"
     NDARRAY_PORT: PLVCAMO1
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:PLVCAMO1"
@@ -331,14 +339,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: PLVCAMO1.TIFF
     NDARRAY_PORT: PLVCAMO1
     P: "SPARC:CAM:PLVCAMO1:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -352,6 +360,7 @@ entities:
     PORT: UTLCAMO2
     ID: Basler-scA640-74gm-21290828
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: UTLCAMO2.PVA
@@ -359,7 +368,7 @@ entities:
     P: "SPARC:CAM:UTLCAMO2"
     R: ":Pva1:"
     NDARRAY_PORT: UTLCAMO2
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:UTLCAMO2"
@@ -369,14 +378,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: UTLCAMO2.TIFF
     NDARRAY_PORT: UTLCAMO2
     P: "SPARC:CAM:UTLCAMO2:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -390,6 +399,7 @@ entities:
     PORT: OSCAMO2
     ID: Basler-scA640-74gm-21290841
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: OSCAMO2.PVA
@@ -397,7 +407,7 @@ entities:
     P: "SPARC:CAM:OSCAMO2"
     R: ":Pva1:"
     NDARRAY_PORT: OSCAMO2
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:OSCAMO2"
@@ -407,14 +417,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: OSCAMO2.TIFF
     NDARRAY_PORT: OSCAMO2
     P: "SPARC:CAM:OSCAMO2:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -428,6 +438,7 @@ entities:
     PORT: OSCAMO1
     ID: Basler-scA640-74gm-21751350
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: OSCAMO1.PVA
@@ -435,7 +446,7 @@ entities:
     P: "SPARC:CAM:OSCAMO1"
     R: ":Pva1:"
     NDARRAY_PORT: OSCAMO1
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:OSCAMO1"
@@ -445,14 +456,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: OSCAMO1.TIFF
     NDARRAY_PORT: OSCAMO1
     P: "SPARC:CAM:OSCAMO1:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
@@ -466,6 +477,7 @@ entities:
     PORT: AC3CAM01
     ID: Basler-scA640-74gm-21751352
     CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
     PORT: AC3CAM01.PVA
@@ -473,7 +485,7 @@ entities:
     P: "SPARC:CAM:AC3CAM01"
     R: ":Pva1:"
     NDARRAY_PORT: AC3CAM01
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDStdArrays
     P: "SPARC:CAM:AC3CAM01"
@@ -483,14 +495,14 @@ entities:
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
-    ENABLED: 0
+    ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: AC3CAM01.TIFF
     NDARRAY_PORT: AC3CAM01
     P: "SPARC:CAM:AC3CAM01:"
     R: "TIFF1:"
-    ENABLED: 0
+    ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
