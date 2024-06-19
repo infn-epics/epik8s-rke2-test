@@ -1,4 +1,10 @@
-- type: ADAravis.aravisCamera
+# yaml-language-server: $schema=../schemas/ibek.support.schema.json
+
+ioc_name: __IOC_NAME__
+description: Sparc cameras
+
+entities:
+  - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
   R: "TestEpics:"
   PORT: TestEpics
@@ -29,6 +35,12 @@
   P: "SPARC:CAM:TestEpics:"
   R: "TIFF1:"
   ENABLED: 1
+
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:TestEpics:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:TestEpics:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:TestEpics:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
@@ -62,6 +74,12 @@
   R: "TIFF1:"
   ENABLED: 1
 
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:AC1CAMO1:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:AC1CAMO1:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:AC1CAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
   R: "THVCAMO1:"
@@ -93,6 +111,12 @@
   P: "SPARC:CAM:THVCAMO1:"
   R: "TIFF1:"
   ENABLED: 1
+
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:THVCAMO1:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:THVCAMO1:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:THVCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
@@ -126,6 +150,12 @@
   R: "TIFF1:"
   ENABLED: 1
 
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:UTLCAMO1:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:UTLCAMO1:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:UTLCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
   R: "PLVCAMO2:"
@@ -157,6 +187,12 @@
   P: "SPARC:CAM:PLVCAMO2:"
   R: "TIFF1:"
   ENABLED: 1
+
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:PLVCAMO2:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:PLVCAMO2:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:PLVCAMO2:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
@@ -190,6 +226,12 @@
   R: "TIFF1:"
   ENABLED: 1
 
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:AC2CAM01:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:AC2CAM01:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:AC2CAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
   R: "DGLCAMO0:"
@@ -221,6 +263,12 @@
   P: "SPARC:CAM:DGLCAMO0:"
   R: "TIFF1:"
   ENABLED: 1
+
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:DGLCAMO0:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:DGLCAMO0:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:DGLCAMO0:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
@@ -254,6 +302,12 @@
   R: "TIFF1:"
   ENABLED: 1
 
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:GUNCAMO1:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:GUNCAMO1:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:GUNCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
   R: "PLVCAMO1:"
@@ -285,6 +339,12 @@
   P: "SPARC:CAM:PLVCAMO1:"
   R: "TIFF1:"
   ENABLED: 1
+
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:PLVCAMO1:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:PLVCAMO1:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:PLVCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
@@ -318,6 +378,12 @@
   R: "TIFF1:"
   ENABLED: 1
 
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:UTLCAMO2:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:UTLCAMO2:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:UTLCAMO2:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
   R: "OSCAMO2:"
@@ -349,6 +415,12 @@
   P: "SPARC:CAM:OSCAMO2:"
   R: "TIFF1:"
   ENABLED: 1
+
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:OSCAMO2:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:OSCAMO2:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:OSCAMO2:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
@@ -382,6 +454,12 @@
   R: "TIFF1:"
   ENABLED: 1
 
+- type: epics.PostStartupCommand
+  command: |
+    dbpf("SPARC:CAM:OSCAMO1:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:OSCAMO1:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:OSCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
 - type: ADAravis.aravisCamera
   P: "SPARC:CAM:"
   R: "AC3CAM01:"
@@ -413,3 +491,11 @@
   P: "SPARC:CAM:AC3CAM01:"
   R: "TIFF1:"
   ENABLED: 1
+
+- type: epics.PostStartupCommand
+  command: |
+    dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
+    dbpf("SPARC:CAM:AC3CAM01:TIFF1:FilePath", "__DATA_DIR__")
+    dbpf("SPARC:CAM:AC3CAM01:TIFF1:FileWriteMode",2)
+    dbpf("SPARC:CAM:AC3CAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
