@@ -8,8 +8,8 @@ entities:
     P: "SPARC:CAM:"
     R: "TestEpics:"
     PORT: TestEpics
-    ID: Basler-scA640-70gm-40204275
-    CLASS: Basler-scA640-70gm
+    ID: Basler-a2A1920-51gcBAS-40204275
+    CLASS: Basler-a2A2600-20gmBAS
 
   - type: ADCore.NDPvaPlugin
     PORT: TestEpics.PVA
