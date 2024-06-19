@@ -44,159 +44,159 @@ entities:
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "AC1CAMO1:"
-    PORT: AC1CAMO1
+    R: "AC1CAM01:"
+    PORT: AC1CAM01
     ID: Basler-scA640-70gm-21273723
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: AC1CAMO1.PVA
-    PVNAME: "SPARC:CAM:AC1CAMO1:PVA:OUTPUT"
-    P: "SPARC:CAM:AC1CAMO1"
+    PORT: AC1CAM01.PVA
+    PVNAME: "SPARC:CAM:AC1CAM01:PVA:OUTPUT"
+    P: "SPARC:CAM:AC1CAM01"
     R: ":Pva1:"
-    NDARRAY_PORT: AC1CAMO1
+    NDARRAY_PORT: AC1CAM01
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:AC1CAMO1"
+    P: "SPARC:CAM:AC1CAM01"
     R: ":image1:"
-    PORT: AC1CAMO1.NTD
-    NDARRAY_PORT: AC1CAMO1
+    PORT: AC1CAM01.NTD
+    NDARRAY_PORT: AC1CAM01
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: AC1CAMO1.TIFF
-    NDARRAY_PORT: AC1CAMO1
-    P: "SPARC:CAM:AC1CAMO1:"
+    PORT: AC1CAM01.TIFF
+    NDARRAY_PORT: AC1CAM01
+    P: "SPARC:CAM:AC1CAM01:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:AC1CAMO1:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:AC1CAMO1:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:AC1CAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:AC1CAM01:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:AC1CAM01:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:AC1CAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "THVCAMO1:"
-    PORT: THVCAMO1
+    R: "THVCAM01:"
+    PORT: THVCAM01
     ID: Basler-scA640-70gm-21290809
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: THVCAMO1.PVA
-    PVNAME: "SPARC:CAM:THVCAMO1:PVA:OUTPUT"
-    P: "SPARC:CAM:THVCAMO1"
+    PORT: THVCAM01.PVA
+    PVNAME: "SPARC:CAM:THVCAM01:PVA:OUTPUT"
+    P: "SPARC:CAM:THVCAM01"
     R: ":Pva1:"
-    NDARRAY_PORT: THVCAMO1
+    NDARRAY_PORT: THVCAM01
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:THVCAMO1"
+    P: "SPARC:CAM:THVCAM01"
     R: ":image1:"
-    PORT: THVCAMO1.NTD
-    NDARRAY_PORT: THVCAMO1
+    PORT: THVCAM01.NTD
+    NDARRAY_PORT: THVCAM01
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: THVCAMO1.TIFF
-    NDARRAY_PORT: THVCAMO1
-    P: "SPARC:CAM:THVCAMO1:"
+    PORT: THVCAM01.TIFF
+    NDARRAY_PORT: THVCAM01
+    P: "SPARC:CAM:THVCAM01:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:THVCAMO1:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:THVCAMO1:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:THVCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:THVCAM01:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:THVCAM01:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:THVCAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "UTLCAMO1:"
-    PORT: UTLCAMO1
+    R: "UTLCAM01:"
+    PORT: UTLCAM01
     ID: Basler-scA640-70gm-21732890
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: UTLCAMO1.PVA
-    PVNAME: "SPARC:CAM:UTLCAMO1:PVA:OUTPUT"
-    P: "SPARC:CAM:UTLCAMO1"
+    PORT: UTLCAM01.PVA
+    PVNAME: "SPARC:CAM:UTLCAM01:PVA:OUTPUT"
+    P: "SPARC:CAM:UTLCAM01"
     R: ":Pva1:"
-    NDARRAY_PORT: UTLCAMO1
+    NDARRAY_PORT: UTLCAM01
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:UTLCAMO1"
+    P: "SPARC:CAM:UTLCAM01"
     R: ":image1:"
-    PORT: UTLCAMO1.NTD
-    NDARRAY_PORT: UTLCAMO1
+    PORT: UTLCAM01.NTD
+    NDARRAY_PORT: UTLCAM01
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: UTLCAMO1.TIFF
-    NDARRAY_PORT: UTLCAMO1
-    P: "SPARC:CAM:UTLCAMO1:"
+    PORT: UTLCAM01.TIFF
+    NDARRAY_PORT: UTLCAM01
+    P: "SPARC:CAM:UTLCAM01:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:UTLCAMO1:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:UTLCAMO1:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:UTLCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:UTLCAM01:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:UTLCAM01:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:UTLCAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "PLVCAMO2:"
-    PORT: PLVCAMO2
+    R: "PLVCAM02:"
+    PORT: PLVCAM02
     ID: Basler-scA640-70gm-21732894
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: PLVCAMO2.PVA
-    PVNAME: "SPARC:CAM:PLVCAMO2:PVA:OUTPUT"
-    P: "SPARC:CAM:PLVCAMO2"
+    PORT: PLVCAM02.PVA
+    PVNAME: "SPARC:CAM:PLVCAM02:PVA:OUTPUT"
+    P: "SPARC:CAM:PLVCAM02"
     R: ":Pva1:"
-    NDARRAY_PORT: PLVCAMO2
+    NDARRAY_PORT: PLVCAM02
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:PLVCAMO2"
+    P: "SPARC:CAM:PLVCAM02"
     R: ":image1:"
-    PORT: PLVCAMO2.NTD
-    NDARRAY_PORT: PLVCAMO2
+    PORT: PLVCAM02.NTD
+    NDARRAY_PORT: PLVCAM02
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: PLVCAMO2.TIFF
-    NDARRAY_PORT: PLVCAMO2
-    P: "SPARC:CAM:PLVCAMO2:"
+    PORT: PLVCAM02.TIFF
+    NDARRAY_PORT: PLVCAM02
+    P: "SPARC:CAM:PLVCAM02:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:PLVCAMO2:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:PLVCAMO2:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:PLVCAMO2:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:PLVCAM02:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:PLVCAM02:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:PLVCAM02:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
@@ -239,237 +239,237 @@ entities:
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "DGLCAMO0:"
-    PORT: DGLCAMO0
+    R: "DGLCAM00:"
+    PORT: DGLCAM00
     ID: Basler-scA640-70gm-23665716
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: DGLCAMO0.PVA
-    PVNAME: "SPARC:CAM:DGLCAMO0:PVA:OUTPUT"
-    P: "SPARC:CAM:DGLCAMO0"
+    PORT: DGLCAM00.PVA
+    PVNAME: "SPARC:CAM:DGLCAM00:PVA:OUTPUT"
+    P: "SPARC:CAM:DGLCAM00"
     R: ":Pva1:"
-    NDARRAY_PORT: DGLCAMO0
+    NDARRAY_PORT: DGLCAM00
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:DGLCAMO0"
+    P: "SPARC:CAM:DGLCAM00"
     R: ":image1:"
-    PORT: DGLCAMO0.NTD
-    NDARRAY_PORT: DGLCAMO0
+    PORT: DGLCAM00.NTD
+    NDARRAY_PORT: DGLCAM00
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: DGLCAMO0.TIFF
-    NDARRAY_PORT: DGLCAMO0
-    P: "SPARC:CAM:DGLCAMO0:"
+    PORT: DGLCAM00.TIFF
+    NDARRAY_PORT: DGLCAM00
+    P: "SPARC:CAM:DGLCAM00:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:DGLCAMO0:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:DGLCAMO0:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:DGLCAMO0:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:DGLCAM00:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:DGLCAM00:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:DGLCAM00:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "GUNCAMO1:"
-    PORT: GUNCAMO1
+    R: "GUNCAM01:"
+    PORT: GUNCAM01
     ID: Basler-scA640-70gm-23665718
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: GUNCAMO1.PVA
-    PVNAME: "SPARC:CAM:GUNCAMO1:PVA:OUTPUT"
-    P: "SPARC:CAM:GUNCAMO1"
+    PORT: GUNCAM01.PVA
+    PVNAME: "SPARC:CAM:GUNCAM01:PVA:OUTPUT"
+    P: "SPARC:CAM:GUNCAM01"
     R: ":Pva1:"
-    NDARRAY_PORT: GUNCAMO1
+    NDARRAY_PORT: GUNCAM01
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:GUNCAMO1"
+    P: "SPARC:CAM:GUNCAM01"
     R: ":image1:"
-    PORT: GUNCAMO1.NTD
-    NDARRAY_PORT: GUNCAMO1
+    PORT: GUNCAM01.NTD
+    NDARRAY_PORT: GUNCAM01
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: GUNCAMO1.TIFF
-    NDARRAY_PORT: GUNCAMO1
-    P: "SPARC:CAM:GUNCAMO1:"
+    PORT: GUNCAM01.TIFF
+    NDARRAY_PORT: GUNCAM01
+    P: "SPARC:CAM:GUNCAM01:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:GUNCAMO1:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:GUNCAMO1:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:GUNCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:GUNCAM01:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:GUNCAM01:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:GUNCAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "PLVCAMO1:"
-    PORT: PLVCAMO1
+    R: "PLVCAM01:"
+    PORT: PLVCAM01
     ID: Basler-scA640-74gm-21002010
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: PLVCAMO1.PVA
-    PVNAME: "SPARC:CAM:PLVCAMO1:PVA:OUTPUT"
-    P: "SPARC:CAM:PLVCAMO1"
+    PORT: PLVCAM01.PVA
+    PVNAME: "SPARC:CAM:PLVCAM01:PVA:OUTPUT"
+    P: "SPARC:CAM:PLVCAM01"
     R: ":Pva1:"
-    NDARRAY_PORT: PLVCAMO1
+    NDARRAY_PORT: PLVCAM01
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:PLVCAMO1"
+    P: "SPARC:CAM:PLVCAM01"
     R: ":image1:"
-    PORT: PLVCAMO1.NTD
-    NDARRAY_PORT: PLVCAMO1
+    PORT: PLVCAM01.NTD
+    NDARRAY_PORT: PLVCAM01
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: PLVCAMO1.TIFF
-    NDARRAY_PORT: PLVCAMO1
-    P: "SPARC:CAM:PLVCAMO1:"
+    PORT: PLVCAM01.TIFF
+    NDARRAY_PORT: PLVCAM01
+    P: "SPARC:CAM:PLVCAM01:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:PLVCAMO1:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:PLVCAMO1:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:PLVCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:PLVCAM01:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:PLVCAM01:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:PLVCAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "UTLCAMO2:"
-    PORT: UTLCAMO2
+    R: "UTLCAM02:"
+    PORT: UTLCAM02
     ID: Basler-scA640-74gm-21290828
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: UTLCAMO2.PVA
-    PVNAME: "SPARC:CAM:UTLCAMO2:PVA:OUTPUT"
-    P: "SPARC:CAM:UTLCAMO2"
+    PORT: UTLCAM02.PVA
+    PVNAME: "SPARC:CAM:UTLCAM02:PVA:OUTPUT"
+    P: "SPARC:CAM:UTLCAM02"
     R: ":Pva1:"
-    NDARRAY_PORT: UTLCAMO2
+    NDARRAY_PORT: UTLCAM02
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:UTLCAMO2"
+    P: "SPARC:CAM:UTLCAM02"
     R: ":image1:"
-    PORT: UTLCAMO2.NTD
-    NDARRAY_PORT: UTLCAMO2
+    PORT: UTLCAM02.NTD
+    NDARRAY_PORT: UTLCAM02
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: UTLCAMO2.TIFF
-    NDARRAY_PORT: UTLCAMO2
-    P: "SPARC:CAM:UTLCAMO2:"
+    PORT: UTLCAM02.TIFF
+    NDARRAY_PORT: UTLCAM02
+    P: "SPARC:CAM:UTLCAM02:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:UTLCAMO2:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:UTLCAMO2:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:UTLCAMO2:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:UTLCAM02:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:UTLCAM02:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:UTLCAM02:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "OSCAMO2:"
-    PORT: OSCAMO2
+    R: "OSCAM02:"
+    PORT: OSCAM02
     ID: Basler-scA640-74gm-21290841
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: OSCAMO2.PVA
-    PVNAME: "SPARC:CAM:OSCAMO2:PVA:OUTPUT"
-    P: "SPARC:CAM:OSCAMO2"
+    PORT: OSCAM02.PVA
+    PVNAME: "SPARC:CAM:OSCAM02:PVA:OUTPUT"
+    P: "SPARC:CAM:OSCAM02"
     R: ":Pva1:"
-    NDARRAY_PORT: OSCAMO2
+    NDARRAY_PORT: OSCAM02
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:OSCAMO2"
+    P: "SPARC:CAM:OSCAM02"
     R: ":image1:"
-    PORT: OSCAMO2.NTD
-    NDARRAY_PORT: OSCAMO2
+    PORT: OSCAM02.NTD
+    NDARRAY_PORT: OSCAM02
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: OSCAMO2.TIFF
-    NDARRAY_PORT: OSCAMO2
-    P: "SPARC:CAM:OSCAMO2:"
+    PORT: OSCAM02.TIFF
+    NDARRAY_PORT: OSCAM02
+    P: "SPARC:CAM:OSCAM02:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:OSCAMO2:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:OSCAMO2:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:OSCAMO2:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:OSCAM02:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:OSCAM02:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:OSCAM02:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "OSCAMO1:"
-    PORT: OSCAMO1
+    R: "OSCAM01:"
+    PORT: OSCAM01
     ID: Basler-scA640-74gm-21751350
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: OSCAMO1.PVA
-    PVNAME: "SPARC:CAM:OSCAMO1:PVA:OUTPUT"
-    P: "SPARC:CAM:OSCAMO1"
+    PORT: OSCAM01.PVA
+    PVNAME: "SPARC:CAM:OSCAM01:PVA:OUTPUT"
+    P: "SPARC:CAM:OSCAM01"
     R: ":Pva1:"
-    NDARRAY_PORT: OSCAMO1
+    NDARRAY_PORT: OSCAM01
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:OSCAMO1"
+    P: "SPARC:CAM:OSCAM01"
     R: ":image1:"
-    PORT: OSCAMO1.NTD
-    NDARRAY_PORT: OSCAMO1
+    PORT: OSCAM01.NTD
+    NDARRAY_PORT: OSCAM01
     TYPE: "Int16"
     FTVL: USHORT
     NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: OSCAMO1.TIFF
-    NDARRAY_PORT: OSCAMO1
-    P: "SPARC:CAM:OSCAMO1:"
+    PORT: OSCAM01.TIFF
+    NDARRAY_PORT: OSCAM01
+    P: "SPARC:CAM:OSCAM01:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:OSCAMO1:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:OSCAMO1:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:OSCAMO1:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:OSCAM01:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:OSCAM01:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:OSCAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
