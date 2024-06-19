@@ -4,43 +4,43 @@ ioc_name: __IOC_NAME__
 description: Sparc cameras
 
 entities:
-  # - type: ADAravis.aravisCamera
-  #   P: "SPARC:CAM:"
-  #   R: "TestEpics:"
-  #   PORT: TestEpics
-  #   ID: Basler-a2A1920-51gcBAS-40204275
-  #   CLASS: Basler-a2A2600-20gmBAS
+  - type: ADAravis.aravisCamera
+    P: "SPARC:CAM:"
+    R: "TestEpics:"
+    PORT: TestEpics
+    ID: Basler-a2A1920-51gcBAS-40204275
+    CLASS: Basler-a2A2600-20gmBAS
 
-  # - type: ADCore.NDPvaPlugin
-  #   PORT: TestEpics.PVA
-  #   PVNAME: "SPARC:CAM:TestEpics:PVA:OUTPUT"
-  #   P: "SPARC:CAM:TestEpics"
-  #   R: ":Pva1:"
-  #   NDARRAY_PORT: TestEpics
-  #   ENABLED: 1
+  - type: ADCore.NDPvaPlugin
+    PORT: TestEpics.PVA
+    PVNAME: "SPARC:CAM:TestEpics:PVA:OUTPUT"
+    P: "SPARC:CAM:TestEpics"
+    R: ":Pva1:"
+    NDARRAY_PORT: TestEpics
+    ENABLED: 1
 
-  # - type: ADCore.NDStdArrays
-  #   P: "SPARC:CAM:TestEpics"
-  #   R: ":image1:"
-  #   PORT: TestEpics.NTD
-  #   NDARRAY_PORT: TestEpics
-  #   TYPE: "Int16"
-  #   FTVL: USHORT
-  #   NELEMENTS: 325546
-  #   ENABLED: 1
+  - type: ADCore.NDStdArrays
+    P: "SPARC:CAM:TestEpics"
+    R: ":image1:"
+    PORT: TestEpics.NTD
+    NDARRAY_PORT: TestEpics
+    TYPE: "Int16"
+    FTVL: USHORT
+    NELEMENTS: 325546
+    ENABLED: 1
 
-  # - type: ADCore.NDFileTIFF
-  #   PORT: TestEpics.TIFF
-  #   NDARRAY_PORT: TestEpics
-  #   P: "SPARC:CAM:TestEpics:"
-  #   R: "TIFF1:"
-  #   ENABLED: 1
+  - type: ADCore.NDFileTIFF
+    PORT: TestEpics.TIFF
+    NDARRAY_PORT: TestEpics
+    P: "SPARC:CAM:TestEpics:"
+    R: "TIFF1:"
+    ENABLED: 1
 
-  # - type: epics.PostStartupCommand
-  #   command: |
-  #     dbpf("SPARC:CAM:TestEpics:TIFF1:FilePath", "__DATA_DIR__")
-  #     dbpf("SPARC:CAM:TestEpics:TIFF1:FileWriteMode",2)
-  #     dbpf("SPARC:CAM:TestEpics:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+  - type: epics.PostStartupCommand
+    command: |
+      dbpf("SPARC:CAM:TestEpics:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:TestEpics:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:TestEpics:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
