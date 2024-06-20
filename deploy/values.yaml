@@ -206,7 +206,6 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
       usegateway: false
-      targetRevision: nfs-mounts
       
     
     - name: "klyloop-s1"
@@ -277,8 +276,6 @@ epicsConfiguration:
       exec: "start.sh"
       autosync: true ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
-      targetRevision: nfs-mounts
-
 
     - name: "bdsparcac2bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -647,7 +644,6 @@ epicsConfiguration:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       # args: "-p 5064:5064/udp -p 5064:5064/tcp -p 5065:5065/udp -p 5065:5065/tcp -p 5075:5075/tcp  -p 5076:5076/udp -it -v .:/epics/ioc/config --network host"
-      targetRevision: nfs-mounts
 
     - name: "sparccam"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -659,7 +655,6 @@ epicsConfiguration:
       docker:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
-      targetRevision: nfs-mounts
 
 applications:
     - name: "flame-state-import"
