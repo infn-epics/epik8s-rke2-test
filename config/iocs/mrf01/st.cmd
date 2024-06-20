@@ -3,7 +3,7 @@
 ## Register all support components
 dbLoadDatabase("../../dbd/mrf.dbd")
 mrf_registerRecordDeviceDriver(pdbbase)
-epicsEnvSet("AUTOSAVE", "/mnt/autosave/mtca01")
+epicsEnvSet("AUTOSAVE", __AUTOSAVE_DIR__)
 
 
 epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES","10000000")
