@@ -34,4 +34,4 @@ dbLoadTemplate("libera.substitutions")
 
 cd ${TOP}
 iocInit()
-dbl > ${CONFIG}/pvlist.txt
+dbl("*") > __CONFIG_DIR__/pvlist.txt
