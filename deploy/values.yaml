@@ -64,10 +64,10 @@ epicsConfiguration:
       resources:
             limits:
               cpu: 999m
-              memory: 2Gi
+              memory: 4Gi
             requests:
               cpu: 400m
-              memory: 500Mi
+              memory: 1Gi
       
     archiver: 
       name: "archiver"
