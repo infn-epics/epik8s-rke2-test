@@ -509,7 +509,6 @@ entities:
       dbpf("SPARC:CAM:AC3CAM01:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("SPARC:CAM:AC3CAM01:TIFF1:FileWriteMode",2)
       dbpf("SPARC:CAM:AC3CAM01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
-      dbl
-      dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
+      dbl("*") > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
 
 

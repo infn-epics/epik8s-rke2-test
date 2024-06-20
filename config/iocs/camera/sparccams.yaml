@@ -55,7 +55,7 @@ entities:
 
   - type: epics.PostStartupCommand 
     command: |
-      dbl  > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
+      dbl("*") > __CONFIG_DIR__/pvlist.txt
       dbpf("SPARC:ACE01:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("SPARC:ACE01:TIFF1:FileWriteMode",2)
       dbpf("SPARC:ACE01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")

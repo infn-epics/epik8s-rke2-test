@@ -42,5 +42,36 @@ create_monitor_set("mrf_settings.req", 5 , "")
 create_monitor_set("mrf_values.req", 5 , "")
 create_monitor_set("mrf_waveforms.req", 30 , "")
 
-dbl > pvlist.txt
+dbl("*") > __CONFIG_DIR__/pvlist.txt
+## initializations
+
+
+    dbpf("MRF01:evg:EvtClkRFFreq-SP", "714 MHz")
+    dbpf("MRF01:evg:EvtClkRFDiv-SP", "9")
+    dbpf("MRF01:evg:EvtClkFracSynFreq-SP", "79.333 MHz")
+    dbpf("MRF01:evg:EvtClkSource-Sel", "RF")
+    dbpf("MRF01:evg:Mxc0Prescaler-SP", "79333000")
+    dbpf("MRF01:evg:Mxc7Prescaler-SP", "79333")
+    dbpf("MRF01:evg:TrigEvt0EvtCode-SP", "1")
+    dbpf("MRF01:evg:TrigEvt1EvtCode-SP", "2")
+    dbpf("MRF01:evg:TrigEvt2EvtCode-SP", "3")
+    dbpf("MRF01:evg:AcTrigDivider-SP", "5")
+    dbpf("MRF01:evg:AcTrigPhase-SP", "0 msec")
+    dbpf("MRF01:evg:AcTrigBypass-Sel", "Off")
+    dbpf("MRF01:evg:AcTrigSyncSrc-Sel", "Mxc7")
+    dbpf("MRF01:evr:LinkClk-SP", "79.333 MHz")
+    dbpf("MRF01:evr:DlyGen0Width-SP", "1 us")
+    dbpf("MRF01:evr:DlyGen0EvtTrig0-SP", "1")
+    dbpf("MRF01:evr:DlyGen1Delay-SP", "50000 us")
+    dbpf("MRF01:evr:DlyGen1Width-SP", "1 us")
+    dbpf("MRF01:evr:DlyGen1EvtTrig0-SP", "3")
+    dbpf("MRF01:evr1:LinkClk-SP", "79.333 MHz")
+    dbpf("MRF01:evr1:DlyGen0Width-SP", "1 us")
+    dbpf("MRF01:evr1:DlyGen1Width-SP", "3 us")
+    dbpf("MRF01:evr1:DlyGen0EvtTrig0-SP", "17")
+    dbpf("MRF01:evr1:DlyGen1EvtTrig0-SP", "2")
+    dbpf("MRF01:evr1:In1Lvl-Sel", "Active High")
+    dbpf("MRF01:evr1:In0Edge-Sel", "Active Rising")
+    dbpf("MRF01:evr1:In0TrigExt-Sel", "Edge")
+    dbpf("MRF01:evr1:In0CodeExt-SP", "17")
 # end

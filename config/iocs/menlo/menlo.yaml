@@ -30,5 +30,4 @@ entities:
 
   - type: epics.PostStartupCommand 
     command: |
-          dbl()
-          dbl() > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
+          dbl("*") > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES

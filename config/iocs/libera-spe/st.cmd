@@ -105,6 +105,6 @@ asynSetTraceIOMask("libera-platform", 0, 0)
 # -------------------------------- FOOTER -------------------------------------
 
 # Save list of PVs to a file
-dbl > pvlist.txt
 
 iocInit()
+dbl("*") > __CONFIG_DIR__/pvlist.txt
