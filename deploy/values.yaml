@@ -170,7 +170,15 @@ epicsConfiguration:
       auto_security: true
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
-
+      aa:
+        urls: "{'default': 'http://sparc-archiver.apps.okd-datest.lnf.infn.it'}"
+        default_alias: default
+        enabled: true
+        pva: false
+        archive_property_name: archive
+        archiver_property_name: archiver
+        auto_pause: pvStatus,archive
+        
     scanserver: 
       name: "scanserver"
       loglevel: DEBUG
