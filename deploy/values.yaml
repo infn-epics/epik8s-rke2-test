@@ -144,6 +144,8 @@ epicsConfiguration:
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
       autosync: true ## restart automatically on changes
+      service:
+        loglevel: "DEBUG"
 
     saveandrestore: 
       name: "saveandrestore"
@@ -154,6 +156,8 @@ epicsConfiguration:
       enable_ingress: true
       mongodb: "sparc-saveandrestore"
       autosync: true ## restart automatically on changes
+      service:
+        loglevel: "DEBUG"
     # alarmserver: 
     #   name: "alarmserver"
     #   loglevel: DEBUG
