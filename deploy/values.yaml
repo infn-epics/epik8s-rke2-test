@@ -670,7 +670,7 @@ epicsConfiguration:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
 cronjobs:
-    - name: "channelInfo"
+    - name: "chfeeder"
       image: baltig.infn.it:4567/epics-containers/epics-py-base
       schedule: "0 */12 * * *" ## at 12
       gitRepoApp:
