@@ -669,7 +669,17 @@ epicsConfiguration:
       docker:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
-
+cronjobs:
+    - name: "channelInfo"
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      schedule: "0 */12 * * *" ## at 12
+      gitRepoApp:
+        url: "https://infn-epics/channelfinder-service-feeder.git"
+        path: .
+        branch: main
+      gitinit: true
+      exec: "start.sh"
+      
 applications:
     - name: "flame-state-import"
       image:
