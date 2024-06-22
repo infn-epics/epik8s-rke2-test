@@ -677,8 +677,9 @@ cronjobs:
         url: "https://infn-epics/channelfinder-service-feeder.git"
         path: .
         branch: main
+        exec: "start.sh"
       gitinit: true
-      exec: "start.sh"
+      
       
 applications:
     - name: "flame-state-import"
