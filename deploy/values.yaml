@@ -152,7 +152,7 @@ epicsConfiguration:
       phoebusservice: "saveandrestore"
       auto_security: true
       enable_ingress: true
-      mongodb: "sparc-ologAttachments"
+      mongodb: "sparc-saveandrestore"
       autosync: true ## restart automatically on changes
     # alarmserver: 
     #   name: "alarmserver"
@@ -171,7 +171,7 @@ epicsConfiguration:
       charturl: https://baltig.infn.it/epics-containers/channelfinder-chart.git
       auto_security: true
       enable_ingress: true
-      mongodb: "sparc-ologAttachments"
+      mongodb: "sparc-channelfinder"
       aa:
         urls: "{'default': 'http://sparc-archiver.apps.okd-datest.lnf.infn.it'}"
         default_alias: default
