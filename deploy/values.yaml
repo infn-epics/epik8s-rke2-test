@@ -145,7 +145,7 @@ epicsConfiguration:
       mongodb: "sparc-ologAttachments"
       autosync: true ## restart automatically on changes
       service:
-        loglevel: "DEBUG"
+        loglevel: "INFO"
 
     saveandrestore: 
       name: "saveandrestore"
