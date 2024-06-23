@@ -677,7 +677,6 @@ cronjobs:
         url: "https://baltig.infn.it/infn-epics/channelfinder-service-feeder.git"
         path: .
         branch: main
-        exec: "start.sh"
       gitinit: true
       
 applications:
