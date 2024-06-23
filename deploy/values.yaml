@@ -672,7 +672,7 @@ epicsConfiguration:
 cronjobs:
     - name: "chfeeder"
       image: baltig.infn.it:4567/epics-containers/epics-py-base
-      schedule: "*/5 * * * *" # every 5 min ## "0 */12 * * *" ## at 12
+      schedule: "* */12 * * *" # every 5 min ## "0 */12 * * *" ## at 12
       gitRepoApp:
         url: "https://baltig.infn.it/infn-epics/channelfinder-service-feeder.git"
         path: .
