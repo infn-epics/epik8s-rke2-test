@@ -237,7 +237,7 @@ epicsConfiguration:
       devgroup: rf
       start: "/epics/ioc/config/start.sh"
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       usegateway: false
     
     - name: "lasersynch-01"
@@ -257,7 +257,7 @@ epicsConfiguration:
       devgroup: rf
       start: "/epics/ioc/config/start.sh"
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       usegateway: false
 
     - name: "flags-ch1"
