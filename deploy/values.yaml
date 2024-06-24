@@ -240,6 +240,26 @@ epicsConfiguration:
       autosync: true ## restart automatically on changes
       usegateway: false
     
+    - name: "lasersynch-01"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:RF:SYNCH:VITARA01"
+      iocdir: "lasersynch"
+      iocparam:
+        - name: "__RP_PREFIX__"
+          value: "SR00RPA03"
+        - name: "__VITARA1_PREFIX__"
+          value: "SPARC:MOT:VITARA01"
+        - name: "__LASER_AMP_PV__"
+          value: "SPARC:LLRF2:ad1:ch2:amp_average_s.AVERAGE"
+      devtype: softioc
+      devgroup: rf
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+      autosync: true ## restart automatically on changes
+      usegateway: false
+
     - name: "flags-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
