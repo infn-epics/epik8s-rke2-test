@@ -678,6 +678,17 @@ epicsConfiguration:
       workdir: "sparc"
       exec: "start.sh"
 
+    - name: "rdsparcpitaia004"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocdir: "pitaya"
+      devtype: daq
+      devgroup: rf
+      iocprefix: "SR00RPA04"
+      host: "rdsparcpitaya004.lnf.infn.it"
+      workdir: "sparc"
+      exec: "start.sh"
+
     - name: "camera"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
