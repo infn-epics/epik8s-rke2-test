@@ -794,12 +794,15 @@ nfsMounts:
       server: 192.168.197.157
       path: /data_epik8s/data
       mountPath: /nfs/data
+      opt: "-o nolock"
     - name: autosave
       server: 192.168.197.157
       path: /data_epik8s/autosave
       mountPath: /nfs/autosave
+      opt: "-o nolock"
     - name: config
       server: 192.168.197.157
       path: /data_epik8s/config
       mountPath: /nfs/config
+      opt: "-o nolock"
     
