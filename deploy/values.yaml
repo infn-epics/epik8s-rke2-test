@@ -98,7 +98,8 @@ epicsConfiguration:
             requests:
               cpu: 100m
               memory: 4Gi
-
+      autosync: true ## restart automatically on changes
+      
     console: 
         name: "console"
         replicaCount: 1
