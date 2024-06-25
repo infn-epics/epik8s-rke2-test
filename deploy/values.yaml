@@ -653,6 +653,9 @@ epicsConfiguration:
       devtype: daq
       devgroup: rf
       iocprefix: "SR00RPA01"
+      iocparam:
+        - name: "__ACQ_TRIGGER_SRC_CMD__"
+          value: "EXT_PE"
       host: "rdsparcpitaya001.lnf.infn.it"
       workdir: "sparc"
       exec: "start.sh"
@@ -663,6 +666,9 @@ epicsConfiguration:
       iocdir: "pitaya"
       devgroup: rf
       iocprefix: "SR00RPA02"
+      iocparam:
+        - name: "__ACQ_TRIGGER_SRC_CMD__"
+          value: "EXT_PE"
       host: "rdsparcpitaya002.lnf.infn.it"
       workdir: "sparc"
       exec: "start.sh"
@@ -674,6 +680,9 @@ epicsConfiguration:
       devtype: daq
       devgroup: rf
       iocprefix: "SR00RPA03"
+      iocparam:
+        - name: "__ACQ_TRIGGER_SRC_CMD__"
+          value: "EXT_PE"
       host: "rdsparcpitaya003.lnf.infn.it"
       workdir: "sparc"
       exec: "start.sh"
@@ -685,6 +694,9 @@ epicsConfiguration:
       devtype: daq
       devgroup: rf
       iocprefix: "SR00RPA04"
+      iocparam:
+        - name: "__ACQ_TRIGGER_SRC_CMD__"
+          value: "EXT_PE"
       host: "rdsparcpitaya004.lnf.infn.it"
       workdir: "sparc"
       exec: "start.sh"
