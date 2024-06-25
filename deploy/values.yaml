@@ -94,10 +94,10 @@ epicsConfiguration:
       resources:
             limits:
               cpu: 999m
-              memory: 3Gi
+              memory: 6Gi
             requests:
               cpu: 100m
-              memory: 2Gi
+              memory: 4Gi
 
     console: 
         name: "console"
