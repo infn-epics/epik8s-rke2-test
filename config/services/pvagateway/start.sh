@@ -20,7 +20,7 @@ JSON_CONTENT=$(cat <<EOF
         {
             "name": "$SERVER_NAME",
             "clients": ["$CLIENT_NAME"],
-            "addrlist": "plsparcgige001.lnf.infn.it:5175",
+            "addrlist": "",
             "autoaddrlist": false,
             "statusprefix": "GW:STS:"
         }

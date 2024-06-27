@@ -24,7 +24,7 @@ entities:
     NDARRAY_PORT: TestEpics
     TYPE: "Int16"
     FTVL: USHORT
-    NELEMENTS: 325546
+    NELEMENTS: 5616000
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
