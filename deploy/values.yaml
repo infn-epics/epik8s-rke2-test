@@ -724,6 +724,21 @@ epicsConfiguration:
       docker:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
+    
+    - name: "sparccam2"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      host: "plsparcgige001.lnf.infn.it"
+      ca_server_port: 5164
+      pva_server_port: 5175
+      devtype: camera
+      devgroup: test
+      docker:
+        enable: true
+        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
+      targetRevision: arg-port
+
+      
 cronjobs:
     - name: "chfeeder"
       image: baltig.infn.it:4567/epics-containers/epics-py-base
