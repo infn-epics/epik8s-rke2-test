@@ -99,7 +99,7 @@ epicsConfiguration:
               cpu: 100m
               memory: 4Gi
       autosync: true ## restart automatically on changes
-      
+
     console: 
         name: "console"
         replicaCount: 1
@@ -221,7 +221,7 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
       usegateway: false
-      
+      targetRevision: arg-port
     
     - name: "klyloop-s1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
