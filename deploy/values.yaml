@@ -169,6 +169,8 @@ epicsConfiguration:
       mongodb: "sparc-ologAttachments"
       info: |
         not working properly at the moment
+      autosync: true ## restart automatically on changes
+
     channelfinder: 
       name: "channelfinder"
       autosync: true ## restart automatically on changes
