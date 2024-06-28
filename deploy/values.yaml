@@ -160,7 +160,7 @@ epicsConfiguration:
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
       alarm:
-        config: "Accelerator-sparc"
+        config: "Accelerator"
       gitinit: true
       autosync: true ## restart automatically on changes
 
@@ -172,8 +172,8 @@ epicsConfiguration:
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
       alarm:
-        config: "Accelerator-sparc"
-        topics: "Accelerator-sparc,ALARM,CONFIGS"
+        config: "Accelerator"
+        topics: "Accelerato,ALARM,CONFIGS"
       autosync: true ## restart automatically on changes
 
     channelfinder: 
