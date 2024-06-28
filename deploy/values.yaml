@@ -159,16 +159,16 @@ epicsConfiguration:
       autosync: true ## restart automatically on changes
       service:
         loglevel: "DEBUG"
-    # alarmserver: 
-    #   name: "alarmserver"
-    #   loglevel: DEBUG
-    #   charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
-    #   phoebusservice: "alarmserver"
-    #   auto_security: true
-    #   enable_ingress: true
-    #   mongodb: "sparc-ologAttachments"
-    #   info: |
-    #     not working properly at the moment
+    alarmserver: 
+      name: "alarmserver"
+      loglevel: DEBUG
+      charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
+      phoebusservice: "alarmserver"
+      auto_security: true
+      enable_ingress: true
+      mongodb: "sparc-ologAttachments"
+      info: |
+        not working properly at the moment
     channelfinder: 
       name: "channelfinder"
       autosync: true ## restart automatically on changes
@@ -221,7 +221,6 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
       usegateway: false
-      targetRevision: arg-port
     
     - name: "klyloop-s1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -736,7 +735,6 @@ epicsConfiguration:
       docker:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
-      targetRevision: arg-port
 
       
 cronjobs:
