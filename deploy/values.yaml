@@ -167,8 +167,8 @@ epicsConfiguration:
       auto_security: true
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
-      info: |
-        not working properly at the moment
+      alarm:
+        config: "Accelerator-sparc"
       autosync: true ## restart automatically on changes
 
     channelfinder: 
