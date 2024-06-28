@@ -173,6 +173,7 @@ epicsConfiguration:
       alarm:
         config: "Accelerator-sparc"
         topics: "Accelerator-sparc,ALARM,CONFIGS"
+      gitinit: true
       autosync: true ## restart automatically on changes
 
     channelfinder: 
