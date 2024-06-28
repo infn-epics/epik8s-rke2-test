@@ -161,6 +161,7 @@ epicsConfiguration:
       mongodb: "sparc-ologAttachments"
       alarm:
         config: "Accelerator-sparc"
+      gitinit: true
       autosync: true ## restart automatically on changes
 
     alarmlogger: 
@@ -173,7 +174,6 @@ epicsConfiguration:
       alarm:
         config: "Accelerator-sparc"
         topics: "Accelerator-sparc,ALARM,CONFIGS"
-      gitinit: true
       autosync: true ## restart automatically on changes
 
     channelfinder: 
