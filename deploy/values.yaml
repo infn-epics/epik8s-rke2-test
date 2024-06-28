@@ -171,6 +171,17 @@ epicsConfiguration:
         config: "Accelerator-sparc"
       autosync: true ## restart automatically on changes
 
+    alarmlogger: 
+      loglevel: DEBUG
+      charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
+      phoebusservice: "alarmlogger"
+      auto_security: true
+      enable_ingress: true
+      mongodb: "sparc-ologAttachments"
+      alarm:
+        config: "Accelerator-sparc"
+      autosync: true ## restart automatically on changes
+
     channelfinder: 
       name: "channelfinder"
       autosync: true ## restart automatically on changes
