@@ -1,4 +1,4 @@
-<config name="GPP">
+<config name="Accelerator-sparc">
     <component name="MRF" id ="component">
         <pv name="MRF01:evg:FCTLink8-Sts">
             <enabled>true</enabled>
