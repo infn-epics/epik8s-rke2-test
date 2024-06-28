@@ -172,7 +172,7 @@ epicsConfiguration:
       mongodb: "sparc-ologAttachments"
       alarm:
         config: "Accelerator-sparc"
-        topics: Accelerator-sparc,ALARM,CONFIGS"
+        topics: "Accelerator-sparc,ALARM,CONFIGS"
       autosync: true ## restart automatically on changes
 
     channelfinder: 
