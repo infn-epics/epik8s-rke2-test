@@ -2,21 +2,30 @@
     <component name="MRF" id ="component">
         <pv name="MRF01:evg:FCTLink8-Sts">
             <enabled>true</enabled>
-            <latching>false</latching>
+            <latching>true</latching>
             <annunciating>true</annunciating>
             <description>Generator Link 8</description>
         </pv>
         <pv name="MRF01:evg:FCTLink1-Sts">
             <enabled>true</enabled>
-            <latching>false</latching>
+            <latching>true</latching>
             <annunciating>true</annunciating>
             <description>Generator Link 1</description>
         </pv>
         <pv name="MRF01:evg:FCTLink2-Sts">
             <enabled>true</enabled>
-            <latching>false</latching>
+            <latching>true</latching>
             <annunciating>true</annunciating>
             <description>Generator Link 2</description>
         </pv>
+    </component>
+    <component name="PLXSPE" id ="component">
+        <pv name="PLXSPE:icb:ID_12:name">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>BPM rotto</description>
+        </pv>
+        
     </component>
 </config>
