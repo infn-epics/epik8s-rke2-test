@@ -274,7 +274,7 @@ epicsConfiguration:
       devgroup: motor
       start: "/epics/ioc/config/start.sh"
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       usegateway: false
 
 
@@ -299,7 +299,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       scpoptions: "-O"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
 
     - name: "bdsparcac1bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -586,7 +586,7 @@ epicsConfiguration:
         ptty: /var/tmp/ttyV0
         baud: 9600
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "tml-ch1"
