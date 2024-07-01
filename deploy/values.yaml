@@ -26,7 +26,6 @@ epicsConfiguration:
   # conn_tmo: 120
   services:
     pvagateway:
-      name: "pvagateway"
       charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
       image:
         repository: baltig.infn.it:4567/epics-containers/docker-pva-gateway
@@ -50,7 +49,6 @@ epicsConfiguration:
       targetRevision: volume-template
 
     gateway:
-      name: "cagateway"
       charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
       ingress:
         enabled: false
@@ -70,7 +68,6 @@ epicsConfiguration:
               memory: 1Gi
       
     archiver: 
-      name: "archiver"
       charturl: 'https://baltig.infn.it/epics-containers/epics-archiver-chart.git'
 
       replicaCount: 1
@@ -99,9 +96,9 @@ epicsConfiguration:
               cpu: 100m
               memory: 4Gi
       autosync: true ## restart automatically on changes
+      usegateway: true
 
     console: 
-        name: "console"
         replicaCount: 1
         charturl: https://baltig.infn.it/epics-containers/epics-console-chart.git
         enable_ingress: true
@@ -118,9 +115,9 @@ epicsConfiguration:
           path: opi
           branch: master
         autosync: true ## restart automatically on changes
+        usegateway: true
 
     notebook: 
-      name: "notebook"
       charturl: 'https://baltig.infn.it/epics-containers/jupyter-control-notebook-chart.git'
       replicaCount: 1
       gitRepoConfig:
@@ -134,10 +131,9 @@ epicsConfiguration:
           accessMode: ReadWriteOnce
       auto_security: true
       enable_ingress: true
-      usegateway: false
+      usegateway: true
 
     olog: 
-      name: "olog"
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
       phoebusservice: "olog"
@@ -147,9 +143,9 @@ epicsConfiguration:
       autosync: true ## restart automatically on changes
       service:
         loglevel: "INFO"
+      usegateway: true
 
     saveandrestore: 
-      name: "saveandrestore"
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
       phoebusservice: "saveandrestore"
@@ -160,7 +156,6 @@ epicsConfiguration:
       service:
         loglevel: "DEBUG"
     alarmserver: 
-      name: "alarmserver"
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
       phoebusservice: "alarmserver"
@@ -168,8 +163,10 @@ epicsConfiguration:
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
       alarm:
-        config: "Accelerator-sparc"
+        config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
+      gitinit: true
       autosync: true ## restart automatically on changes
+      usegateway: true
 
     alarmlogger: 
       loglevel: DEBUG
@@ -179,11 +176,11 @@ epicsConfiguration:
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
       alarm:
-        config: "Accelerator-sparc"
+        config: "Accelerator"
+        topics: "Accelerato,ALARM,CONFIGS"
       autosync: true ## restart automatically on changes
 
     channelfinder: 
-      name: "channelfinder"
       autosync: true ## restart automatically on changes
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/channelfinder-chart.git
@@ -200,7 +197,6 @@ epicsConfiguration:
         auto_pause: pvStatus,archive
 
     scanserver: 
-      name: "scanserver"
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
       phoebusservice: "scanserver"
@@ -282,7 +278,7 @@ epicsConfiguration:
       devgroup: motor
       start: "/epics/ioc/config/start.sh"
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       usegateway: false
 
 
@@ -307,7 +303,7 @@ epicsConfiguration:
       workdir: "/opt/sparc"
       scpoptions: "-O"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
 
     - name: "bdsparcac1bpm001"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -594,7 +590,7 @@ epicsConfiguration:
         ptty: /var/tmp/ttyV0
         baud: 9600
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "tml-ch1"
@@ -709,7 +705,7 @@ epicsConfiguration:
       iocprefix: "SR00RPA04"
       iocparam:
         - name: "__ACQ_TRIGGER_SRC_CMD__"
-          value: "EXT_PE"
+          value: "Internal"
       host: "rdsparcpitaya004.lnf.infn.it"
       workdir: "sparc"
       exec: "start.sh"
