@@ -801,7 +801,7 @@ backend:
     clusterName: elasticsearch
     port: 9200
   kafka:
-    host: kafka-controller-headless
+    host: kafka-headless
     port: 9092
 
 syncPolicy:
