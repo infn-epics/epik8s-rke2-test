@@ -96,6 +96,7 @@ epicsConfiguration:
               cpu: 100m
               memory: 4Gi
       autosync: true ## restart automatically on changes
+      usegateway: true
 
     console: 
         replicaCount: 1
@@ -114,6 +115,7 @@ epicsConfiguration:
           path: opi
           branch: master
         autosync: true ## restart automatically on changes
+        usegateway: true
 
     notebook: 
       charturl: 'https://baltig.infn.it/epics-containers/jupyter-control-notebook-chart.git'
@@ -129,7 +131,7 @@ epicsConfiguration:
           accessMode: ReadWriteOnce
       auto_security: true
       enable_ingress: true
-      usegateway: false
+      usegateway: true
 
     olog: 
       loglevel: DEBUG
@@ -141,6 +143,7 @@ epicsConfiguration:
       autosync: true ## restart automatically on changes
       service:
         loglevel: "INFO"
+      usegateway: true
 
     saveandrestore: 
       loglevel: DEBUG
@@ -163,6 +166,7 @@ epicsConfiguration:
         config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
       gitinit: true
       autosync: true ## restart automatically on changes
+      usegateway: true
 
     alarmlogger: 
       loglevel: DEBUG
@@ -701,7 +705,7 @@ epicsConfiguration:
       iocprefix: "SR00RPA04"
       iocparam:
         - name: "__ACQ_TRIGGER_SRC_CMD__"
-          value: "EXT_PE"
+          value: "Internal"
       host: "rdsparcpitaya004.lnf.infn.it"
       workdir: "sparc"
       exec: "start.sh"
