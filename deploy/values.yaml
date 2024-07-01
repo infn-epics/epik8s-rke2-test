@@ -162,10 +162,10 @@ epicsConfiguration:
       auto_security: true
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
-      alarm:
-        config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
+      # alarm:
+      #  config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       usegateway: true
 
     alarmlogger: 
