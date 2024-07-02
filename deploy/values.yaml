@@ -257,7 +257,7 @@ epicsConfiguration:
       iocdir: "lasersynch"
       iocparam:
         - name: "__RP_PREFIX__"
-          value: "SR00RPA03"
+          value: "SR00RPA04"
         - name: "__VITARA1_PREFIX__"
           value: "SPARC:MOT:VITARA01"
         - name: "__LASER_AMP_PV__"
