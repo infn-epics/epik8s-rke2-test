@@ -705,7 +705,7 @@ epicsConfiguration:
       iocprefix: "SR00RPA04"
       iocparam:
         - name: "__ACQ_TRIGGER_SRC_CMD__"
-          value: "Internal"
+          value: "0"
       host: "rdsparcpitaya004.lnf.infn.it"
       workdir: "sparc"
       exec: "start.sh"
