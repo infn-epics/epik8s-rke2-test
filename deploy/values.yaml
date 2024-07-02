@@ -606,7 +606,7 @@ epicsConfiguration:
         ptty: /var/tmp/ttyV0
         baud: 9600
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "menlo"
