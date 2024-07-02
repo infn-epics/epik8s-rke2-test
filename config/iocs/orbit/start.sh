@@ -2,5 +2,5 @@
 script_dir=$(dirname "$0")
 cd $script_dir
 echo "Starting Orbit addr: $EPICS_CA_ADDR_LIST"
-python ./scripts/py-ioc-collector.py -c sparc_orbit.json
+python ./scripts/py-ioc-collector.py -c sparc_orbit.json -p __CONFIG_DIR__/pvlist.txt
 echo "Exited..."
