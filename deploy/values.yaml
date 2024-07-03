@@ -165,7 +165,7 @@ epicsConfiguration:
       # alarm:
       #  config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
       gitinit: true
-      autosync: false ## restart automatically on changes
+      autosync: true ## restart automatically on changes
       usegateway: true
 
     alarmlogger: 

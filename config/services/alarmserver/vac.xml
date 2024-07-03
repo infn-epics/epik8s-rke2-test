@@ -1,3 +1,5 @@
+<component name="VAC" id ="vac">
+
 <component name="AC3" id ="component">
 	<pv name="AC3VGA01:IG1:press_RB">
 	<enabled>true</enabled>
@@ -593,4 +595,5 @@
 	<annunciating>true</annunciating>
 	<description>readout Pressure</description>
 	</pv>
+</component>
 </component>
