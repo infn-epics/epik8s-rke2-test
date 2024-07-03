@@ -254,5 +254,6 @@
 
 
     </component>
+    <xi:include href="vac.xml" xpointer="include-component" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
 </config>
