@@ -257,6 +257,6 @@
 
     </component>
 
-    <xi:include href="/gitconfig/vac.xml" xpointer="vac" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="/gitconfig/vac.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
 </config>
