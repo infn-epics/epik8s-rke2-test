@@ -20,12 +20,7 @@
         </pv>
     </component>
     <component name="Camera" id ="component">
-        <pv name="SPARC:CAM:THVCAM01:DetectorState_RBV">
-            <enabled>true</enabled>
-            <latching>true</latching>
-            <annunciating>true</annunciating>
-            <description>THVCAM01</description>
-        </pv>
+       
         <pv name="SPARC:CAM:GUNCAM01:DetectorState_RBV">
             <enabled>true</enabled>
             <latching>true</latching>
