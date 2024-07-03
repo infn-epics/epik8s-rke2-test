@@ -2,6 +2,7 @@
     "dataset":[
         {
             "name": "AC3VGA01",
+            "group": "AC3",
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -16,6 +17,8 @@
             "keybind": "AC3VGA01_DYN"
         },{
             "name": "AC3VGA02",
+            "group": "AC3",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -31,6 +34,8 @@
         },
         {
             "name": "CMBVGA01",
+            "group": "CMB",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -45,6 +50,7 @@
             "keybind": "CMBVGA01_DYN"
         },{
             "name": "DGLVGA01",
+            "group": "DGL",
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -59,6 +65,8 @@
             "keybind": "DGLVGA01_DYN"
         },{
             "name": "GUNVGA01",
+            "group": "GUN",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -73,6 +81,8 @@
             "keybind": "GUNVGA01_DYN"
         },{
             "name": "GUNVGA02",
+            "group": "GUN",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -87,6 +97,8 @@
             "keybind": "GUNVGA02_DYN"
         },{
             "name": "UN2VGA01",
+            "group": "UND",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -101,6 +113,8 @@
             "keybind": "UN2VGA01_DYN"
         },{
             "name": "UN3VGA01",
+            "group": "UND",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -115,6 +129,8 @@
             "keybind": "UN3VGA01_DYN"
         },{
             "name": "UN4VGA01",
+            "group": "UND",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -129,6 +145,8 @@
             "keybind": "UN4VGA01_DYN"
         },{
             "name": "UN5VGA01",
+            "group": "UND",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -143,6 +161,8 @@
             "keybind": "UN5VGA01_DYN"
         },{
             "name": "UTLVGA01",
+            "group": "UTL",
+
             "type": "vdouble",
             "varname":["IG1:press_RB","IG2:press_RB","PG1:press_RB","PG2:press_RB"],
             "description": "readout Pressure",
@@ -158,6 +178,7 @@
         },
         {
             "name": "AC1SIP01",
+            "group": "AC1",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -173,6 +194,7 @@
         },
         {
             "name": "AC2SIP01",
+            "group": "AC2",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -188,6 +210,7 @@
         },
         {
             "name": "AC3SIP01",
+            "group": "AC3",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -203,6 +226,7 @@
         },
         {
             "name": "AC3SIP02",
+            "group": "AC3",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -218,6 +242,7 @@
         },
         {
             "name": "AC3SIP03",
+            "group": "AC3",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -233,6 +258,7 @@
         },
         {
             "name": "AC3SIP04",
+            "group": "AC3",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -248,6 +274,8 @@
         },
         {
             "name": "BOCSIP01",
+            "group": "BOC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -263,6 +291,7 @@
         },
         {
             "name": "DGLSIP01",
+            "group": "DGL",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -278,6 +307,7 @@
         },
         {
             "name": "DGLSIP02",
+            "group": "DGL",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -293,6 +323,7 @@
         },
         {
             "name": "DGLSIP03",
+            "group": "DGL",
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -308,6 +339,8 @@
         },
         {
             "name": "DGLSIP04",
+            "group": "DGL",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -323,6 +356,8 @@
         },
         {
             "name": "GUNSIP00",
+            "group": "GUN",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -338,6 +373,8 @@
         },
         {
             "name": "GUNSIP01",
+            "group": "GUN",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -353,6 +390,8 @@
         },
         {
             "name": "GUNSIP02",
+            "group": "GUN",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -368,6 +407,8 @@
         },
         {
             "name": "GUNSIP03",
+            "group": "GUN",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -383,6 +424,8 @@
         },
         {
             "name": "KLCSIP01",
+            "group": "KLY",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -398,6 +441,8 @@
         },
         {
             "name": "KLY1SIP1",
+            "group": "KLY",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -413,6 +458,8 @@
         },
         {
             "name": "KLY2SIP1",
+            "group": "KLY",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -428,6 +475,8 @@
         },
         {
             "name": "PLXSIP01",
+            "group": "PLX",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -443,6 +492,8 @@
         },
         {
             "name": "PLXSIP02",
+            "group": "PLX",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -458,6 +509,8 @@
         },
         {
             "name": "RFDSIP01",
+            "group": "RFD",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -472,6 +525,8 @@
             "keybind": "RFDSIP01_DYN"
         },{
             "name": "UN1SIP01",
+            "group": "UND1",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -486,6 +541,8 @@
             "keybind": "UN1SIP01_DYN"
         },{
             "name": "UN2SIP01",
+            "group": "UND2",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -500,6 +557,8 @@
             "keybind": "UN2SIP01_DYN"
         },{
             "name": "UN3SIP01",
+            "group": "UND3",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -514,6 +573,8 @@
             "keybind": "UN3SIP01_DYN"
         },{
             "name": "UN4SIP01",
+            "group": "UND4",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -528,6 +589,8 @@
             "keybind": "UN4SIP01_DYN"
         },{
             "name": "UN5SIP01",
+            "group": "UND5",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -542,6 +605,8 @@
             "keybind": "UN5SIP01_DYN"
         },{
             "name": "UN6SIP01",
+            "group": "UND6",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -556,6 +621,8 @@
             "keybind": "UN6SIP01_DYN"
         },{
             "name": "UTLSIP01",
+            "group": "UTL",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -570,6 +637,8 @@
             "keybind": "UTLSIP01_DYN"
         },{
             "name": "W1ASIP01",
+            "group": "W1",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -584,6 +653,8 @@
             "keybind": "W1ASIP01_DYN"
         },{
             "name": "W1BSIP01",
+            "group": "W1",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -598,6 +669,8 @@
             "keybind": "W1BSIP01_DYN"
         },{
             "name": "W1GSIP01",
+            "group": "W1",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -612,6 +685,8 @@
             "keybind": "W1GSIP01_DYN"
         },{
             "name": "W1KSIP01",
+            "group": "W1",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -626,6 +701,8 @@
             "keybind": "W1KSIP01_DYN"
         },{
             "name": "W1KSIP02",
+            "group": "W1",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -640,6 +717,8 @@
             "keybind": "W1KSIP02_DYN"
         },{
             "name": "W1KSIP03",
+            "group": "W1",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -654,6 +733,8 @@
             "keybind": "W1KSIP03_DYN"
         },{
             "name": "W2KSIP01",
+            "group": "W2",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -668,6 +749,8 @@
             "keybind": "W2KSIP01_DYN"
         },{
             "name": "W2KSIP02",
+            "group": "W2",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -682,6 +765,8 @@
             "keybind": "W2KSIP02_DYN"
         },{
             "name": "W2KSIP03",
+            "group": "W2",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -696,6 +781,8 @@
             "keybind": "W2KSIP03_DYN"
         },{
             "name": "W2SSIP01",
+            "group": "W2",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -710,6 +797,8 @@
             "keybind": "W2SSIP01_DYN"
         },{
             "name": "WCSIP01",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -724,6 +813,8 @@
             "keybind": "WCSIP01_DYN"
         },{
             "name": "WCSIP02",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -738,6 +829,8 @@
             "keybind": "WCSIP02_DYN"
         },{
             "name": "WCSIP03",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -752,6 +845,8 @@
             "keybind": "WCSIP03_DYN"
         },{
             "name": "WCSIP04",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -766,6 +861,8 @@
             "keybind": "WCSIP04_DYN"
         },{
             "name": "WCSIP05",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -780,6 +877,8 @@
             "keybind": "WCSIP05_DYN"
         },{
             "name": "WCSIP06",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -794,6 +893,8 @@
             "keybind": "WCSIP06_DYN"
         },{
             "name": "WCSIP07",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -809,6 +910,8 @@
         },
         {
             "name": "WCSLD01",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -823,6 +926,8 @@
             "keybind": "WCSLD01_DYN"
         },{
             "name": "WCSLD02",
+            "group": "WC",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
@@ -837,6 +942,8 @@
             "keybind": "WCSLD02_DYN"
         },{
             "name": "WRFDSIP1",
+            "group": "WRF",
+
             "type": "double",
             "varname":"press_RB",
             "description": "readout Pressure",
