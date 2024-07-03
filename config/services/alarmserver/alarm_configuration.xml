@@ -1,5 +1,5 @@
 <config name="Accelerator">
-    <component name="MRF" id ="component">
+    <component name="Timing" id ="component">
         <pv name="MRF01:evg:FCTLink8-Sts">
             <enabled>true</enabled>
             <latching>true</latching>
@@ -19,12 +19,182 @@
             <description>Generator Link 2</description>
         </pv>
     </component>
-    <component name="PLXSPE" id ="component">
-        <pv name="PLXSPE:icb:ID_12:name">
+    <component name="Camera" id ="component">
+        <pv name="SPARC:CAM:THVCAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>THVCAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:GUNCAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>GUNCAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:AC1CAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>AC1CAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:AC2CAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>AC2CAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:AC3CAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>AC3CAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:PLVCAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>PLVCAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:PLVCAM02:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>PLVCAM02</description>
+        </pv>
+        <pv name="SPARC:CAM:OSCAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>EOSCAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:OSCAM02:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>EOSCAM02</description>
+        </pv>
+        <pv name="SPARC:CAM:UTLCAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>UTLCAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:UTLCAM02:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>UTLCAM02</description>
+        </pv>
+        <pv name="SPARC:CAM:THVCAM01:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>THVCAM01</description>
+        </pv>
+        <pv name="SPARC:CAM:THVCAM02:DetectorState_RBV">
+            <enabled>true</enabled>
+            <latching>true</latching>
+            <annunciating>true</annunciating>
+            <description>THVCAM02</description>
+        </pv>
+    </component>
+    <component name="Orbit" id ="component">
+        <pv name="SPARC:ORBIT:x">
             <enabled>true</enabled>
             <latching>false</latching>
             <annunciating>true</annunciating>
-            <description>BPM rotto</description>
+            <description>ORBIT X</description>
+        </pv>
+        <pv name="SPARC:ORBIT:y">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>ORBIT Y</description>
+        </pv>
+        <pv name="AC1BPM01:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>AC1BPM01 STATUS</description>
+        </pv>
+        <pv name="AC2BPM01:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>AC2BPM01 STATUS</description>
+        </pv>
+        <pv name="AC3BPM01:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>AC3BPM01 STATUS</description>
+        </pv>
+        <pv name="PTLBPM01:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>PTLBPM01 STATUS</description>
+        </pv>
+        <pv name="UTLBPM01:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>UTLBPM01 STATUS</description>
+        </pv>
+        <pv name="DGLBPM01:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>DGLBPM01 STATUS</description>
+        </pv>
+        <pv name="DGLBPM02:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>DGLBPM02 STATUS</description>
+        </pv>
+        <pv name="DGLBPM03:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>DGLBPM03 STATUS</description>
+        </pv>
+        <pv name="PLXBPM01:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>PLXBPM01 STATUS</description>
+        </pv>
+        <pv name="PLXBPM02:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>PLXBPM02 STATUS</description>
+        </pv>
+        <pv name="PLXBPM03:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>PLXBPM03 STATUS</description>
+        </pv>
+        <pv name="PLXBPM04:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>PLXBPM04 STATUS</description>
+        </pv>
+        <pv name="PLXBPM05:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>PLXBPM05 STATUS</description>
+        </pv>
+        <pv name="PLXBPM06:SA:SA_STATUS_MONITOR">
+            <enabled>true</enabled>
+            <latching>false</latching>
+            <annunciating>true</annunciating>
+            <description>PLXBPM06 STATUS</description>
         </pv>
         
     </component>
