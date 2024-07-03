@@ -1,3 +1,5 @@
+<?xml version='1.0' encoding='utf8'?>
+
 <config name="Accelerator">
     <component name="Timing" id ="component">
         <pv name="MRF01:evg:FCTLink8-Sts">
@@ -254,6 +256,6 @@
 
 
     </component>
-    <xi:include href="/gitconfig/vac.xml" xpointer="vac" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="vac.xml" xpointer="vac" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
 </config>
