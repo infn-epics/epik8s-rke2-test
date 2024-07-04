@@ -23,6 +23,7 @@ entities:
   LOW: __LOW__
   HIGH: __HIGH__
   HIHI: 100
+  NELM: 60 ## history
 
 - type: modbus.modbusTemp
   PORT: ICPDAS001
@@ -36,7 +37,8 @@ entities:
   LOW: __LOW__
   HIGH: __HIGH__
   HIHI: 100
-
+  NELM: 60 ## history
+  
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
