@@ -1,3 +1,7 @@
+<?xml version='1.0' encoding='utf8'?>
+<!DOCTYPE config [
+  <!ATTLIST component id ID #IMPLIED>
+]>
 <config name="Accelerator">
 
 <component name="AC3" id="vac">
