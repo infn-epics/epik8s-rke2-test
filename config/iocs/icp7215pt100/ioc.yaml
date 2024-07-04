@@ -5,7 +5,7 @@ entities:
 
 - type: modbus.modbusDev
   MODBUSPORT: ICPDAS001
-  IP: ddcgicp006.lnf.infn.it
+  IP: __SERVER__
   TCPPORT: 502
   STARTADDR: 0
   DATA_LENGTH: 7
@@ -18,7 +18,7 @@ entities:
   ID: __ID0__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 0
-  ASLO: 0.00305059
+  ASLO: 0.003916
   LOLO: 0
   LOW: __LOW__
   HIGH: __HIGH__

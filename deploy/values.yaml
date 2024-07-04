@@ -559,11 +559,13 @@ epicsConfiguration:
 
 
     - name: "sparctemp" 
-      asset: "https://confluence.infn.it/x/nYD8DQ"
+      asset: "https://confluence.infn.it/display/LDCG/ICP-23-0032"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "SPARC:DIA"
       iocdir: "icp7215pt100"
       iocparam:
+        - name: "__SERVER__"
+          value: ddcgicp006.lnf.infn.it
         - name: "__ID0__"
           value: "TEST"
         - name: "__LOW__"
