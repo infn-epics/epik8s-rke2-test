@@ -165,7 +165,7 @@ epicsConfiguration:
       # alarm:
       #  config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
       gitinit: true
-      autosync: false ## restart automatically on changes
+      autosync: true ## restart automatically on changes
       usegateway: true
 
     alarmlogger: 
@@ -269,6 +269,24 @@ epicsConfiguration:
       autosync: false ## restart automatically on changes
       usegateway: false
 
+    - name: "vacimport"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:VAC"
+      iocdir: "mem2epics"
+      iocparam:
+        - name: "__CONFIGURATION__"
+          value: "vac.json"
+        - name: "__MEMECACHED_SERVER__"
+          value: "plsparcmem001.lnf.infn.it"
+        
+      devtype: softioc
+      devgroup: vac
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+      autosync: true ## restart automatically on changes
+
     - name: "flags-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
@@ -280,7 +298,7 @@ epicsConfiguration:
       gitinit: true
       autosync: false ## restart automatically on changes
       usegateway: false
-
+      disable: true
 
     - name: "bdsparcplxbpm007"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -606,7 +624,8 @@ epicsConfiguration:
         ptty: /var/tmp/ttyV0
         baud: 9600
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
+      disable: true
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "menlo"
@@ -640,21 +659,21 @@ epicsConfiguration:
       autosync: false ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
-    # - name: "tml-ch3"
-    #   asset: "https://confluence.infn.it/x/nYD8DQ"
-    #   devtype: motor
-    #   devgroup: diag
-    #   charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-    #   image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
-    #   iocprefix: "SPARC:TML"
-    #   serial:
-    #     ip: scsparcmoxa001.lnf.infn.it
-    #     port: 4003
-    #     ptty: /var/tmp/ttyV0
-    #     baud: 9600
-    #   gitinit: true
-    #   autosync: false ## restart automatically on changes
-    #   disable: true ## dont deploy
+    - name: "tml-ch3"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      devtype: motor
+      devgroup: diag
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
+      iocprefix: "SPARC:TML"
+      serial:
+        ip: scsparcmoxa001.lnf.infn.it
+        port: 4003
+        ptty: /var/tmp/ttyV0
+        baud: 9600
+      gitinit: true
+      autosync: false ## restart automatically on changes
+      disable: true ## dont deploy
 
 
 

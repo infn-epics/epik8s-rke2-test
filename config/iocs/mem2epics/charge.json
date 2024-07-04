@@ -1,0 +1,59 @@
+{   "dictremap":[
+        {"src":"average charge (pC)",
+         "dst":"avcharge"
+        },
+        {"src":"charge (pC)",
+         "dst":"charge"
+        }
+    ],
+    "dataset":[
+        {
+            "name": "AC1BCM01",
+            "type": "json","factor":1.0,
+
+            "description": "Charge",
+            "rate": 10,
+            "keybind": "AC1BCM01_DYN"
+        },{
+            "name": "AC1FBCM1",
+            "type": "json","factor":1.0,
+            "description": "Charge",
+            "rate": 10,
+            "keybind": "AC1FBCM1_DYN"
+        },{
+            "name": "AC1FCP01",
+            "type": "json","factor":1.0,
+
+            "description": "Charge",
+            "rate": 10,
+            "keybind": "AC1FCP01_DYN"
+        },{
+            "name": "AC2BCM01",
+            "type": "json","factor":1.0,
+            "description": "Charge",
+            "rate": 10,
+            "keybind": "AC2BCM01_DYN"
+        },{
+            "name": "DGLBCM01",
+            "type": "json","factor":1.0,
+
+            "description": "Charge",
+            "rate": 10,
+            "keybind": "DGLBCM01_DYN"
+        },{
+            "name": "DGLBCM02",
+            "type": "json","factor":1.0,
+
+            "description": "Charge",
+            "rate": 10,
+            "keybind": "DGLBCM02_DYN"
+        },{
+            "name": "PTLBCM01",
+            "type": "json","factor":1.0,
+
+            "description": "Charge",
+            "rate": 10,
+            "keybind": "PTLBCM01_DYN"
+        }
+
+    ]}

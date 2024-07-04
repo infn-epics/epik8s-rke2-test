@@ -13,3 +13,6 @@
 [submodule "config/iocs/lasersynch/scripts"]
 	path = config/iocs/lasersynch/scripts
 	url = https://baltig.infn.it/lnf-da-control/laser-synch-soft-ioc
+[submodule "config/iocs/mem2epics/scripts"]
+	path = config/iocs/mem2epics/scripts
+	url = https://baltig.infn.it/infn-epics/memcached2epics.git

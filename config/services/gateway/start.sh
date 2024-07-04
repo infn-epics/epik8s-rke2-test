@@ -5,7 +5,7 @@ echo "Starting CA Gateway $EPICS_CA_ADDR_LIST on $EPICS_GATEWAY_ADDR_LIST ($name
 echo "Starting caRepeater"
 export EPICS_CAS_BEACON_ADDR_LIST=$EPICS_CA_ADDR_LIST
 export EPICS_CAS_AUTO_BEACON_ADDR_LIST=NO
-export EPICS_CAS_IGNORE_ADDR_LIST="cagateway-0 cagateway-1"
+export EPICS_CAS_IGNORE_ADDR_LIST="gateway-0 gateway-1"
 /epics/epics-base/bin/linux-x86_64/caRepeater&
 sleep 1
 defaults="-connect_timeout 5 -inactive_timeout 300 -dead_timeout 60 -disconnect_timeout 10 -reconnect_inhibit 60"
