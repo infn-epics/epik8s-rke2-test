@@ -558,6 +558,22 @@ epicsConfiguration:
       initcmd: "mount -o remount,rw /"
 
 
+    - name: "temperature" 
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "SPARC:DIA"
+      iocdir: "icp7215pt100"
+      iocparam:
+        - name: "__ID0__"
+          value: "TEST"
+        - name: "__LOW__"
+          value: 10
+        - name: "__HIGH__"
+          value: 50
+      gitinit: true
+      devtype: sensor
+      devgroup: diag
+      autosync: true ## restart automatically on changes
 
     - name: "temp01" 
       asset: "https://confluence.infn.it/x/nYD8DQ"
