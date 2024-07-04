@@ -1,4 +1,4 @@
-ioc_name: temperature
+ioc_name: __IOC_NAME__
 description: Modbus Temperature acquisition 
 
 entities:
@@ -114,3 +114,7 @@ entities:
   LOW: __LOW__
   HIGH: __HIGH__
   HIHI: 100
+
+- type: epics.PostStartupCommand 
+  command: |
+          dbl("*") > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
