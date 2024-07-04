@@ -18,7 +18,7 @@ entities:
   ID: __ID0__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 0
-  ASLO: 0.003916
+  ASLO: 0.0183112
   LOLO: 0
   LOW: __LOW__
   HIGH: __HIGH__
