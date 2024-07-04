@@ -1,3 +1,7 @@
+<?xml version='1.0' encoding='utf8'?>
+<!DOCTYPE config [
+<!ATTLIST component id ID #IMPLIED>
+]>
 <component name="VAC" id ="vac">
 	<component name="AC3" id ="component">
 		<pv name="SPARC:VAC:AC3VGA01:IG1:press_RB">
