@@ -558,7 +558,7 @@ epicsConfiguration:
       initcmd: "mount -o remount,rw /"
 
 
-    - name: "sparc_temp" 
+    - name: "sparctemp" 
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "SPARC:DIA"
@@ -583,7 +583,7 @@ epicsConfiguration:
       gitinit: true
       devtype: sensor
       devgroup: test
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
 
     - name: "mrf01"
       asset: "https://confluence.infn.it/x/nYD8DQ"
