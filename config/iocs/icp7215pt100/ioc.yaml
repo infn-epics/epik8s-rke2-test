@@ -14,7 +14,7 @@ entities:
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
-  R: "TEMP:"
+  R: "TEMP"
   ID: __ID0__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 0
@@ -27,7 +27,7 @@ entities:
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
-  R: "TEMP:"
+  R: "TEMP"
   ID: __ID1__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 1
@@ -40,7 +40,7 @@ entities:
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
-  R: "TEMP:"
+  R: "TEMP"
   ID: __ID2__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 2
@@ -53,7 +53,7 @@ entities:
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
-  R: "TEMP:"
+  R: "TEMP"
   ID: __ID3__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 3
@@ -66,7 +66,7 @@ entities:
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
-  R: "TEMP:"
+  R: "TEMP"
   ID: __ID4__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 4
@@ -79,7 +79,7 @@ entities:
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
-  R: "TEMP:"
+  R: "TEMP"
   ID: __ID5__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 5
@@ -92,7 +92,7 @@ entities:
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
-  R: "TEMP:"
+  R: "TEMP"
   ID: __ID6__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 6
@@ -105,7 +105,7 @@ entities:
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
-  R: "TEMP:"
+  R: "TEMP"
   ID: __ID7__
   DESC: "Temperature PT100 sensor"
   REGOFFSET: 7
