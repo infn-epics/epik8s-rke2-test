@@ -1,0 +1,116 @@
+ioc_name: temperature
+description: Modbus Temperature acquisition 
+
+entities:
+
+- type: modbus.modbusDev
+  MODBUSPORT: ICPDAS001
+  IP: ddcgicp006.lnf.infn.it
+  TCPPORT: 502
+  STARTADDR: 0
+  DATA_LENGTH: 7
+  SERVER_ADDR: 1
+
+- type: modbus.modbusTemp
+  PORT: ICPDAS001
+  P: __IOC_PREFIX__
+  R: "TEMP:"
+  ID: __ID0__
+  DESC: "Temperature PT100 sensor"
+  REGOFFSET: 0
+  ASLO: 0.00305059
+  LOLO: 0
+  LOW: __LOW__
+  HIGH: __HIGH__
+  HIHI: 100
+
+- type: modbus.modbusTemp
+  PORT: ICPDAS001
+  P: __IOC_PREFIX__
+  R: "TEMP:"
+  ID: __ID1__
+  DESC: "Temperature PT100 sensor"
+  REGOFFSET: 1
+  ASLO: 0.00305059
+  LOLO: 0
+  LOW: __LOW__
+  HIGH: __HIGH__
+  HIHI: 100
+
+- type: modbus.modbusTemp
+  PORT: ICPDAS001
+  P: __IOC_PREFIX__
+  R: "TEMP:"
+  ID: __ID2__
+  DESC: "Temperature PT100 sensor"
+  REGOFFSET: 2
+  ASLO: 0.00305059
+  LOLO: 0
+  LOW: __LOW__
+  HIGH: __HIGH__
+  HIHI: 100
+
+- type: modbus.modbusTemp
+  PORT: ICPDAS001
+  P: __IOC_PREFIX__
+  R: "TEMP:"
+  ID: __ID3__
+  DESC: "Temperature PT100 sensor"
+  REGOFFSET: 3
+  ASLO: 0.00305059
+  LOLO: 0
+  LOW: __LOW__
+  HIGH: __HIGH__
+  HIHI: 100
+
+- type: modbus.modbusTemp
+  PORT: ICPDAS001
+  P: __IOC_PREFIX__
+  R: "TEMP:"
+  ID: __ID4__
+  DESC: "Temperature PT100 sensor"
+  REGOFFSET: 4
+  ASLO: 0.00305059
+  LOLO: 0
+  LOW: __LOW__
+  HIGH: __HIGH__
+  HIHI: 100
+
+- type: modbus.modbusTemp
+  PORT: ICPDAS001
+  P: __IOC_PREFIX__
+  R: "TEMP:"
+  ID: __ID5__
+  DESC: "Temperature PT100 sensor"
+  REGOFFSET: 5
+  ASLO: 0.00305059
+  LOLO: 0
+  LOW: __LOW__
+  HIGH: __HIGH__
+  HIHI: 100
+
+- type: modbus.modbusTemp
+  PORT: ICPDAS001
+  P: __IOC_PREFIX__
+  R: "TEMP:"
+  ID: __ID6__
+  DESC: "Temperature PT100 sensor"
+  REGOFFSET: 6
+  ASLO: 0.00305059
+  LOLO: 0
+  LOW: __LOW__
+  HIGH: __HIGH__
+  HIHI: 100
+
+- type: modbus.modbusTemp
+  PORT: ICPDAS001
+  P: __IOC_PREFIX__
+  R: "TEMP:"
+  ID: __ID7__
+  DESC: "Temperature PT100 sensor"
+  REGOFFSET: 7
+  ASLO: 0.00305059
+  LOLO: 0
+  LOW: __LOW__
+  HIGH: __HIGH__
+  HIHI: 100
