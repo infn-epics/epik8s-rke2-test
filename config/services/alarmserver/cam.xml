@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf8'?>
+<!DOCTYPE config [
+<!ATTLIST component id ID #IMPLIED>
+]>
+<component name="Camera" id ="camera">
+       
+    <pv name="SPARC:CAM:GUNCAM01:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>GUNCAM01</description>
+    </pv>
+    <pv name="SPARC:CAM:AC1CAM01:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>AC1CAM01</description>
+    </pv>
+    <pv name="SPARC:CAM:AC2CAM01:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>AC2CAM01</description>
+    </pv>
+    <pv name="SPARC:CAM:AC3CAM01:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>AC3CAM01</description>
+    </pv>
+    <pv name="SPARC:CAM:PLVCAM01:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>PLVCAM01</description>
+    </pv>
+    <pv name="SPARC:CAM:PLVCAM02:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>PLVCAM02</description>
+    </pv>
+    <pv name="SPARC:CAM:OSCAM01:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>EOSCAM01</description>
+    </pv>
+    <pv name="SPARC:CAM:OSCAM02:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>EOSCAM02</description>
+    </pv>
+    <pv name="SPARC:CAM:UTLCAM01:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>UTLCAM01</description>
+    </pv>
+    <pv name="SPARC:CAM:UTLCAM02:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>UTLCAM02</description>
+    </pv>
+    <pv name="SPARC:CAM:THVCAM01:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>THVCAM01</description>
+    </pv>
+    <pv name="SPARC:CAM:THVCAM02:DetectorState_RBV">
+        <enabled>true</enabled>
+        <latching>true</latching>
+        <annunciating>true</annunciating>
+        <description>THVCAM02</description>
+    </pv>
+</component>
