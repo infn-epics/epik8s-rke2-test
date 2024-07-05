@@ -243,7 +243,7 @@ entities:
     P: "SPARC:CAM:"
     R: "DGL01:"
     PORT: DGL01
-    ID: Basler-scA640-70gm-23665716
+    ID: Basler-scA640-70gm-21732893
     CLASS: Basler-scA640-70gm
     TIMEOUT: 5
 
