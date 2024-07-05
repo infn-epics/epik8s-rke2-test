@@ -40,3 +40,42 @@ entities:
       dbpf("SPARC:CAM:THV01:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("SPARC:CAM:THV01:TIFF1:FileWriteMode",2)
       dbpf("SPARC:CAM:THV01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
+  - type: ADAravis.aravisCamera
+    P: "SPARC:CAM:"
+    R: "THV02:"
+    PORT: THV02
+    ID: Basler-a2A2448-23gmBAS-40283407
+    CLASS: Basler-a2A2448-23gmBAS
+    TIMEOUT: 5
+
+  - type: ADCore.NDPvaPlugin
+    PORT: THV02.PVA
+    PVNAME: "SPARC:CAM:THV02:PVA:OUTPUT"
+    P: "SPARC:CAM:THV02"
+    R: ":Pva1:"
+    NDARRAY_PORT: THV02
+    ENABLED: 1
+
+  - type: ADCore.NDStdArrays
+    P: "SPARC:CAM:THV02"
+    R: ":image1:"
+    PORT: THV02.NTD
+    NDARRAY_PORT: THV02
+    TYPE: "Int16"
+    FTVL: USHORT
+    NELEMENTS: 325546
+    ENABLED: 1
+
+  - type: ADCore.NDFileTIFF
+    PORT: THV02.TIFF
+    NDARRAY_PORT: THV02
+    P: "SPARC:CAM:THV02:"
+    R: "TIFF1:"
+    ENABLED: 1
+
+  - type: epics.PostStartupCommand
+    command: |
+      dbpf("SPARC:CAM:THV02:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:THV02:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:THV02:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
