@@ -8,7 +8,7 @@ entities:
   IP: __SERVER__
   TCPPORT: 502
   STARTADDR: 0
-  DATA_LENGTH: 7
+  DATA_LENGTH: 8
   SERVER_ADDR: 1
 
 - type: modbus.modbusTemp
@@ -38,7 +38,7 @@ entities:
   HIGH: __HIGH__
   HIHI: 100
   NELM: 60 ## history
-  
+
 - type: modbus.modbusTemp
   PORT: ICPDAS001
   P: __IOC_PREFIX__
