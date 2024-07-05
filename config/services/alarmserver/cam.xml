@@ -4,76 +4,76 @@
 ]>
 <component name="Camera" id ="camera">
        
-    <pv name="SPARC:CAM:GUNCAM01:DetectorState_RBV">
+    <pv name="SPARC:CAM:GUN01:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>GUNCAM01</description>
+        <description>GUN01</description>
     </pv>
-    <pv name="SPARC:CAM:AC1CAM01:DetectorState_RBV">
+    <pv name="SPARC:CAM:AC101:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>AC1CAM01</description>
+        <description>AC101</description>
     </pv>
-    <pv name="SPARC:CAM:AC2CAM01:DetectorState_RBV">
+    <pv name="SPARC:CAM:AC201:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>AC2CAM01</description>
+        <description>AC201</description>
     </pv>
-    <pv name="SPARC:CAM:AC3CAM01:DetectorState_RBV">
+    <pv name="SPARC:CAM:AC301:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>AC3CAM01</description>
+        <description>AC301</description>
     </pv>
-    <pv name="SPARC:CAM:PLVCAM01:DetectorState_RBV">
+    <pv name="SPARC:CAM:PLV01:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>PLVCAM01</description>
+        <description>PLV01</description>
     </pv>
-    <pv name="SPARC:CAM:PLVCAM02:DetectorState_RBV">
+    <pv name="SPARC:CAM:PLV02:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>PLVCAM02</description>
+        <description>PLV02</description>
     </pv>
-    <pv name="SPARC:CAM:OSCAM01:DetectorState_RBV">
+    <pv name="SPARC:CAM:EOS01:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>EOSCAM01</description>
+        <description>EOS01</description>
     </pv>
-    <pv name="SPARC:CAM:OSCAM02:DetectorState_RBV">
+    <pv name="SPARC:CAM:EOS02:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>EOSCAM02</description>
+        <description>EOS02</description>
     </pv>
-    <pv name="SPARC:CAM:UTLCAM01:DetectorState_RBV">
+    <pv name="SPARC:CAM:UTL01:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>UTLCAM01</description>
+        <description>UTL01</description>
     </pv>
-    <pv name="SPARC:CAM:UTLCAM02:DetectorState_RBV">
+    <pv name="SPARC:CAM:UTL02:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>UTLCAM02</description>
+        <description>UTL02</description>
     </pv>
-    <pv name="SPARC:CAM:THVCAM01:DetectorState_RBV">
+    <pv name="SPARC:CAM:THV01:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>THVCAM01</description>
+        <description>THV01</description>
     </pv>
-    <pv name="SPARC:CAM:THVCAM02:DetectorState_RBV">
+    <pv name="SPARC:CAM:THV02:DetectorState_RBV">
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <description>THVCAM02</description>
+        <description>THV02</description>
     </pv>
 </component>
