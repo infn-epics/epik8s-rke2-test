@@ -771,7 +771,7 @@ epicsConfiguration:
       devgroup: test
       docker:
         enable: true
-        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
+        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc
     
     - name: "sparccam2"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -783,7 +783,7 @@ epicsConfiguration:
       devgroup: test
       docker:
         enable: true
-        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
+        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc
 
       
 cronjobs:
