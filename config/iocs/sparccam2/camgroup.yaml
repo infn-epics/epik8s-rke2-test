@@ -4,39 +4,78 @@ description: Sparc cameras
 entities:
   - type: ADAravis.aravisCamera
     P: "SPARC:CAM:"
-    R: "TestEpics:"
-    PORT: TestEpics
-    ID: Basler-a2A1920-51gcBAS-40204275
-    CLASS: Basler-a2A2600-20gmBAS
+    R: "THV01:"
+    PORT: THV01
+    ID: Basler-scA640-70gm-21290809
+    CLASS: Basler-scA640-70gm
+    TIMEOUT: 5
 
   - type: ADCore.NDPvaPlugin
-    PORT: TestEpics.PVA
-    PVNAME: "SPARC:CAM:TestEpics:PVA:OUTPUT"
-    P: "SPARC:CAM:TestEpics"
+    PORT: THV01.PVA
+    PVNAME: "SPARC:CAM:THV01:PVA:OUTPUT"
+    P: "SPARC:CAM:THV01"
     R: ":Pva1:"
-    NDARRAY_PORT: TestEpics
+    NDARRAY_PORT: THV01
     ENABLED: 1
 
   - type: ADCore.NDStdArrays
-    P: "SPARC:CAM:TestEpics"
+    P: "SPARC:CAM:THV01"
     R: ":image1:"
-    PORT: TestEpics.NTD
-    NDARRAY_PORT: TestEpics
+    PORT: THV01.NTD
+    NDARRAY_PORT: THV01
     TYPE: "Int16"
     FTVL: USHORT
-    NELEMENTS: 5616000
+    NELEMENTS: 325546
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
-    PORT: TestEpics.TIFF
-    NDARRAY_PORT: TestEpics
-    P: "SPARC:CAM:TestEpics:"
+    PORT: THV01.TIFF
+    NDARRAY_PORT: THV01
+    P: "SPARC:CAM:THV01:"
     R: "TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand
     command: |
-      dbpf("SPARC:CAM:TestEpics:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("SPARC:CAM:TestEpics:TIFF1:FileWriteMode",2)
-      dbpf("SPARC:CAM:TestEpics:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("SPARC:CAM:THV01:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:THV01:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:THV01:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
 
+  - type: ADAravis.aravisCamera
+    P: "SPARC:CAM:"
+    R: "THV02:"
+    PORT: THV02
+    ID: Basler-a2A2448-23gmBAS-40283407
+    CLASS: Basler-a2A2448-23gmBAS
+    TIMEOUT: 5
+
+  - type: ADCore.NDPvaPlugin
+    PORT: THV02.PVA
+    PVNAME: "SPARC:CAM:THV02:PVA:OUTPUT"
+    P: "SPARC:CAM:THV02"
+    R: ":Pva1:"
+    NDARRAY_PORT: THV02
+    ENABLED: 1
+
+  - type: ADCore.NDStdArrays
+    P: "SPARC:CAM:THV02"
+    R: ":image1:"
+    PORT: THV02.NTD
+    NDARRAY_PORT: THV02
+    TYPE: "Int16"
+    FTVL: USHORT
+    NELEMENTS: 325546
+    ENABLED: 1
+
+  - type: ADCore.NDFileTIFF
+    PORT: THV02.TIFF
+    NDARRAY_PORT: THV02
+    P: "SPARC:CAM:THV02:"
+    R: "TIFF1:"
+    ENABLED: 1
+
+  - type: epics.PostStartupCommand
+    command: |
+      dbpf("SPARC:CAM:THV02:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("SPARC:CAM:THV02:TIFF1:FileWriteMode",2)
+      dbpf("SPARC:CAM:THV02:TIFF1:FileTemplate","%s%s_%3.3d.tiff")

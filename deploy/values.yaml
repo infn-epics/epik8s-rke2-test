@@ -162,8 +162,8 @@ epicsConfiguration:
       auto_security: true
       enable_ingress: true
       mongodb: "sparc-ologAttachments"
-      alarm:
-        config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
+      # alarm:
+      #  config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
       gitinit: true
       autosync: true ## restart automatically on changes
       usegateway: true
@@ -257,7 +257,7 @@ epicsConfiguration:
       iocdir: "lasersynch"
       iocparam:
         - name: "__RP_PREFIX__"
-          value: "SR00RPA03"
+          value: "SR00RPA04"
         - name: "__VITARA1_PREFIX__"
           value: "SPARC:MOT:VITARA01"
         - name: "__LASER_AMP_PV__"
@@ -268,6 +268,24 @@ epicsConfiguration:
       gitinit: true
       autosync: false ## restart automatically on changes
       usegateway: false
+
+    - name: "vacimport"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:VAC"
+      iocdir: "mem2epics"
+      iocparam:
+        - name: "__CONFIGURATION__"
+          value: "vac.json"
+        - name: "__MEMECACHED_SERVER__"
+          value: "plsparcmem001.lnf.infn.it"
+        
+      devtype: softioc
+      devgroup: vac
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+      autosync: true ## restart automatically on changes
 
     - name: "flags-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -280,7 +298,7 @@ epicsConfiguration:
       gitinit: true
       autosync: false ## restart automatically on changes
       usegateway: false
-
+      disable: true
 
     - name: "bdsparcplxbpm007"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -540,6 +558,24 @@ epicsConfiguration:
       initcmd: "mount -o remount,rw /"
 
 
+    - name: "sparctemp" 
+      asset: "https://confluence.infn.it/display/LDCG/ICP-23-0032"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "SPARC:DIA"
+      iocdir: "icp7215pt100"
+      iocparam:
+        - name: "__SERVER__"
+          value: ddcgicp006.lnf.infn.it
+        - name: "__ID0__"
+          value: "TEST"
+        - name: "__LOW__"
+          value: 10
+        - name: "__HIGH__"
+          value: 50
+      gitinit: true
+      devtype: sensor
+      devgroup: diag
+      autosync: true ## restart automatically on changes
 
     - name: "temp01" 
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -549,7 +585,7 @@ epicsConfiguration:
       gitinit: true
       devtype: sensor
       devgroup: test
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
 
     - name: "mrf01"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -606,7 +642,8 @@ epicsConfiguration:
         ptty: /var/tmp/ttyV0
         baud: 9600
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
+      disable: true
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "menlo"
@@ -654,6 +691,9 @@ epicsConfiguration:
         baud: 9600
       gitinit: true
       autosync: false ## restart automatically on changes
+      disable: true ## dont deploy
+
+
 
     - name: "rdsparcpitaia001"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -705,7 +745,7 @@ epicsConfiguration:
       iocprefix: "SR00RPA04"
       iocparam:
         - name: "__ACQ_TRIGGER_SRC_CMD__"
-          value: "Internal"
+          value: "0"
       host: "rdsparcpitaya004.lnf.infn.it"
       workdir: "sparc"
       exec: "start.sh"
@@ -731,7 +771,7 @@ epicsConfiguration:
       devgroup: test
       docker:
         enable: true
-        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
+        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
     
     - name: "sparccam2"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -743,7 +783,7 @@ epicsConfiguration:
       devgroup: test
       docker:
         enable: true
-        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
+        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
 
       
 cronjobs:
@@ -801,7 +841,7 @@ backend:
     clusterName: elasticsearch
     port: 9200
   kafka:
-    host: kafka-controller-headless
+    host: kafka-headless
     port: 9092
 
 syncPolicy:
