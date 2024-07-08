@@ -151,7 +151,7 @@ epicsConfiguration:
       charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
       image:
         repository: baltig.infn.it:4567/epics-containers/phoebus-web-docker
-      phoebusservice: "pws"
+      phoebusservice: "pvws"
       auto_security: true
       enable_ingress: true
       autosync: true ## restart automatically on changes
