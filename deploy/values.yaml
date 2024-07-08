@@ -133,6 +133,19 @@ epicsConfiguration:
       enable_ingress: true
       usegateway: true
 
+    webalarm: 
+      loglevel: DEBUG
+      charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
+      image:
+        repository: baltig.infn.it:4567/epics-containers/phoebus-web-docker
+      phoebusservice: "webalarm"
+      auto_security: true
+      enable_ingress: true
+      autosync: true ## restart automatically on changes
+      service:
+        loglevel: "INFO"
+      usegateway: true
+
     olog: 
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
