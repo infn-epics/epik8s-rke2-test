@@ -146,6 +146,39 @@ epicsConfiguration:
         loglevel: "INFO"
       usegateway: true
 
+    pws: 
+      loglevel: DEBUG
+      charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
+      image:
+        repository: baltig.infn.it:4567/epics-containers/phoebus-web-docker
+      phoebusservice: "pws"
+      auto_security: true
+      enable_ingress: true
+      autosync: true ## restart automatically on changes
+      service:
+        loglevel: "INFO"
+      usegateway: true
+    
+    dbwr: 
+      loglevel: DEBUG
+      charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
+      image:
+        repository: baltig.infn.it:4567/epics-containers/phoebus-web-docker
+      phoebusservice: "dbwr"
+      auto_security: true
+      enable_ingress: true
+      autosync: true ## restart automatically on changes
+      service:
+        loglevel: "INFO"
+      usegateway: true
+      gitRepoConfig:
+          url: https://baltig.infn.it/lnf-da-control/sparc-epics-opi.git
+          path: .
+      pvws:
+        host: pws.sparc.svc
+        port: 8080
+    
+
     olog: 
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
