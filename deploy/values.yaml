@@ -176,7 +176,7 @@ epicsConfiguration:
           path: .
       pvws:
         host: pws.sparc.svc
-        port: 8080
+        port: 80
     
 
     olog: 
