@@ -132,6 +132,7 @@ epicsConfiguration:
       auto_security: true
       enable_ingress: true
       usegateway: true
+      autosync: true ## restart automatically on changes
 
     webalarm: 
       loglevel: DEBUG
