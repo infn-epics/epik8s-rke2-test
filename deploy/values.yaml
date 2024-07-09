@@ -129,7 +129,6 @@ epicsConfiguration:
           claim:  ## an existing claim or empty will create a new one
           size: 5Gi ## size of the claim
           accessMode: ReadWriteOnce
-      auto_security: true
       enable_ingress: true
       usegateway: true
       autosync: true ## restart automatically on changes
