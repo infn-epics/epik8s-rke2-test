@@ -132,6 +132,10 @@ epicsConfiguration:
       enable_ingress: true
       usegateway: true
       autosync: true ## restart automatically on changes
+      pip:
+        - bluesky
+        - infn-ophyd-hal
+  
 
     webalarm: 
       loglevel: DEBUG
