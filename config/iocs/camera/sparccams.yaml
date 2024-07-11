@@ -48,7 +48,7 @@ entities:
     R: "TS:"
     PORT: ACE01.TS
     NDARRAY_PORT: ACE01
-    NCHANS: 8
+    NCHANS: "8"
     ENABLED: 1
     NAME: ACE01TS
 
