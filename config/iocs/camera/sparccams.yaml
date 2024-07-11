@@ -43,7 +43,7 @@ entities:
     YSIZE: 768
     ENABLED: 1
 
-  - name: NDTimeSeries
+  - type: ADCore.NDTimeSeries
     P: "SPARC:CAM:ACE01:"
     R: "TS:"
     PORT: ACE01.TS
