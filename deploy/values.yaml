@@ -662,7 +662,7 @@ epicsConfiguration:
         accessMode: 'ReadWriteOnce' ## until not enabled shared
         size: 8Mi
       gitinit: true
-      imagePullPolicy: Never
+      imagePullPolicy: IfNotPresent
     
     - name: "tml-test"
       asset: "https://confluence.infn.it/x/nYD8DQ"
