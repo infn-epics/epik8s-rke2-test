@@ -76,7 +76,7 @@ epicsConfiguration:
         name: "default"
       dataVolume:
             claim:  ## an existing claim or empty will create a new one
-            size: 50Gi ## size of the claim
+            size: 100Gi ## size of the claim
             accessMode: ReadWriteOnce
       mysql:
             host: mysql
