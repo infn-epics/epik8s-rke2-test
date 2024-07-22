@@ -18,7 +18,7 @@
     {
         "pvname":"AVG_NUM",
         "type":"aOut",
-        "init_value":"20"
+        "init_value":"3"
     },
     {
         "pvname":"AVG_START",
