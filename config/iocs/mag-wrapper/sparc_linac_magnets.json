@@ -1,0 +1,2448 @@
+{
+    "prefix": "LINAC",
+    "memcached": "plsparcmem001.lnf.infn.it",
+    "update": 0.2,
+    "version": 1.0,
+    "date" : "15/07/2024",
+    "ps": [
+        {
+            "dcsname": "PTLDPL01_DYN",
+            "epicname": "PTLDPL01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {                    
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLQUA01_DYN",
+            "epicname": "PTLQUA01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1HCR01_DYN",
+            "epicname": "AC1HCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC3QUA01_DYN",
+            "epicname": "AC3QUA01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "DPLSOL01_DYN",
+            "epicname": "DPLSOL01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLDPL02_DYN",
+            "epicname": "PTLDPL02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLDPL03_DYN",
+            "epicname": "PTLDPL03",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLDPL04_DYN",
+            "epicname": "PTLDPL04",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLQUA02_DYN",
+            "epicname": "PTLQUA02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLQUA03_DYN",
+            "epicname": "PTLQUA03",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLQUA04_DYN",
+            "epicname": "PTLQUA04",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLQUA05_DYN",
+            "epicname": "PTLQUA05",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLQUA06_DYN",
+            "epicname": "PTLQUA06",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1SOL02-03-04_DYN",
+            "epicname": "AC1SOL02-03-04",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1SOL05-06-07_DYN",
+            "epicname": "AC1SOL05-06-07",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1SOL08-09-10_DYN",
+            "epicname": "AC1SOL08-09-10",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1HCR02_DYN",
+            "epicname": "AC1HCR02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1VCR01_DYN",
+            "epicname": "AC1VCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1VCR02_DYN",
+            "epicname": "AC1VCR02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC2HCR01_DYN",
+            "epicname": "AC2HCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC2HCR02_DYN",
+            "epicname": "AC2HCR02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC2VCR01_DYN",
+            "epicname": "AC2VCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC2VCR02_DYN",
+            "epicname": "AC2VCR02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC3HCR01_DYN",
+            "epicname": "AC3HCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC3VCR01_DYN",
+            "epicname": "AC3VCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "GUNHCR01_DYN",
+            "epicname": "GUNHCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "GUNVCR01_DYN",
+            "epicname": "GUNVCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1HCR1A_DYN",
+            "epicname": "AC1HCR1A",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1VCR1A_DYN",
+            "epicname": "AC1VCR1A",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC3HCR02_DYN",
+            "epicname": "AC3HCR02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC3VCR02_DYN",
+            "epicname": "AC3VCR02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLHCR01_DYN",
+            "epicname": "PTLHCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLHCR02_DYN",
+            "epicname": "PTLHCR02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLVCR01_DYN",
+            "epicname": "PTLVCR01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "PTLVCR02_DYN",
+            "epicname": "PTLVCR02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC1SOL11-12-13_DYN",
+            "epicname": "AC1SOL11-12-13",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC2SOL02-03-04_DYN",
+            "epicname": "AC2SOL02-03-04",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC2SOL05-06-07_DYN",
+            "epicname": "AC2SOL05-06-07",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC2SOL08-09-10_DYN",
+            "epicname": "AC2SOL08-09-10",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC2SOL11-12-13_DYN",
+            "epicname": "AC2SOL11-12-13",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "GUNSOL01_DYN",
+            "epicname": "GUNSOL01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "GUNSOL02_DYN",
+            "epicname": "GUNSOL02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC3QUA02_DYN",
+            "epicname": "AC3QUA02",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "AC3QUA03_DYN",
+            "epicname": "AC3QUA03",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "GUNQSK01_DYN",
+            "epicname": "GUNQSK01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        },
+        {
+            "dcsname": "GUNQUA01_DYN",
+            "epicname": "GUNQUA01",
+            "devil": "111",
+            "devil_ip": "192.168.198.137",
+            "devil_tcp_port": "50791",
+            "mkey": "_DYN",
+            "pv_rb": [
+                {
+                    "mem_type": "json",
+                    "pvname": "current_rb",
+                    "type": "double"
+                },
+                {
+                    "mem_type": "json",
+                    "pvname": "mode_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"polarity_rb",
+                    "type": "int32"                
+                },
+                {
+                    "mem_type": "json",
+                    "pvname":"remote_rb",
+                    "type": "bool"
+                }
+            ],
+            "pv_cmd": [
+                {
+                    "pvname": "current",
+                    "type": "double",
+                    "dcs_cmd": "SETT",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname": "mode",
+                    "type": "string",
+                    "dcs_cmd": "MODE",
+                    "parameters": "TRUE",
+                    "lock": "TRUE"
+                },
+                {
+                    "pvname" : "polarity",
+                    "type" : "string",
+                    "dcs_cmd" : "POLA",
+                    "parameters" : "TRUE",
+                    "lock" : "TRUE"                    
+                }
+            ]
+        }
+    ]
+}
+    
