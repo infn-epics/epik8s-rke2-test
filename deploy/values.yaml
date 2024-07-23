@@ -854,6 +854,13 @@ epicsConfiguration:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
 
+    - name: "mag-wrapper"
+      asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC"
+      start: "/epics/ioc/config/start.sh" ## if your mynewioc has a start.sh this line must be kept
+      gitinit: true
       
 cronjobs:
     - name: "chfeeder"
