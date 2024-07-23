@@ -20,7 +20,8 @@ epicsConfiguration:
     plsparcllrfs001.lnf.infn.it
     plsparcllrfs002.lnf.infn.it
     plsparcllrfc001.lnf.infn.it
-    mikelinux.lnf.infn.it"
+    mikelinux.lnf.infn.it
+    192.168.117.224" ## modulator
     
   max_array_bytes: "10000000"
   # conn_tmo: 120
@@ -74,10 +75,27 @@ epicsConfiguration:
       serviceAccount:
         create: false
         name: "default"
-      dataVolume:
-            claim:  ## an existing claim or empty will create a new one
-            size: 50Gi ## size of the claim
-            accessMode: ReadWriteOnce
+      storage:
+        lts:
+          path: /storage/lts
+          size: 1000Gi
+          claim: ""
+          accessMode: ReadWriteOnce
+        mts:
+          path: /storage/mts
+          size: 100Gi
+          claim: ""
+          accessMode: ReadWriteOnce
+        sts:
+          path: /storage/sts
+          size: 10Gi
+          claim: ""
+          accessMode: ReadWriteOnce
+        logs:
+          path: /storage/logs
+          size: 50Gi
+          claim: ""
+          accessMode: ReadWriteOnce
       mysql:
             host: mysql
             dbname: arcappl
@@ -328,6 +346,24 @@ epicsConfiguration:
       iocparam:
         - name: "__CONFIGURATION__"
           value: "vac.json"
+        - name: "__MEMECACHED_SERVER__"
+          value: "plsparcmem001.lnf.infn.it"
+        
+      devtype: softioc
+      devgroup: vac
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+      autosync: true ## restart automatically on changes
+
+    - name: "bcmimport"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:BCM"
+      iocdir: "mem2epics"
+      iocparam:
+        - name: "__CONFIGURATION__"
+          value: "charge.json"
         - name: "__MEMECACHED_SERVER__"
           value: "plsparcmem001.lnf.infn.it"
         
@@ -836,6 +872,16 @@ epicsConfiguration:
         enable: true
         image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
 
+    - name: "mag-wrapper"
+      asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:MAG"
+      start: "/epics/ioc/config/start.sh" ## if your mynewioc has a start.sh this line must be kept
+      devtype: softioc
+      devgroup: mag
+      gitinit: true
+      autosync: true ## restart automatically on changes
       
 cronjobs:
     - name: "chfeeder"

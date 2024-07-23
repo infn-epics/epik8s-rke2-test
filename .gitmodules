@@ -16,3 +16,6 @@
 [submodule "config/iocs/mem2epics/scripts"]
 	path = config/iocs/mem2epics/scripts
 	url = https://baltig.infn.it/infn-epics/memcached2epics.git
+[submodule "config/iocs/mag-wrapper/scripts"]
+	path = config/iocs/mag-wrapper/scripts
+	url = https://baltig.infn.it/lnf-da-control/softioc-devil-wrapper-for-sparc.git

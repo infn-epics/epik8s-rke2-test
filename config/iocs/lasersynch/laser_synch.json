@@ -18,12 +18,12 @@
     {
         "pvname":"AVG_NUM",
         "type":"aOut",
-        "init_value":"20"
+        "init_value":"3"
     },
     {
         "pvname":"AVG_START",
         "type":"aOut",
-        "init_value":"8500"
+        "init_value":"5000"
     },
     {
         "pvname":"AVG_STOP",
@@ -48,7 +48,7 @@
     {
         "pvname":"TRACKING_STEP",
         "type":"aOut",
-        "init_value":"0.0001"
+        "init_value":"0.00001"
     },
     {
         "pvname":"LASER_AMP_TSH",
