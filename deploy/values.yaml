@@ -355,6 +355,24 @@ epicsConfiguration:
       gitinit: true
       autosync: true ## restart automatically on changes
 
+    - name: "bcmimport"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/epics-py-base
+      iocprefix: "SPARC:BCM"
+      iocdir: "mem2epics"
+      iocparam:
+        - name: "__CONFIGURATION__"
+          value: "charge.json"
+        - name: "__MEMECACHED_SERVER__"
+          value: "plsparcmem001.lnf.infn.it"
+        
+      devtype: softioc
+      devgroup: vac
+      start: "/epics/ioc/config/start.sh"
+      gitinit: true
+      autosync: true ## restart automatically on changes
+
     - name: "flags-ch1"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
