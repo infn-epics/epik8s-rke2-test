@@ -16,6 +16,9 @@
             <latching>false</latching>
             <annunciating>true</annunciating>
             <description>LLRF2 Interlock STATUS</description>
+            <severity>
+                <level value="MAJOR" limit="1"/>
+            </severity>
         </pv>
         <pv name="SPARC:LLRF3:app:interlock:state">
             <enabled>true</enabled>
