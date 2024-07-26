@@ -421,7 +421,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
     - name: "bdsparcac2bpm001"
@@ -436,7 +436,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -453,7 +453,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -470,7 +470,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -487,7 +487,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -504,7 +504,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -521,7 +521,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -538,7 +538,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -555,7 +555,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -572,7 +572,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -589,7 +589,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -606,7 +606,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -623,7 +623,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -640,7 +640,7 @@ epicsConfiguration:
       scpoptions: "-O"
       workdir: "/opt/sparc"
       exec: "start.sh"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       initcmd: "mount -o remount,rw /"
 
 
@@ -756,7 +756,7 @@ epicsConfiguration:
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       iocprefix: "SPARC:MENLO"
       gitinit: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "ibilt-test"
