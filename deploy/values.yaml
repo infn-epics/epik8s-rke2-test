@@ -384,7 +384,7 @@ epicsConfiguration:
       gitinit: true
       autosync: false ## restart automatically on changes
       usegateway: false
-      disable: true
+      disable: false
 
     - name: "bdsparcplxbpm007"
       asset: "https://confluence.infn.it/x/doKBBg"
@@ -663,6 +663,19 @@ epicsConfiguration:
       devgroup: diag
       autosync: false ## restart automatically on changes
 
+    - name: "shutter" 
+      asset: "https://confluence.infn.it/display/LDCG/ICP-23-0032"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "SPARC:LASER"
+      iocdir: "icp7026"
+      iocparam:
+        - name: "__SERVER__"
+          value: ddcgicpaio001.lnf.infn.it
+      gitinit: true
+      devtype: ai
+      devgroup: diag
+      autosync: false ## restart automatically on changes
+
     - name: "temp01" 
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
@@ -700,20 +713,22 @@ epicsConfiguration:
       gitinit: true
       imagePullPolicy: IfNotPresent
     
-    - name: "tml-test"
-      asset: "https://confluence.infn.it/x/nYD8DQ"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
-      iocprefix: "SPARC:TML"
-      devtype: motor
-      devgroup: test
-      serial:
-        ip: 192.168.190.55
-        port: 4001
-        ptty: /var/tmp/ttyV0
-        baud: 9600
-      gitinit: true
-      autosync: false ## restart automatically on changes
+    # - name: "tml-test"
+    #   asset: "https://confluence.infn.it/x/nYD8DQ"
+    #   charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+    #   image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b4
+    #   iocprefix: "SPARC:TML"
+    #   devtype: motor
+    #   devgroup: test
+    #   serial:
+    #     ip: 192.168.190.55
+    #     port: 4001
+    #     ptty: /var/tmp/ttyV0
+    #     baud: 9600
+    #   gitinit: true
+    #   autosync: false ## restart automatically on changes
+    #   disable: true
+
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "tml-ch1"
@@ -730,7 +745,7 @@ epicsConfiguration:
         baud: 9600
       gitinit: true
       autosync: false ## restart automatically on changes
-      disable: true
+      disable: false
       # carepeater: true ## launch ca repeater, this ioc needs it
 
     - name: "menlo"
@@ -778,7 +793,7 @@ epicsConfiguration:
         baud: 9600
       gitinit: true
       autosync: false ## restart automatically on changes
-      disable: true ## dont deploy
+      disable: false ## dont deploy
 
 
 
