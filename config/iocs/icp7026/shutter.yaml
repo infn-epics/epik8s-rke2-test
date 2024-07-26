@@ -1,0 +1,16 @@
+ioc_name: __IOC_NAME__
+description: Shutter Control 
+
+entities:
+
+- type: icpdas.icp7026
+  NAME: ICPDAS001
+  IP: __SERVER__
+  TCPPORT: 502
+  P: __IOC_PREFIX__
+  R: "SHUTTER"
+
+
+- type: epics.PostStartupCommand 
+  command: |
+          dbl("*") > __CONFIG_DIR__/pvlist.txt           ## dumps PV NAMES
