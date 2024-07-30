@@ -30,7 +30,7 @@ entities:
     P: "SPARC:TML:CH2"
     TTY: /var/tmp/ttyV0
     numAxes: 11
-    hostid: 255
+    hostid: 1
 
   - <<: *motor
     axid: 2
