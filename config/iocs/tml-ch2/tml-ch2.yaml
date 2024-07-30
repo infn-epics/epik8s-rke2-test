@@ -75,5 +75,6 @@ entities:
 
   - type: epics.PostStartupCommand 
     command: |
+          
           dbl("*") > __CONFIG_DIR__/pvlist.txt
 
