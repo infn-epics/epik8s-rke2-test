@@ -696,7 +696,7 @@ epicsConfiguration:
       host: "plsparcmrf001.lnf.infn.it"
       workdir: "/home/nat/progetti/mrfioc2/iocBoot/epik8s"
       exec: "start.sh"
-      autosync: false 
+      autosync: true 
 
       # disable: true ## dont deploy
 
