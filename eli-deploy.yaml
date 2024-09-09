@@ -1,23 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sparc-start-epik8-deploy
+  name: eli-start-epik8-deploy
   namespace: argocd
   labels:
-      deploy: sparc
+      deploy: eli
 spec:
   project: default
   source:
-    repoURL: 'https://baltig.infn.it/lnf-da-control/epik8-sparc.git'
+    repoURL: 'https://baltig.infn.it/lnf-da-control/epik8-eli.git'
     path: deploy
     targetRevision: HEAD
     helm:
-      parameters:
-        - name: beamline
-          value: sparc
+      values: |
+          namespace: backend
+          domain: "apps.k8s-da.lnf.infn.it"
+          ingressClassName: "haproxy"
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: sparc
+    namespace: eli
   syncPolicy:
     automated:
       prune: true  # Optional: Automatically remove resources not specified in Helm chart
