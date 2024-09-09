@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eli-start-epik8-deploy
+  name: eli-start-epik8s-deploy
   namespace: argocd
   labels:
       deploy: eli
