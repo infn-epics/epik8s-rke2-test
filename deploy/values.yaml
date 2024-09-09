@@ -6,7 +6,7 @@ epik8namespace: "apps.k8s-da.lnf.infn.it"
 targetRevision: "devel"
 serviceAccountName: "default"
 ## starting point
-giturl: https://baltig.infn.it/lnf-da-control/epik8-eli.git
+giturl: https://baltig.infn.it/lnf-da-control/epik8s-eli.git
 gitrev: master
 baseIp: "10.244"
 startIp: 1
@@ -108,7 +108,7 @@ epicsConfiguration:
               cpu: 1000m
               memory: 1Gi
         gitRepoConfig:
-          url: https://baltig.infn.it/lnf-da-control/epik8-eli.git
+          url: https://baltig.infn.it/lnf-da-control/epik8s-eli.git
           path: opi
           branch: master
         autosync: true ## restart automatically on changes
