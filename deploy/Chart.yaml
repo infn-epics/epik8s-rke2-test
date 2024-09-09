@@ -1,5 +1,5 @@
 apiVersion: v2
-name: sparc-beamline-chart
+name: eli-beamline-chart
 version: 1.0.1
 
 # dependencies:
