@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
-          namespace: backend
+          namespace: eli
           domain: "apps.k8s-da.lnf.infn.it"
           ingressClassName: "haproxy"
   destination:
