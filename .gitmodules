@@ -16,3 +16,6 @@
 [submodule "config/iocs/mag-wrapper/scripts"]
 	path = config/iocs/mag-wrapper/scripts
 	url = https://baltig.infn.it/lnf-da-control/softioc-devil-wrapper-for-sparc.git
+[submodule "opi"]
+	path = opi
+	url = https://baltig.infn.it/lnf-da-control/eli-epics-opi.git
