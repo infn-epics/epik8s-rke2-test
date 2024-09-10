@@ -57,7 +57,7 @@ epicsConfiguration:
       storage:
         lts:
           path: /storage/lts
-          size: 1000Gi
+          size: 100Gi
           claim: ""
           accessMode: ReadWriteOnce
         mts:
