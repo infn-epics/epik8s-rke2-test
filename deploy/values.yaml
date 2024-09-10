@@ -76,6 +76,8 @@ epicsConfiguration:
           size: 50Gi
           claim: ""
           accessMode: ReadWriteOnce
+          storageClassName: "nassparc-k8s-quad02"
+
       mysql:
             host: mysql
             dbname: arcappl
