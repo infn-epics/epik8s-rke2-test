@@ -59,6 +59,7 @@ epicsConfiguration:
           path: /storage/lts
           size: 100Gi
           claim: ""
+          storageClassName: "nassparc-k8s-quad02"
           accessMode: ReadWriteOnce
         mts:
           path: /storage/mts
