@@ -303,17 +303,16 @@ epicsConfiguration:
       # carepeater: true ## launch ca repeater, this ioc needs it
 
   
-    - name: "elicam2"
+    - name: "camera"
       asset: "https://confluence.infn.it/x/nYD8DQ"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      host: "pleligige001.lnf.infn.it"
-      ca_server_port: 5164
-      pva_server_port: 5175
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camera
       devgroup: test
-      docker:
-        enable: true
-        image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
+      hostNetwork: true
+      useAffinity: true
+      affinityKey: "gige"
+      affinityValue: "enabled"
 
     - name: "mag-wrapper"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
