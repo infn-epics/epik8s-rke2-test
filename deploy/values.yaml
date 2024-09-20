@@ -313,7 +313,8 @@ epicsConfiguration:
       useAffinity: true
       affinityKey: "gige"
       affinityValue: "enabled"
-
+      targetRevision: "affinity"
+      
     - name: "mag-wrapper"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
