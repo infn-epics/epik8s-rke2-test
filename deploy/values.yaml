@@ -306,7 +306,7 @@ epicsConfiguration:
   
     - name: "camera"
       asset: "https://confluence.infn.it/x/nYD8DQ"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       targetRevision: "affinity"
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camera
