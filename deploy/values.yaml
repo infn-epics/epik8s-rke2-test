@@ -65,6 +65,7 @@ epicsConfiguration:
           path: /storage/mts
           size: 100Gi
           claim: ""
+          storageClassName: "nassparc-k8s-quad02"
           accessMode: ReadWriteOnce
         sts:
           path: /storage/sts
@@ -305,7 +306,8 @@ epicsConfiguration:
   
     - name: "camera"
       asset: "https://confluence.infn.it/x/nYD8DQ"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      targetRevision: "affinity"
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camera
       devgroup: test
@@ -313,7 +315,6 @@ epicsConfiguration:
       useAffinity: true
       affinityKey: "gige"
       affinityValue: "enabled"
-      targetRevision: "affinity"
       
     - name: "mag-wrapper"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
