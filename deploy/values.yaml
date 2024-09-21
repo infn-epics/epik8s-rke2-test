@@ -313,7 +313,10 @@ epicsConfiguration:
       devgroup: test
       gitinit: true
 
-      hostNetwork: true
+      metadata:
+        name: gigevision-client
+        annotations:
+          k8s.v1.cni.cncf.io/networks: gigevision-network
       useAffinity: true
       affinityKey: "gige"
       affinityValue: "enabled"
