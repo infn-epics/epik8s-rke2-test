@@ -311,6 +311,8 @@ epicsConfiguration:
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camera
       devgroup: test
+      gitinit: true
+
       hostNetwork: true
       useAffinity: true
       affinityKey: "gige"
