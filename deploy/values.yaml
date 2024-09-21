@@ -314,9 +314,9 @@ epicsConfiguration:
       gitinit: true
 
       networks:
-        name: gigevision-client
-        annotations: gigevision-network
-        
+        - name: "gigevision-client"
+          annotation: "gigevision-network"
+
       useAffinity: true
       affinityKey: "gige"
       affinityValue: "enabled"
