@@ -8,7 +8,7 @@ serviceAccountName: "default"
 ## starting point
 giturl: https://baltig.infn.it/lnf-da-control/epik8s-eli.git
 gitrev: master
-baseIp: "10.96"
+# baseIp: "10.96"
 startIp: 1
 ipRange: 1024  # /16 range (256 * 256)
 openshift: true
