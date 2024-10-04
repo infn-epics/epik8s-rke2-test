@@ -313,10 +313,10 @@ epicsConfiguration:
       devgroup: test
       gitinit: true
 
-      networks:
-        - name: "gigevision-client"
-          annotation: "gigevision-network"
-
+      # networks:
+      #   - name: "gigevision-client"
+      #     annotation: "gigevision-network"
+      hostNetwork: true
       useAffinity: true
       affinityKey: "gige"
       affinityValue: "enabled"
