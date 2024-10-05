@@ -320,6 +320,8 @@ epicsConfiguration:
       useAffinity: true
       affinityKey: "gige"
       affinityValue: "enabled"
+      iocprefix: "LEL:SCN01"
+      iocroot: "CAM01"
       
       iocparam:
       - name: "CAMERA_ID"
