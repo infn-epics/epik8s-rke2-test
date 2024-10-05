@@ -304,7 +304,7 @@ epicsConfiguration:
       # carepeater: true ## launch ca repeater, this ioc needs it
 
   
-    - name: "camera"
+    - name: "cam01"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       targetRevision: "affinity"
@@ -312,7 +312,7 @@ epicsConfiguration:
       devtype: camera
       devgroup: test
       gitinit: true
-
+      iocdir: "camera"
       networks:
         - name: "gigevision-client"
           annotation: "gigevision-network"
@@ -320,6 +320,23 @@ epicsConfiguration:
       useAffinity: true
       affinityKey: "gige"
       affinityValue: "enabled"
+      
+      iocparam:
+      - name: "CAMERA_ID"
+        value: "Basler-a2A1920-51gmBAS-40458493"
+      - name: "CAMERA_CLASS"
+        value: "Basler-a2A2600-20gmBAS"
+      - name: "CAMERA_TYPE"
+        value: "Int8"
+      - name: "CAMERA_FTVL"
+        value: "UCHAR"
+      - name: "CAMERA_ELEMS"
+        value: "325546"
+      - name: "CAMERA_STATS_XSIZE"
+        value: "1024"
+      - name: "CAMERA_STATS_YSIZE"
+        value: "768" 
+
       
     - name: "mag-wrapper"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
