@@ -24,7 +24,7 @@ entities:
   - type: ADCore.NDProcess
     PORT: __IOC_ROOT__.PROC
     P: "__IOC_PREFIX__:CAM02"
-    R: ":Pva1:"
+    R: ":Proc1:"
     NDARRAY_PORT: __IOC_ROOT__
     ENABLED: 1
   
