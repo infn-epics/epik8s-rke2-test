@@ -19,7 +19,7 @@ JSON_CONTENT=$(cat <<EOF
     "servers": [
         {
             "name": "$name",
-            "clients": [],
+            "clients": ["cam1"],
             "addrlist": "",
             "autoaddrlist": false,
             "statusprefix": "GW:STS:"
