@@ -6,42 +6,18 @@ CLIENT_NAME="$name"
 #export EPICS_PVA_ADDR_LIST $EPICS_CA_ADDR_LIST
 # export EPICS_PVA_NAME_SERVERS=$EPICS_CA_ADDR_LIST
 # Generate JSON content
-# JSON_CONTENT=$(cat <<EOF
-# {
-#     "version": 2,
-#     "clients":[
-#         {
-#             "name":"cam1",
-#             "addrlist": "cam01.eli.svc",
-#             "autoaddrlist":false
-#         },
-#          {
-#             "name":"cam2",
-#             "addrlist": "cam02.eli.svc",
-#             "autoaddrlist":false
-#         }
-
-#     ],
-#     "servers": [
-
-#         {
-#             "name":"server192",
-#             "clients":["cam1","cam2"],
-#             "autoaddrlist":false,
-#             "statusprefix":"GW:STS:"
-#         }
-#     ]
-# }
-# EOF
-# )
-
 JSON_CONTENT=$(cat <<EOF
 {
     "version": 2,
     "clients":[
         {
-            "name":"cameranet",
-            "addrlist": "10.96.2.255",
+            "name":"cam1",
+            "addrlist": "cam01.eli.svc",
+            "autoaddrlist":false
+        },
+         {
+            "name":"cam2",
+            "addrlist": "cam02.eli.svc",
             "autoaddrlist":false
         }
 
@@ -50,7 +26,7 @@ JSON_CONTENT=$(cat <<EOF
 
         {
             "name":"server192",
-            "clients":["cameranet"],
+            "clients":["cam1","cam2"],
             "autoaddrlist":false,
             "statusprefix":"GW:STS:"
         }
@@ -58,6 +34,8 @@ JSON_CONTENT=$(cat <<EOF
 }
 EOF
 )
+
+
 
 # Output the JSON content to a file
 echo "$JSON_CONTENT" > gateway_config.json
