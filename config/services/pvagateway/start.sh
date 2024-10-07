@@ -14,6 +14,11 @@ JSON_CONTENT=$(cat <<EOF
             "name":"cam1",
             "addrlist": "cam01.eli.svc",
             "autoaddrlist":false
+        },
+         {
+            "name":"cam2",
+            "addrlist": "cam02.eli.svc",
+            "autoaddrlist":false
         }
 
     ],
