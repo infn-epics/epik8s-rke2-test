@@ -39,5 +39,6 @@ EOF
 echo "$JSON_CONTENT" > gateway_config.json
 
 echo "Generated gateway_config.json:"
-
-python3 -m p4p.gw --debug gateway_config.json
+cat gateway_config.json
+## -- debug
+python3 -m p4p.gw gateway_config.json
