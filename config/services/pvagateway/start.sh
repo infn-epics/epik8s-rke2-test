@@ -18,12 +18,13 @@ JSON_CONTENT=$(cat <<EOF
 
     ],
     "servers": [
+        # {
+        #     "name": "$name",
+        #     "clients": ["cam1"],
+        #     "autoaddrlist": false,
+        #     "statusprefix": "GW:STS:"
+        # },
         {
-            "name": "$name",
-            "clients": ["cam1"],
-            "autoaddrlist": false,
-            "statusprefix": "GW:STS:"
-        },{
             "name":"server192",
             "clients":[],
             "autoaddrlist":false,
