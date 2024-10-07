@@ -26,7 +26,7 @@ JSON_CONTENT=$(cat <<EOF
 
         {
             "name":"server192",
-            "clients":[],
+            "clients":["cam1","cam2"],
             "autoaddrlist":false,
             "statusprefix":"GW:STS:"
         }
