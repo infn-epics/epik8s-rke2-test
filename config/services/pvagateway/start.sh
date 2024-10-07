@@ -15,14 +15,19 @@ JSON_CONTENT=$(cat <<EOF
             "addrlist": "cam01.eli.svc",
             "autoaddrlist":false
         }
+
     ],
     "servers": [
         {
             "name": "$name",
-            "clients": ["0.0.0.0"],
-            "addrlist": "",
+            "clients": ["cam1"],
             "autoaddrlist": false,
             "statusprefix": "GW:STS:"
+        },{
+            "name":"server192",
+            "clients":[],
+            "autoaddrlist":false,
+            "statusprefix":"GW:STS:"
         }
     ]
 }
