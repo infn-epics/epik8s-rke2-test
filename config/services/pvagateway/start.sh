@@ -41,7 +41,7 @@ JSON_CONTENT=$(cat <<EOF
     "clients":[
         {
             "name":"cameranet",
-            "addrlist": "10.96.255.255",
+            "addrlist": "10.96.2.255",
             "autoaddrlist":false
         }
 
