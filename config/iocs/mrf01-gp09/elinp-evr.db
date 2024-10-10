@@ -607,6 +607,75 @@ record(ai, "$(SYS,recursive)-$(EVR,recursive):Pul0-Width-RB") {
   field(PREC, "3")
   field(FLNK, "$(SYS,recursive)-$(EVR,recursive):Pul0-Width-Raw-RB")
 }
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul0-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul1-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul2-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul3-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul4-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul5-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul6-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul7-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul8-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):Pul9-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
 
 record(longin, "$(SYS,recursive)-$(EVR,recursive):Pul0-Width-Raw-RB") {
   field(DTYP, "Obj Prop uint32")

@@ -206,6 +206,12 @@ record(bi, "$(SYS,recursive)-$(EVG,recursive):AcTrig-SyncSrc-RB") {
     field( ONAM, "Mxc7")
 }
 
+
+
+
+
+
+
 record(bo, "$(SYS,recursive)-$(EVG,recursive):AcTrig-TrigSrc0-SP") {
     field( DESC, "Event trigger 0")
     field( DTYP, "EVG Trig Evt AC")
