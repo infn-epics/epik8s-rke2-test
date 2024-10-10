@@ -401,7 +401,7 @@ epicsConfiguration:
       iocprefix: "TMG"
       devtype: timing
       devgroup: timing
-      host: "gen-cs-gp09-ioc01"
+      host: "10.16.4.24"
       workdir: "/opt/codac-4.1/apps/elinp-gp09-ioc01/iocBoot/epik8s"
       exec: "start.sh"
       autosync: false
