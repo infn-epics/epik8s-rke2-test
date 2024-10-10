@@ -410,7 +410,7 @@ epicsConfiguration:
           value: "EVR01"
         - name: "EVG_PREFIX"
           value: "EVG01"
-      ssh_options: "-o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
 
     - name: "mag-wrapper"
