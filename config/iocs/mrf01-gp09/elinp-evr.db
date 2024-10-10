@@ -2385,6 +2385,30 @@ record(longout, "$(SYS,recursive)-$(EVR,recursive):FrontUnivOut0-Src-SP") {
   info(autosaveFields_pass0, "VAL HOPR LOPR DRVH DRVL")
 }
 
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):FrontUnivOut0-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):FrontUnivOut1-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):FrontUnivOut2-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
+record(waveform, "$(SYS,recursive)-$(EVR,recursive):FrontUnivOut3-Label-I") {
+  field(DESC, "Label")
+  field(FTVL, "CHAR")
+  field(NELM, "128")
+  info(autosaveFields_pass1, "VAL")
+}
 # Settings
 # Users use will set one of these at a time.
 
