@@ -15,7 +15,6 @@ openshift: true
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
   address_list: "
-    gen-cs-gp09-ioc01.lnf.infn.it
     gen-cs-gp08-ioc06.lnf.infn.it 
     "
 
@@ -396,7 +395,24 @@ epicsConfiguration:
       - name: "CAMERA_STATS_YSIZE"
         value: "768"
 
-      
+    - name: "mrf01-gp09"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocprefix: "TMG"
+      devtype: timing
+      devgroup: timing
+      host: "gen-cs-gp09-ioc01"
+      workdir: "/opt/codac-4.1/apps/elinp-gp09-ioc01/iocBoot/epik8s"
+      exec: "start.sh"
+      autosync: false
+      iocparam:
+        - name: "EVR_PREFIX"
+          value: "EVR01"
+        - name: "EVG_PREFIX"
+          value: "EVG01"
+      ssh_options: "-o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      scpoptions: "-O"
+
     - name: "mag-wrapper"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
