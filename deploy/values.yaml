@@ -421,7 +421,7 @@ epicsConfiguration:
       iocdir: "icp7060"
       devtype: icpdas7060
       devgroup: polarity_reversal01
-      autosync: false
+      autosync: true
       iocparam:
         - name: "__SERVER__"
           value: ddeliicp6r6i001.lnf.infn.it
@@ -434,7 +434,7 @@ epicsConfiguration:
       iocdir: "icp7060"
       devtype: icpdas7060
       devgroup: polarity_reversal01
-      autosync: false
+      autosync: true
       iocparam:
         - name: "__SERVER__"
           value: ddeliicp6r6i002.lnf.infn.it
