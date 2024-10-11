@@ -413,28 +413,28 @@ epicsConfiguration:
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
 
-    - name: "polrev0_icpdas01"
+    - name: "polrev-icpdas01"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:POLREV"
       iocroot: "ICPDAS01"
       iocdir: "icp7060"
       devtype: icpdas7060
-      devgroup: polarity_reversal01
+      devgroup: polarity_reversal
       autosync: true
       gitinit: true
       iocparam:
         - name: "__SERVER__"
           value: ddeliicp6r6i001.lnf.infn.it
 
-    - name: "polrev0_icpdas02"
+    - name: "polrev-icpdas02"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:POLREV"
       iocroot: "ICPDAS02"
       iocdir: "icp7060"
       devtype: icpdas7060
-      devgroup: polarity_reversal01
+      devgroup: polarity_reversal
       autosync: true
       gitinit: true
       iocparam:
