@@ -422,6 +422,7 @@ epicsConfiguration:
       devtype: icpdas7060
       devgroup: polarity_reversal01
       autosync: true
+      gitinit: true
       iocparam:
         - name: "__SERVER__"
           value: ddeliicp6r6i001.lnf.infn.it
@@ -435,6 +436,7 @@ epicsConfiguration:
       devtype: icpdas7060
       devgroup: polarity_reversal01
       autosync: true
+      gitinit: true
       iocparam:
         - name: "__SERVER__"
           value: ddeliicp6r6i002.lnf.infn.it
@@ -461,7 +463,6 @@ cronjobs:
       gitinit: true
       
 applications:
-   
     - name: "icpdastemp01"
       image:
         repository: baltig.infn.it:4567/epics-containers/epics-py-base
