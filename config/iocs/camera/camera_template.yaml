@@ -49,7 +49,7 @@ entities:
   - type: ADCore.NDStdArrays
     P: "__IOC_PREFIX__:__IOC_ROOT__"
     R: ":image2:"
-    PORT: __IOC_ROOT__.NTD
+    PORT: __IOC_ROOT__.NTD2
     NDARRAY_PORT: __IOC_ROOT__.PROC
     TYPE: CAMERA_TYPE
     FTVL: CAMERA_FTVL
