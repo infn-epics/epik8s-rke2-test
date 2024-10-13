@@ -19,6 +19,14 @@ entities:
     R: ":Pva1:"
     NDARRAY_PORT: __IOC_ROOT__
     ENABLED: 1
+  
+  - type: ADCore.NDPvaPlugin
+    PORT: __IOC_ROOT__.PVA2
+    PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:PROC:OUTPUT"
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":Pva2:"
+    NDARRAY_PORT: __IOC_ROOT__.PROC
+    ENABLED: 1
 
 
   - type: ADCore.NDProcess
@@ -38,6 +46,16 @@ entities:
     NELEMENTS: CAMERA_ELEMS
     ENABLED: 1
 
+  - type: ADCore.NDStdArrays
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":image2:"
+    PORT: __IOC_ROOT__.NTD
+    NDARRAY_PORT: __IOC_ROOT__.PROC
+    TYPE: CAMERA_TYPE
+    FTVL: CAMERA_FTVL
+    NELEMENTS: CAMERA_ELEMS
+    ENABLED: 1
+
   - type: ADCore.NDStats
     PORT: __IOC_ROOT__.STATS
     NDARRAY_PORT: __IOC_ROOT__
@@ -48,11 +66,29 @@ entities:
     YSIZE: CAMERA_STATS_YSIZE
     ENABLED: 1
 
+  - type: ADCore.NDStats
+    PORT: __IOC_ROOT__.STATS2
+    NDARRAY_PORT: __IOC_ROOT__.PROC
+    HIST_SIZE: 50
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":Stats2:"
+    XSIZE: CAMERA_STATS_XSIZE
+    YSIZE: CAMERA_STATS_YSIZE
+    ENABLED: 1
+
+
   - type: ADCore.NDFileTIFF
     PORT: __IOC_ROOT__.TIFF
     NDARRAY_PORT: __IOC_ROOT__
     P: "__IOC_PREFIX__:__IOC_ROOT__"
     R: ":TIFF1:"
+    ENABLED: 1
+
+  - type: ADCore.NDFileTIFF
+    PORT: __IOC_ROOT__.TIFF2
+    NDARRAY_PORT: __IOC_ROOT__.PROC
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":TIFF2:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand 
@@ -64,6 +100,9 @@ entities:
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileWriteMode",2)
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF2:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF2:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF2:FileTemplate","%s%s_proc_%3.3d.tiff")
 
   - type: epics.EpicsCaMaxArrayBytes 
     max_bytes: 10000000
