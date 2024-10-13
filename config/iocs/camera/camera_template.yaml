@@ -57,6 +57,13 @@ entities:
 
   - type: epics.PostStartupCommand 
     command: dbl              ## dumps PV NAMES
-    
+
+  - type: epics.PostStartupCommand 
+    command: |
+      dbl("*") > __CONFIG_DIR__/pvlist.txt
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
+
   - type: epics.EpicsCaMaxArrayBytes 
     max_bytes: 10000000
