@@ -31,7 +31,7 @@ entities:
     PORT: __IOC_ROOT__.PVA2
     PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:PROC:OUTPUT"
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":Proc:Pva1:"
+    R: ":Proc1:Pva1:"
     NDARRAY_PORT: __IOC_ROOT__.PROC
     ENABLED: 1
 
@@ -113,7 +113,7 @@ entities:
     NDARRAY_PORT: __IOC_ROOT__.PROC
     HIST_SIZE: 50
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":Proc:Stats1:"
+    R: ":Proc1:Stats1:"
     XSIZE: CAMERA_STATS_XSIZE
     YSIZE: CAMERA_STATS_YSIZE
     ENABLED: 1
@@ -140,7 +140,7 @@ entities:
     PORT: __IOC_ROOT__.TIFF2
     NDARRAY_PORT: __IOC_ROOT__.PROC
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":Proc:TIFF1:"
+    R: ":Proc1:TIFF1:"
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
@@ -166,9 +166,9 @@ entities:
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileWriteMode",2)
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc:TIFF1:FilePath", "__DATA_DIR__")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc:TIFF1:FileWriteMode",2)
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc:TIFF1:FileTemplate","%s%s_proc_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc1:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc1:TIFF1:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc1:TIFF1:FileTemplate","%s%s_proc_%3.3d.tiff")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FilePath", "__DATA_DIR__")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FileWriteMode",2)
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FileTemplate","%s%s_roi1_%3.3d.tiff")
