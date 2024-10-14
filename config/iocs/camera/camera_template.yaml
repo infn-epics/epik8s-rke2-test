@@ -17,7 +17,7 @@ entities:
     R: ":Proc1:"
     NDARRAY_PORT: __IOC_ROOT__
     ENABLED: 1
-    
+
   # Want to have also high throuput PVA protocol
   - type: ADCore.NDPvaPlugin
     PORT: __IOC_ROOT__.PVA
@@ -35,9 +35,37 @@ entities:
     NDARRAY_PORT: __IOC_ROOT__.PROC
     ENABLED: 1
 
+  - type: ADCore.NDROI
+    PORT: __IOC_ROOT__.ROI1
+    NDARRAY_PORT: __IOC_ROOT__
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":Roi1:"
+    ENABLED: 1
 
+  - type: ADCore.NDOverlay
+    PORT: __IOC_ROOT__.OVERLAY1
+    NDARRAY_PORT: __IOC_ROOT__
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":Overlay1:"
+    ENABLED: 1
 
   
+  - type: ADCore.NDPvaPlugin
+    PORT: __IOC_ROOT__.PVA3
+    PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:ROI1:OUTPUT"
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":PvaRoi1:"
+    NDARRAY_PORT: __IOC_ROOT__.ROI1
+    ENABLED: 1
+
+  - type: ADCore.NDPvaPlugin
+    PORT: __IOC_ROOT__.PVA4
+    PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:OVERLAY1:OUTPUT"
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":PvaOverlay1:"
+    NDARRAY_PORT: __IOC_ROOT__.OVERLAY1
+    ENABLED: 1
+
   - type: ADCore.NDStdArrays
     P: "__IOC_PREFIX__:__IOC_ROOT__"
     R: ":image1:"
@@ -77,6 +105,16 @@ entities:
     XSIZE: CAMERA_STATS_XSIZE
     YSIZE: CAMERA_STATS_YSIZE
     ENABLED: 1
+  
+  - type: ADCore.NDStats
+    PORT: __IOC_ROOT__.STATS3
+    NDARRAY_PORT: __IOC_ROOT__.ROI1
+    HIST_SIZE: 50
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":StatsRoi1:"
+    XSIZE: CAMERA_STATS_XSIZE
+    YSIZE: CAMERA_STATS_YSIZE
+    ENABLED: 1
 
 
   - type: ADCore.NDFileTIFF
@@ -90,7 +128,14 @@ entities:
     PORT: __IOC_ROOT__.TIFF2
     NDARRAY_PORT: __IOC_ROOT__.PROC
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":TIFF2:"
+    R: ":TIFFProc:"
+    ENABLED: 1
+
+  - type: ADCore.NDFileTIFF
+    PORT: __IOC_ROOT__.TIFF3
+    NDARRAY_PORT: __IOC_ROOT__.ROI1
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":TIFFRoi1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand 
@@ -102,9 +147,12 @@ entities:
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileWriteMode",2)
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF2:FilePath", "__DATA_DIR__")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF2:FileWriteMode",2)
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF2:FileTemplate","%s%s_proc_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFProc:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFProc:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFProc:FileTemplate","%s%s_proc_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFRoi1:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFRoi1:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFRoi1:FileTemplate","%s%s_roi1_%3.3d.tiff")
 
   - type: epics.EpicsCaMaxArrayBytes 
     max_bytes: 10000000
