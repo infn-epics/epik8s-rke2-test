@@ -48,6 +48,7 @@ entities:
     P: "__IOC_PREFIX__:__IOC_ROOT__"
     R: ":Overlay1:"
     NAME: "Reference"
+    NOverlays: 8
     SHAPE: "3"
     XPOS: ""
     YPOS: ""
@@ -57,7 +58,7 @@ entities:
     YSIZE: ""
     XWIDTH: ""
     YWIDTH: ""
-    O: "Reference"
+    O: "1:"
 
 
   
