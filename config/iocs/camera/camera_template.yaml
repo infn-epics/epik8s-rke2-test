@@ -47,7 +47,18 @@ entities:
     NDARRAY_PORT: __IOC_ROOT__
     P: "__IOC_PREFIX__:__IOC_ROOT__"
     R: ":Overlay1:"
-    ENABLED: 1
+    NAME: "Reference"
+    SHAPE: "3"
+    XPOS: ""
+    YPOS: ""
+    XCENT: ""
+    YCENT: ""
+    XSIZE: ""
+    YSIZE: ""
+    XWIDTH: ""
+    YWIDTH: ""
+    O: "Reference"
+
 
   
   - type: ADCore.NDPvaPlugin
