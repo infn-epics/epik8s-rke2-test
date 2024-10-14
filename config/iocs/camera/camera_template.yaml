@@ -52,13 +52,7 @@ entities:
     NDARRAY_PORT: __IOC_ROOT__.ROI1
     ENABLED: 1
 
-  - type: ADCore.NDPvaPlugin
-    PORT: __IOC_ROOT__.PVA4
-    PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:OVERLAY1:OUTPUT"
-    P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":Overlay1:Pva1:"
-    NDARRAY_PORT: __IOC_ROOT__.OVERLAY1
-    ENABLED: 1
+  
 
   - type: ADCore.NDStdArrays
     P: "__IOC_PREFIX__:__IOC_ROOT__"
@@ -70,6 +64,32 @@ entities:
     NELEMENTS: CAMERA_ELEMS
     ENABLED: 1
 
+  - type: ADCore.NDOverlay
+    PORT: __IOC_ROOT__.OVERLAY1
+    NDARRAY_PORT: __IOC_ROOT__.NTD
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":Overlay1:"
+    NAME: "Reference"
+    NOverlays: 8
+    SHAPE: "3"
+    XPOS: ""
+    YPOS: ""
+    XCENT: ""
+    YCENT: ""
+    XSIZE: ""
+    YSIZE: ""
+    XWIDTH: ""
+    YWIDTH: ""
+    O: "1:"
+
+  - type: ADCore.NDPvaPlugin
+    PORT: __IOC_ROOT__.PVA4
+    PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:OVERLAY1:OUTPUT"
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":Overlay1:Pva1:"
+    NDARRAY_PORT: __IOC_ROOT__.OVERLAY1
+    ENABLED: 1
+    
   - type: ADCore.NDStdArrays
     P: "__IOC_PREFIX__:__IOC_ROOT__"
     R: ":image2:"
@@ -110,23 +130,7 @@ entities:
     YSIZE: CAMERA_STATS_YSIZE
     ENABLED: 1
 
-  - type: ADCore.NDOverlay
-    PORT: __IOC_ROOT__.OVERLAY1
-    NDARRAY_PORT: __IOC_ROOT__.NTD
-    P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":Overlay1:"
-    NAME: "Reference"
-    NOverlays: 8
-    SHAPE: "3"
-    XPOS: ""
-    YPOS: ""
-    XCENT: ""
-    YCENT: ""
-    XSIZE: ""
-    YSIZE: ""
-    XWIDTH: ""
-    YWIDTH: ""
-    O: "1:"
+  
 
 
 
