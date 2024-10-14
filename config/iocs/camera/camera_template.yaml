@@ -31,7 +31,7 @@ entities:
     PORT: __IOC_ROOT__.PVA2
     PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:PROC:OUTPUT"
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":Pva2:"
+    R: ":Proc:Pva1:"
     NDARRAY_PORT: __IOC_ROOT__.PROC
     ENABLED: 1
 
@@ -65,7 +65,7 @@ entities:
     PORT: __IOC_ROOT__.PVA3
     PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:ROI1:OUTPUT"
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":PvaRoi1:"
+    R: ":Roi1:Pva1:"
     NDARRAY_PORT: __IOC_ROOT__.ROI1
     ENABLED: 1
 
@@ -73,7 +73,7 @@ entities:
     PORT: __IOC_ROOT__.PVA4
     PVNAME: "__IOC_PREFIX__:__IOC_ROOT__:OVERLAY1:OUTPUT"
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":PvaOverlay1:"
+    R: ":Overlay1:Pva1:"
     NDARRAY_PORT: __IOC_ROOT__.OVERLAY1
     ENABLED: 1
 
@@ -112,7 +112,7 @@ entities:
     NDARRAY_PORT: __IOC_ROOT__.PROC
     HIST_SIZE: 50
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":Stats2:"
+    R: ":Proc:Stats1:"
     XSIZE: CAMERA_STATS_XSIZE
     YSIZE: CAMERA_STATS_YSIZE
     ENABLED: 1
@@ -122,7 +122,7 @@ entities:
     NDARRAY_PORT: __IOC_ROOT__.ROI1
     HIST_SIZE: 50
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":StatsRoi1:"
+    R: ":Roi1:Stats1:"
     XSIZE: CAMERA_STATS_XSIZE
     YSIZE: CAMERA_STATS_YSIZE
     ENABLED: 1
@@ -139,14 +139,21 @@ entities:
     PORT: __IOC_ROOT__.TIFF2
     NDARRAY_PORT: __IOC_ROOT__.PROC
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":TIFFProc:"
+    R: ":Proc:TIFF1:"
     ENABLED: 1
 
   - type: ADCore.NDFileTIFF
     PORT: __IOC_ROOT__.TIFF3
     NDARRAY_PORT: __IOC_ROOT__.ROI1
     P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":TIFFRoi1:"
+    R: ":Roi1:TIFF1:"
+    ENABLED: 1
+
+  - type: ADCore.NDFileTIFF
+    PORT: __IOC_ROOT__.TIFF4
+    NDARRAY_PORT: __IOC_ROOT__.OVERLAY1
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":Overlay1:TIFF1:"
     ENABLED: 1
 
   - type: epics.PostStartupCommand 
@@ -158,12 +165,15 @@ entities:
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileWriteMode",2)
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFProc:FilePath", "__DATA_DIR__")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFProc:FileWriteMode",2)
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFProc:FileTemplate","%s%s_proc_%3.3d.tiff")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFRoi1:FilePath", "__DATA_DIR__")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFRoi1:FileWriteMode",2)
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFFRoi1:FileTemplate","%s%s_roi1_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc:TIFF1:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc:TIFF1:FileTemplate","%s%s_proc_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FileTemplate","%s%s_roi1_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF:FileTemplate","%s%s_overlay1_%3.3d.tiff")
 
   - type: epics.EpicsCaMaxArrayBytes 
     max_bytes: 10000000
