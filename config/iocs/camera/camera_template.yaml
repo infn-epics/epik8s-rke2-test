@@ -11,11 +11,18 @@ entities:
     ID: CAMERA_ID
     CLASS: CAMERA_CLASS
 
+  - type: ADCore.NDROI
+    PORT: __IOC_ROOT__.ROI1
+    NDARRAY_PORT: __IOC_ROOT__
+    P: "__IOC_PREFIX__:__IOC_ROOT__"
+    R: ":Roi1:"
+    ENABLED: 1
+
   - type: ADCore.NDProcess
     PORT: __IOC_ROOT__.PROC
     P: "__IOC_PREFIX__:__IOC_ROOT__"
     R: ":Proc1:"
-    NDARRAY_PORT: __IOC_ROOT__
+    NDARRAY_PORT: __IOC_ROOT__.ROI1
     ENABLED: 1
 
   - type: ADCore.NDOverlay
@@ -53,12 +60,7 @@ entities:
     NDARRAY_PORT: __IOC_ROOT__.PROC
     ENABLED: 1
 
-  - type: ADCore.NDROI
-    PORT: __IOC_ROOT__.ROI1
-    NDARRAY_PORT: __IOC_ROOT__
-    P: "__IOC_PREFIX__:__IOC_ROOT__"
-    R: ":Roi1:"
-    ENABLED: 1
+  
 
   
   
@@ -172,16 +174,26 @@ entities:
       dbl("*") > __CONFIG_DIR__/pvlist.txt
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileName","camera")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:AutoIncrement",1)
+
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:TIFF1:FileTemplate","%s%s_%3.3d.tiff")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc1:TIFF1:FilePath", "__DATA_DIR__")
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc1:TIFF1:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc1:TIFF1:FileName","camera_proc")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc1:TIFF1:AutoIncrement",1)
+
       dbpf("__IOC_PREFIX__:__IOC_ROOT__:Proc1:TIFF1:FileTemplate","%s%s_proc_%3.3d.tiff")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FilePath", "__DATA_DIR__")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FileWriteMode",2)
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF:FileTemplate","%s%s_roi1_%3.3d.tiff")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF:FilePath", "__DATA_DIR__")
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF:FileWriteMode",2)
-      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF:FileTemplate","%s%s_overlay1_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF1:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF1:FileName","camera_roi")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF1:AutoIncrement",1)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Roi1:TIFF1:FileTemplate","%s%s_roi1_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF1:FilePath", "__DATA_DIR__")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF1:FileWriteMode",2)
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF1:FileTemplate","%s%s_overlay1_%3.3d.tiff")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:TIFF1:FileName","camera_roi")
+      dbpf("__IOC_PREFIX__:__IOC_ROOT__:Overlay1:EnableCallbacks","1")
 
   - type: epics.EpicsCaMaxArrayBytes 
     max_bytes: 10000000
