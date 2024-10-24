@@ -297,7 +297,7 @@ epicsConfiguration:
       devtype: llrf
       devgroup: rf
       iocprefix: "LEL-RF-LLRF03"
-      host: "plelillrf001"
+      host: "10.16.4.31" # "plelillrf001"
       scpoptions: "-O"
       ssh_options: "-o PubkeyAcceptedKeyTypes=+ssh-rsa"
       workdir: "/opt/epik8s"
