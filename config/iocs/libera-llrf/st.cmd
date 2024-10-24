@@ -102,7 +102,7 @@ asynSetTraceIOMask("libera-platform", 0, 0)
 
 # -------------------------------- FOOTER -------------------------------------
 
-< init.cmd
+< $(TOP)/init.cmd
 iocInit()
 # Save list of PVs to a file
 
