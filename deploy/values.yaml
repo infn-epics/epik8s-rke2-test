@@ -3,15 +3,14 @@ namespace: eli
 domain: ""
 ingressClassName: "haproxy"
 epik8namespace: "apps.k8s-da.lnf.infn.it"
-targetRevision: "devel"
+targetRevision: "experimental"
 serviceAccountName: "default"
 ## starting point
 giturl: https://baltig.infn.it/lnf-da-control/epik8s-eli.git
 gitrev: master
-baseIp: "10.96" ## valid IPs is 10.96.0.0/12
+baseIp: "10.96.0.0/16" ## valid IPs is 10.96.0.0/12
 startIp: 1
-ipRange: 1024  # /16 range (256 * 256)
-openshift: true
+openshift: false
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
   address_list: "
@@ -291,6 +290,20 @@ epicsConfiguration:
         name: "default"
   
   iocs:
+    - name: "llrf01"
+      asset: "https://confluence.infn.it/x/doKBBg"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      iocdir: "libera-llrf"
+      devtype: llrf
+      devgroup: rf
+      iocprefix: "LEL-RF-LLRF03"
+      host: "plelillrf001"
+      scpoptions: "-O"
+      ssh_options: "-o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      workdir: "/opt/epik8s"
+      exec: "st.cmd"
+      autosync: true ## restart automatically on changes
+
     - name: "orbit"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
@@ -394,6 +407,45 @@ epicsConfiguration:
         value: "1024"
       - name: "CAMERA_STATS_YSIZE"
         value: "768"
+
+    - name: "cam-sim01"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocdir: "camera-sim"
+      autosync: true ## restart automatically on changes
+      devtype: cam
+      gitinit: true
+      devgroup: diag
+      iocprefix: "BTF"
+      iocroot: "TST01"
+      iocinit:
+        - name: "AcquirePeriod"
+          value: "1"
+        - name: "Gain"
+          value: "255"
+        - name: "SimMode"
+          value: "Peaks"
+        - name: "PeakStartX"
+          value: "250"
+        - name: "PeakStartY"
+          value: "200"
+        - name: "PeakWidthX"
+          value: "70"
+        - name: "PeakWidthY"
+          value: "50"
+        - name: "PeakVariation"
+          value: "10"
+      iocparam:
+        - name: "CAMERA_TYPE"
+          value: "Int8"
+        - name: "CAMERA_FTVL"
+          value: "UCHAR"
+        - name: "CAMERA_ELEMS"
+          value: "325546"
+        - name: "CAMERA_STATS_XSIZE"
+          value: "1024"
+        - name: "CAMERA_STATS_YSIZE"
+          value: "768"
 
     - name: "mrf01-gp09"
       asset: "https://confluence.infn.it/x/nYD8DQ"
