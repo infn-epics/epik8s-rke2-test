@@ -302,7 +302,7 @@ epicsConfiguration:
       ssh_options: "-o PubkeyAcceptedKeyTypes=+ssh-rsa"
       workdir: "/opt/epik8s-eli"
       exec: "st.cmd"
-      autosync: true ## restart automatically on changes
+      # autosync: true ## restart automatically on changes
 
     - name: "orbit"
       asset: "https://confluence.infn.it/x/nYD8DQ"
