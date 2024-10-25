@@ -414,7 +414,7 @@ epicsConfiguration:
       devtype: cam
       gitinit: true
       devgroup: diag
-      iocprefix: "BTF"
+      iocprefix: "LEL"
       iocroot: "TST01"
       iocinit:
         - name: "AcquirePeriod"
