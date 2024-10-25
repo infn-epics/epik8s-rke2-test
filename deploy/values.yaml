@@ -302,7 +302,7 @@ epicsConfiguration:
       ssh_options: "-o PubkeyAcceptedKeyTypes=+ssh-rsa"
       workdir: "/opt/epik8s-eli"
       exec: "st.cmd"
-      # autosync: true ## restart automatically on changes
+      #autosync: true ## restart automatically on changes
 
     - name: "orbit"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -341,7 +341,6 @@ epicsConfiguration:
     - name: "cam01"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126655"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      targetRevision: "affinity"
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camera
       devgroup: diag
@@ -376,7 +375,6 @@ epicsConfiguration:
     - name: "cam02"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126656"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      targetRevision: "affinity"
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camera
       devgroup: diag
