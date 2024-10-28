@@ -346,6 +346,7 @@ epicsConfiguration:
       devgroup: diag
       gitinit: true
       iocdir: "camera"
+      pva: true
       networks:
         - name: "gigevision-client"
           annotation: "gigevision-network"
@@ -387,6 +388,7 @@ epicsConfiguration:
       devgroup: diag
       gitinit: true
       iocdir: "camera"
+      pva: true
       networks:
         - name: "gigevision-client"
           annotation: "gigevision-network"
@@ -428,6 +430,7 @@ epicsConfiguration:
       devgroup: diag
       gitinit: true
       iocdir: "camera"
+      pva: true
       networks:
         - name: "gigevision-client"
           annotation: "gigevision-network"
