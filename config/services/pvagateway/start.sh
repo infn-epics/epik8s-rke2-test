@@ -11,22 +11,18 @@ JSON_CONTENT=$(cat <<EOF
     "version": 2,
     "clients":[
         {
-            "name":"cam1",
-            "addrlist": "cam01.eli.svc",
-            "autoaddrlist":false
-        },
-         {
-            "name":"cam2",
-            "addrlist": "cam02.eli.svc",
+            "name":"internal",
+            "addrlist": "$EPICS_CA_ADDR_LIST",
             "autoaddrlist":false
         }
+        
 
     ],
     "servers": [
 
         {
-            "name":"server192",
-            "clients":["cam1","cam2"],
+            "name":"localhost",
+            "clients":["internal"],
             "autoaddrlist":false,
             "statusprefix":"GW:STS:"
         }
