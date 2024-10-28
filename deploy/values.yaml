@@ -469,8 +469,9 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocdir: "camera-sim"
       autosync: true ## restart automatically on changes
-      devtype: cam
+      devtype: camera
       gitinit: true
+      pva: true
       devgroup: diag
       iocprefix: "LEL"
       iocroot: "TST01"
