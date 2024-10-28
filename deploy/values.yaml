@@ -359,6 +359,10 @@ epicsConfiguration:
       iocinit:
         - name: "AcquirePeriod"
           value: "1"
+        - name: "FrameRate"
+          value: "1"
+        - name: "FrameRateEnable"
+          value: "Yes"
       iocparam:
       - name: "CAMERA_ID"
         value: "Basler-a2A1920-51gmBAS-40458493"
@@ -396,6 +400,10 @@ epicsConfiguration:
       iocinit:
         - name: "AcquirePeriod"
           value: "1"
+        - name: "FrameRate"
+          value: "1"
+        - name: "FrameRateEnable"
+          value: "Yes"
       iocparam:
       - name: "CAMERA_ID"
         value: "Basler-a2A1920-51gmBAS-40458497"
@@ -433,6 +441,10 @@ epicsConfiguration:
       iocinit:
         - name: "AcquirePeriod"
           value: "1"
+        - name: "FrameRate"
+          value: "1"
+        - name: "FrameRateEnable"
+          value: "Yes"
       iocparam:
       - name: "CAMERA_ID"
         value: "Basler-a2A1920-51gmBAS-40458491"
