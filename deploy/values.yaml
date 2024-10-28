@@ -435,7 +435,7 @@ epicsConfiguration:
           value: "1"
       iocparam:
       - name: "CAMERA_ID"
-        value: "Basler-a2A1920-51gmBAS-40458493"
+        value: "Basler-a2A1920-51gmBAS-40458491"
       - name: "CAMERA_CLASS"
         value: "Basler-a2A2600-20gmBAS"
       - name: "CAMERA_TYPE"
