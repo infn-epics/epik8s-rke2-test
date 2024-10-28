@@ -4,7 +4,7 @@ echo "Starting PVA Gateway ($name)"
 # -debug 1
 CLIENT_NAME="$name"
 #export EPICS_PVA_ADDR_LIST $EPICS_CA_ADDR_LIST
-export EPICS_PVA_NAME_SERVERS=$EPICS_CA_ADDR_LIST
+export EPICS_PVA_NAME_SERVERS=$EPICS_PVA_ADDR_LIST
 # Generate JSON content
 JSON_CONTENT=$(cat <<EOF
 {
@@ -12,7 +12,7 @@ JSON_CONTENT=$(cat <<EOF
     "clients":[
         {
             "name":"internal",
-            "addrlist": "$EPICS_CA_ADDR_LIST",
+            "addrlist": "$EPICS_PVA_NAME_SERVERS",
             "autoaddrlist":false
         }
         
