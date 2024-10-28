@@ -356,6 +356,9 @@ epicsConfiguration:
       iocprefix: "LEL:SCN01"
       iocroot: "CAM01"
       autosync: true ## restart automatically on changes
+      iocinit:
+        - name: "AcquirePeriod"
+          value: "1"
       iocparam:
       - name: "CAMERA_ID"
         value: "Basler-a2A1920-51gmBAS-40458493"
@@ -390,6 +393,9 @@ epicsConfiguration:
       iocprefix: "LEL:SCN02"
       iocroot: "CAM01"
       autosync: true ## restart automatically on changes
+      iocinit:
+        - name: "AcquirePeriod"
+          value: "1"
       iocparam:
       - name: "CAMERA_ID"
         value: "Basler-a2A1920-51gmBAS-40458497"
