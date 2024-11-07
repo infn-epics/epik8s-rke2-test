@@ -5,10 +5,11 @@ ingressClassName: "haproxy"
 epik8namespace: "apps.k8s-da.lnf.infn.it"
 targetRevision: "experimental"
 serviceAccountName: "default"
+token: 6r-MzeKyVxfVnhPAxtpP
 ## starting point
 giturl: https://baltig.infn.it/lnf-da-control/epik8s-eli.git
 gitrev: devel
-baseIp: "10.96.0.0/12" ## valid IPs is 10.96.0.0/12
+baseIp: "10.96.0.0/13" ## valid IPs is 10.96.0.0/12
 startIp: 1
 openshift: false
 epicsConfiguration:
