@@ -1,0 +1,41 @@
+image: baltig.infn.it:4567/epics-containers/epics-py-base
+
+stages:
+  - build
+  - update-docs
+
+variables:
+  # Enable recursive cloning of submodules
+  GIT_SUBMODULE_STRATEGY: recursive
+  
+before_script:
+  # Update pip to the latest version
+  - python3 -m pip install --upgrade pip
+  - pip install epik8s-tools
+  - export PATH=$PATH:$HOME/.local/bin
+
+check-and-create-test-opi:
+  stage: build
+  script:
+    # Run the command to generate the test-opi directory
+    - epik8s-opigen --yaml deploy/values.yaml --projectdir test-opi
+    # Create a tar.gz archive of the test-opi directory
+    - tar czvf test-opi.tar.gz test-opi
+  artifacts:
+    paths:
+      - test-opi.tar.gz
+    expire_in: 1 month
+
+update-readme:
+  stage: update-docs
+  script:
+    - cd $CI_PROJECT_DIR
+    - git config --global --add safe.directory `pwd`
+    - git remote set-url origin https://$CI_USER:$CI_TOKEN@baltig.infn.it/$CI_PROJECT_PATH
+    - epik8s-opigen --yaml deploy/values.yaml --projectdir test  # Generate README.md
+    - git checkout $CI_COMMIT_REF_NAME
+    - cp test/README.md .
+    - git status
+    - git diff --exit-code README.md || (git config user.name "CI Bot" && git config user.email "ci-bot@example.com" && git add README.md && git commit -m "Update README.md with latest configurations" && git push origin $CI_COMMIT_REF_NAME)
+  only:
+    - devel  # Only run on the devel branch
