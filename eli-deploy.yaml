@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: 'https://baltig.infn.it/lnf-da-control/epik8s-eli.git'
     path: deploy
-    targetRevision: HEAD
+    targetRevision: devel
     helm:
       values: |
           namespace: eli

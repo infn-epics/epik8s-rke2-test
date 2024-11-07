@@ -7,8 +7,8 @@ targetRevision: "experimental"
 serviceAccountName: "default"
 ## starting point
 giturl: https://baltig.infn.it/lnf-da-control/epik8s-eli.git
-gitrev: master
-baseIp: "10.96.0.0/16" ## valid IPs is 10.96.0.0/12
+gitrev: devel
+baseIp: "10.96.0.0/12" ## valid IPs is 10.96.0.0/12
 startIp: 1
 openshift: false
 epicsConfiguration:
