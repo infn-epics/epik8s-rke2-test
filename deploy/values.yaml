@@ -535,7 +535,7 @@ epicsConfiguration:
       gitinit: true
       iocparam:
         - name: "__SERVER__"
-          value: ddeliicp6r6i001.lnf.infn.it
+          value: ddeliicp6r6i001.lnf.infn.it #10.16.4.32
 
     - name: "polrev-icpdas02"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -549,7 +549,39 @@ epicsConfiguration:
       gitinit: true
       iocparam:
         - name: "__SERVER__"
-          value: ddeliicp6r6i002.lnf.infn.it
+          value: ddeliicp6r6i002.lnf.infn.it # 10.16.4.33
+
+    - name: "start2-test"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "ELI:START2"
+      iocroot: "MEA1"
+      iocdir: "sigmaphi"
+      devtype: sigmaphi
+      devgroup: mag
+      autosync: true
+      gitinit: true
+      iocparam:
+        - name: "__SERVER__"
+          value: pselistart2001.lnf.infn.it # 10.16.4.196
+        - name: "MAX"
+          value: 1
+
+    - name: "start11-test"
+      asset: "https://confluence.infn.it/x/nYD8DQ"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "ELI:START11"
+      iocroot: "MEA1"
+      iocdir: "sigmaphi"
+      devtype: sigmaphi
+      devgroup: mag
+      autosync: true
+      gitinit: true
+      iocparam:
+        - name: "__SERVER__"
+          value: pselistart1101.lnf.infn.it # 10.16.4.197
+        - name: "MAX"
+          value: 1
 
     - name: "mag-wrapper"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
