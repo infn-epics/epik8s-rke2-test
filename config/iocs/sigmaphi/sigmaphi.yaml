@@ -1,0 +1,19 @@
+
+ioc_name: sigmaPhiStart-test
+description: sigmaPhiStart test
+
+entities:
+
+  - type: sigmaPhiStart.configure
+    controllerName: START
+    P: __IOC_PREFIX__
+    IP: __SERVER__
+    TCPPORT: 502
+
+  - type: sigmaPhiStart.device
+    controller: START
+    P: __IOC_ROOT__
+    max: 1
+
+
+  
