@@ -1,5 +1,5 @@
 epicsEnvSet("ARCH","linux-x86_64")
-epicsEnvSet("IOC","iocelinp-gp08-ioc06")
+epicsEnvSet("IOC","__IOC_NAME__")
 epicsEnvSet("TOP","__IOC_TOP__")
 epicsEnvSet("EPICS_BASE","/opt/codac-4.1/epics/base")
 epicsEnvSet("ASYN","/opt/codac-4.1/epics/modules/asyn")
