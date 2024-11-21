@@ -518,7 +518,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       devtype: timing
       devgroup: timing
-      host: "10.16.4.24"
+      host: "10.16.4.25"
       workdir: "/opt/codac-4.1/apps/elinp-gp08-ioc06/iocBoot/epik8s"
       exec: "start.sh"
       autosync: false
