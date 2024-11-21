@@ -14,9 +14,7 @@ startIp: 1
 openshift: false
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
-  address_list: "
-    gen-cs-gp08-ioc06.lnf.infn.it 
-    "
+  address_list: ""
 
 # 10.16.4.26 gen-cs-gp09-ioc01.lnf.infn.it
 ## modulator
@@ -498,7 +496,7 @@ epicsConfiguration:
           value: "768"
 
     - name: "mrf01-gp09"
-      asset: "https://confluence.infn.it/x/nYD8DQ"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2441&objectId=113217"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocprefix: "TMG"
       devtype: timing
@@ -512,6 +510,31 @@ epicsConfiguration:
           value: "EVR01"
         - name: "EVG_PREFIX"
           value: "EVG01"
+      ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
+      scpoptions: "-O"
+
+    - name: "mrfkey-gp08"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&mode=object&objectId=119372"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+      devtype: timing
+      devgroup: timing
+      host: "10.16.4.24"
+      workdir: "/opt/codac-4.1/apps/elinp-gp08-ioc06/iocBoot/epik8s"
+      exec: "start.sh"
+      autosync: false
+      iocparam:
+        - name: "ADC0_PREFIX"
+          value: "LEL-DIA-FCT01"
+        - name: "ADC1_PREFIX"
+          value: "LEL-DIA-FCT02"
+        - name: "ADC_BUFFER_SIZE"
+          value: "2059"
+        - name: "EVR0_PREFIX"
+          value: "EVR02"
+        - name: "EVR1_PREFIX"
+          value: "EVR03"
+        - name: "TMG_PREFIX"
+          value: "TMG"
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
 
