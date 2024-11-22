@@ -85,7 +85,7 @@ iocInit
 
 
 {%- for param in iocinit %}
-dbpf {{param.name}}:{{param.value}}
+dbpf ("{{param.name}}","{{param.value}}")
 {% endfor %}
 
 
