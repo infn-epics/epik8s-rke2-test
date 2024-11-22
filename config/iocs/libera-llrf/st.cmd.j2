@@ -6,14 +6,13 @@
 ## everywhere it appears in this file
 
 epicsEnvSet("ARCH","linux-x86")
-epicsEnvSet("TOP","__IOC_TOP__")
+epicsEnvSet("TOP","{{ioctop}}")
 epicsEnvSet("ASYN","/opt/epics/asyn")
 epicsEnvSet("EPICS_BASE","/opt/epics/base")
 
 cd ${TOP}
 
-epicsEnvSet("IOCNAME",__IOC_PREFIX__)
-# Get IOC name from tmp/IOCname.env (generated from IOCname)
+epicsEnvSet("IOCNAME",{{iocprefix}})
 
 ## Register all support components
 dbLoadDatabase("dbd/liberaIOC.dbd")
@@ -102,8 +101,10 @@ asynSetTraceIOMask("libera-platform", 0, 0)
 
 # -------------------------------- FOOTER -------------------------------------
 
-< $(TOP)/init.cmd
 iocInit()
+{%- for param in iocinit %}
+dbpf ("{{param.name}}","{{param.value}}")
+{% endfor %}
 # Save list of PVs to a file
 
-dbl("*") > __CONFIG_DIR__/pvlist.txt
+dbl("*") > {{config_dir}}/pvlist.txt
