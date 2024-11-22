@@ -512,6 +512,7 @@ epicsConfiguration:
           value: "EVG01"
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
+      targetRevision: "jnja"
 
     - name: "mrfkey-gp08"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&mode=object&objectId=119372"
