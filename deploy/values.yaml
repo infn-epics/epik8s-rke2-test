@@ -691,6 +691,8 @@ epicsConfiguration:
               value: "ELI"
             - name: "P"
               value: "UNI:LEL"
+      targetRevision: "jnja"
+      
 cronjobs:
     - name: "chfeeder"
       image: baltig.infn.it:4567/epics-containers/epics-py-base
