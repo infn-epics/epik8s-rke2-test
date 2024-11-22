@@ -25,8 +25,8 @@ elinp_gp09_ioc01_registerRecordDeviceDriver pdbbase
 #############################################
 ## HW setup                                ##
 #############################################
-epicsEnvSet("EVR",		"EVR_PREFIX")
-epicsEnvSet("EVG",		"EVG_PREFIX")
+epicsEnvSet("EVR",		"{{EVR_PREFIX}}")
+epicsEnvSet("EVG",		"{{EVG_PREFIX}}")
 
 # Run lspci and adjust
 mrmEvgSetupPCI("$(EVG)",9,9,0)
@@ -39,7 +39,7 @@ mrmEvrSetupPCI("$(EVR)",0,9,11,0)
 #dbLoadTemplate("${TOP}/db/$(IOCMODULE).substitutions")
 
 ## Timing DB (EVG)
-epicsEnvSet("PREFIX",	"__IOC_PREFIX__")
+epicsEnvSet("PREFIX",	"{{iocprefix}}")
 # EVG card ID
 dbLoadRecords("elinp-evg.db", "SYS=$(PREFIX), EVG=$(EVG)")
 
@@ -87,8 +87,14 @@ iocInit
 
 < "tmg-EVRsetup.cmd"
 
+
+{{- range iocinit }}
+dbpf {{.name}}:{{.value}}
+{{- end }}
+
+
 # dbl > pvlist.txt
-dbl("*") > __CONFIG_DIR__/pvlist.txt
+dbl("*") > {{config_dir}}/pvlist.txt
 
 #############################################
 ## Auto Save/Restore post init config      ##
