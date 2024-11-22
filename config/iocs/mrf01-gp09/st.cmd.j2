@@ -88,9 +88,9 @@ iocInit
 < "tmg-EVRsetup.cmd"
 
 
-{{- range iocinit }}
-dbpf {{.name}}:{{.value}}
-{{- end }}
+{%- for param in iocinit %}
+dbpf {{param.name}}:{{param.value}}
+{% endfor %}
 
 
 # dbl > pvlist.txt
