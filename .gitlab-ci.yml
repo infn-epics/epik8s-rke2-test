@@ -34,6 +34,7 @@ update-readme:
     - git remote set-url origin https://$CI_USER:$CI_TOKEN@baltig.infn.it/$CI_PROJECT_PATH
     - epik8s-opigen --yaml deploy/values.yaml --projectdir test  # Generate README.md
     - git checkout $CI_COMMIT_REF_NAME
+    - git pull
     - cp test/README.md .
     - git status
     - git diff --exit-code README.md || (git config user.name "CI Bot" && git config user.email "ci-bot@example.com" && git add README.md && git commit -m "Update README.md with latest configurations" && git push origin $CI_COMMIT_REF_NAME)

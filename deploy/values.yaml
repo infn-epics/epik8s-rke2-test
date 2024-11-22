@@ -670,17 +670,27 @@ epicsConfiguration:
         - name: "MAX"
           value: 1
 
-    - name: "mag-wrapper"
+    - name: "unimag"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/epics-py-base
       iocprefix: "LEL:MAG"
       start: "/epics/ioc/config/start.sh" ## if your mynewioc has a start.sh this line must be kept
-      devtype: softioc
-      devgroup: mag
       gitinit: true
-      autosync: true ## restart automatically on changes
-      
+      devtype: unimag
+      devgroup: mag
+      iocdir: "unimag"
+      iocparam:
+        - name: "CONFIG"
+          value: "elimagsim.yaml"
+      opi:
+          url: https://baltig.infn.it/infn-epics/unimag.git
+          main: opi/unimag.bob
+          macro:
+            - name: "TITLE"
+              value: "ELI"
+            - name: "P"
+              value: "UNI:LEL"
 cronjobs:
     - name: "chfeeder"
       image: baltig.infn.it:4567/epics-containers/epics-py-base
