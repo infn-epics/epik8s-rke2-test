@@ -79,13 +79,9 @@ iocInit
 ## Timing configuration                    ##
 #############################################
 
-# Load EVG config with external RF
-< "tmg-EVGsetup.cmd"
 
 # OR load EVG config with internal clock
 #< "${PTTS}/ioc_config/tmg-EVGinternal.cmd"
-
-< "tmg-EVRsetup.cmd"
 
 
 {%- for param in iocinit %}
