@@ -505,6 +505,25 @@ epicsConfiguration:
       workdir: "/opt/codac-4.1/apps/elinp-gp09-ioc01/iocBoot/epik8s"
       exec: "start.sh"
       autosync: false
+      nfsMounts:
+      - name: data
+        server: "192.168.197.157"
+        path: /data_epik8s/eli/data
+        mountPath: /nfs/data
+        opt: "-o credentials=/etc/smbcredentials"
+        type: "cifs"
+      - name: autosave
+        server: "192.168.197.157"
+        path: /data_epik8s/eli/autosave
+        mountPath: /nfs/autosave
+        opt: "-o credentials=/etc/smbcredentials"
+        type: "cifs"
+      - name: config
+        server: "192.168.197.157"
+        path: /data_epik8s/eli/config
+        mountPath: /nfs/config
+        opt: "-o credentials=/etc/smbcredentials"
+        type: "cifs"
       iocparam:
         - name: "EVR_PREFIX"
           value: "EVR01"
@@ -593,6 +612,25 @@ epicsConfiguration:
       workdir: "/opt/codac-4.1/apps/elinp-gp08-ioc06/iocBoot/epik8s"
       exec: "start.sh"
       autosync: false
+      nfsMounts:
+      - name: data
+        server: "192.168.197.157"
+        path: /data_epik8s/eli/data
+        mountPath: /nfs/data
+        opt: "-o credentials=/etc/smbcredentials"
+        type: "cifs"
+      - name: autosave
+        server: "192.168.197.157"
+        path: /data_epik8s/eli/autosave
+        mountPath: /nfs/autosave
+        opt: "-o credentials=/etc/smbcredentials"
+        type: "cifs"
+      - name: config
+        server: "192.168.197.157"
+        path: /data_epik8s/eli/config
+        mountPath: /nfs/config
+        opt: "-o credentials=/etc/smbcredentials"
+        type: "cifs"
       iocparam:
         - name: "ADC0_PREFIX"
           value: "LEL-DIA-FCT01"
@@ -692,7 +730,7 @@ epicsConfiguration:
             - name: "P"
               value: "UNI:LEL"
       targetRevision: "jnja"
-      
+
 cronjobs:
     - name: "chfeeder"
       image: baltig.infn.it:4567/epics-containers/epics-py-base
