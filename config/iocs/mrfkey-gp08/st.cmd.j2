@@ -68,7 +68,7 @@ dbLoadRecords "db/xct-stat.template", "PREFIX=$(PREFIX), NELM=$(BUFSIZE), BUFSIZ
 epicsEnvSet("PREFIX", "{{TMG_PREFIX}}")
 
 mrmEvrSetupPCI("{{EVR0_PREFIX}}",0,9,9,0)
-mrmEvrSetupPCI("{{EVR1_PREFIX}}",0,9,11,0)
+mrmEvrSetupPCI("{{EVR1_PREFIX}}",0,9,10,0)
 
 dbLoadRecords("db/elinp-evr.db", "SYS=$(PREFIX), EVR={{EVR0_PREFIX}}, EVT=0")
 
