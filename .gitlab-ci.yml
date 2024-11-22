@@ -11,7 +11,7 @@ variables:
 before_script:
   # Update pip to the latest version
   - python3 -m pip install --upgrade pip
-  - pip install epik8s-tools
+  - pip install epik8s-tools -U
   - export PATH=$PATH:$HOME/.local/bin
 
 check-and-create-test-opi:
