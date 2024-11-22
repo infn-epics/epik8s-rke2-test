@@ -537,6 +537,7 @@ epicsConfiguration:
           value: "TMG"
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
+      targetRevision: "jnja"
 
     - name: "polrev-icpdas01"
       asset: "https://confluence.infn.it/x/nYD8DQ"
