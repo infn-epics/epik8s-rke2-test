@@ -18,12 +18,13 @@ check-and-create-test-opi:
   stage: build
   script:
     # Run the command to generate the test-opi directory
-    - epik8s-opigen --yaml deploy/values.yaml --projectdir test-opi
-    # Create a tar.gz archive of the test-opi directory
-    - tar czvf test-opi.tar.gz test-opi
+    - epik8s-opigen --yaml deploy/values.yaml --projectdir beamline-opi
+    - epik8s-compose --config deploy/values.yaml --host-dir ./config --output docker-compose.yaml --pvaport 5175
+    - epik8s-opigen --yaml deploy/values.yaml --projectdir .  # Generate README.md
+    - tar czvf beamline-test.tar.gz docker-compose.yaml README.md deploy/values.yaml config beamline-opi
   artifacts:
     paths:
-      - test-opi.tar.gz
+      - beamline-test.tar.gz
     expire_in: 1 month
 
 update-readme:
