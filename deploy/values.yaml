@@ -335,15 +335,8 @@ epicsConfiguration:
       pva: true
       gitinit: true
       devgroup: diag
-      opi:
-        url: https://baltig.infn.it/infn-epics/camera-opi.git
-        main: Camera_Main.bob
-        macro:
-          - name: "DEVICE"
-            value: LEL
-          - name: "CAM"
-            value: "TST02"
-          
+      opi: "camera"
+        
       iocprefix: "LEL"
       iocroot: "TST02"
       iocparam:
@@ -768,14 +761,7 @@ epicsConfiguration:
       iocparam:
         - name: "CONFIG"
           value: "elimagsim.yaml"
-      opi:
-          url: https://baltig.infn.it/infn-epics/unimag.git
-          main: opi/unimag.bob
-          macro:
-            - name: "TITLE"
-              value: "ELI"
-            - name: "P"
-              value: "UNI:LEL"
+      opi: "unimag"
       targetRevision: "jnja"
 
 cronjobs:
@@ -854,7 +840,16 @@ opi:
         value: "{{iocprefix}}"
       - name: "R"
         value: "{{iocroot}}"
-
+  unimag:
+    url: https://baltig.infn.it/infn-epics/unimag.git
+    main: opi/unimag.bob
+    macro:
+      - name: "TITLE"
+        value: "Unimag {{beamline}}"
+      - name: "P"
+        value: "{{iocprefix}}"
+      - name: "CONFFILE"
+        value: "{{CONFIG}}"
 nfsMounts:
     - name: data
       server: 192.168.197.157
