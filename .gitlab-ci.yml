@@ -21,7 +21,7 @@ check-and-create-test-opi:
     - epik8s-opigen --yaml deploy/values.yaml --projectdir beamline-opi
     - epik8s-compose --config deploy/values.yaml --host-dir ./config --output docker-compose.yaml --pvaport 5175
     - epik8s-opigen --yaml deploy/values.yaml --projectdir .  # Generate README.md
-    - tar czvf beamline-control.tar.gz docker-compose.yaml README.md deploy/values.yaml config beamline-opi
+    - tar czvf beamline-control.tar.gz docker-compose.yaml *.env README.md deploy/values.yaml config beamline-opi
   artifacts:
     paths:
       - beamline-control.tar.gz
