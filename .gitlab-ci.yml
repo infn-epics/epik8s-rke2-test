@@ -18,11 +18,13 @@ check-and-create-test-opi:
   stage: build
   script:
     # Run the command to generate the test-opi directory
-    - epik8s-opigen --yaml deploy/values.yaml --projectdir beamline-opi
+    - mkdir -p beamline-control
+    - epik8s-opigen --yaml deploy/values.yaml --projectdir beamline-control/beamline-opi
     - epik8s-compose --config deploy/values.yaml --host-dir ./config --output docker-compose.yaml --pvaport 5175
-    - epik8s-opigen --yaml deploy/values.yaml --projectdir .  # Generate README.md
-    - tar czvf beamline-control.tar.gz docker-compose.yaml *.env README.md deploy/values.yaml config beamline-opi
+    - mv docker-compose.yaml *.env beamline-control/ && mv config beamline-control/ && mv deploy/values.yaml beamline-control/beamline.yaml
+    - tar czvf beamline-control.tar.gz beamline-control
   artifacts:
+    name: "beamline-control-$CI_COMMIT_REF_NAME.tar.gz"
     paths:
       - beamline-control.tar.gz
     expire_in: 1 month
