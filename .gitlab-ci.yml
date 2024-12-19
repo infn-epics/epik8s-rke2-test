@@ -37,7 +37,7 @@ update-readme:
       echo "* project path: $CI_PROJECT_PATH REF: $CI_COMMIT_REF_NAME"
       git fetch origin
       git checkout $CI_COMMIT_REF_NAME
-      git rebase origin/master || (git rebase --abort && git reset --hard origin/master)
+      git rebase origin/$CI_COMMIT_REF_NAME || (git rebase --abort && git reset --hard origin/$CI_COMMIT_REF_NAME)
 
       epik8s-opigen --yaml deploy/values.yaml --projectdir test  # Generate README.md
       cp test/README.md .
