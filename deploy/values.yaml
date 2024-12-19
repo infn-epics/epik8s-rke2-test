@@ -321,7 +321,6 @@ epicsConfiguration:
       devtype: mag
       devgroup: magnets
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:2.30b5
       gitinit: true
       autosync: false ## restart automatically on changes
       # carepeater: true ## launch ca repeater, this ioc needs it
