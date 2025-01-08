@@ -138,7 +138,7 @@ epicsConfiguration:
         usegateway: true
 
     notebook: 
-      charturl: 'https://baltig.infn.it/epics-containers/jupyter-control-notebook-chart.git'
+      charturl: https://baltig.infn.it/epics-containers/jupyter-chart.git
       replicaCount: 1
       gitRepoConfig:
         url: https://baltig.infn.it/lnf-da-control/ecs-jupyter-control.git
