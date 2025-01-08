@@ -3,7 +3,7 @@ namespace: eli
 domain: ""
 ingressClassName: "haproxy"
 epik8namespace: "apps.k8s-da.lnf.infn.it"
-targetRevision: "experimental"
+targetRevision: "main"
 serviceAccountName: "default"
 token: 6r-MzeKyVxfVnhPAxtpP
 ## starting point
@@ -640,7 +640,6 @@ epicsConfiguration:
 
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
-      targetRevision: "jnja"
 
     - name: "mrfkey-gp08"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&mode=object&objectId=119372"
@@ -685,7 +684,6 @@ epicsConfiguration:
           value: "TMG"
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
-      targetRevision: "jnja"
 
     - name: "polrev-icpdas01"
       asset: "https://confluence.infn.it/x/nYD8DQ"
@@ -813,7 +811,6 @@ epicsConfiguration:
         - name: "CONFIG"
           value: "elimagsim.yaml"
       opi: "unimag"
-      targetRevision: "jnja"
 
 cronjobs:
     - name: "chfeeder"

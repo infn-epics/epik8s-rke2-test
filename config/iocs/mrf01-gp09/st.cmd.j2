@@ -30,6 +30,8 @@ epicsEnvSet("EVG",		"{{EVG_PREFIX}}")
 
 # Run lspci and adjust
 mrmEvgSetupPCI("$(EVG)",9,9,0)
+mrmEvgSetupPCI("$(EVG)-1",9,12,0)
+
 mrmEvrSetupPCI("$(EVR)",0,9,11,0)
 
 
@@ -42,6 +44,8 @@ mrmEvrSetupPCI("$(EVR)",0,9,11,0)
 epicsEnvSet("PREFIX",	"{{iocprefix}}")
 # EVG card ID
 dbLoadRecords("elinp-evg.db", "SYS=$(PREFIX), EVG=$(EVG)")
+dbLoadRecords("elinp-evg.db", "SYS=$(PREFIX), EVG=$(EVG)-1")
+
 
 dbLoadRecords("elinp-evr.db", "SYS=$(PREFIX), EVR=$(EVR), EVT=0")
 
