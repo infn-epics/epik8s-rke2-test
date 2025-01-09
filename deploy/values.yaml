@@ -723,7 +723,6 @@ epicsConfiguration:
       iocdir: "agilent-vac"
       devtype: xgs600
       devgroup: vgc
-      opi: "icpdas"
       autosync: false
       gitinit: true
       iocparam:
@@ -731,7 +730,7 @@ epicsConfiguration:
           value: 10.16.4.57 # scelimxa16001
         - name: "port"
           value: 4001
-      opi: "xgs600ctrl"
+      opi: "agilentXGS"
       devices:
         img:
           opi: "xgs600img"
