@@ -719,7 +719,6 @@ epicsConfiguration:
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2505&objectId=111736"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:VAC:VGCON01"
-      iocroot: "ICPDAS02"
       iocdir: "agilent-vac"
       devtype: xgs600
       devgroup: vgc
@@ -754,13 +753,60 @@ epicsConfiguration:
             sensor: "I1"
             number: "1"
           - name: "GAUG01:CC:SP2"
-            sensor: "I1"
+            sensor: "I2"
             number: "2"
           - name: "GAUG02:CC:SP1"
-            sensor: "I1"
+            sensor: "I3"
             number: "1"
           - name: "GAUG02:CC:SP2"
+            sensor: "I4"
+            number: "2"
+          
+    - name: "vgcon02"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2505&objectId=111737"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:VAC:VGCON02"
+      iocdir: "agilent-vac"
+      devtype: xgs600
+      devgroup: vgc
+      autosync: false
+      gitinit: true
+      iocparam:
+        - name: "server"
+          value: 10.16.4.57 # scelimxa16001
+        - name: "port"
+          value: 4003
+      opi: "agilentXGS"
+      devices:
+        img:
+          opi: "xgs600img"
+          sensors:
+          - name: "GAUG05:CC"
             sensor: "I1"
+            tcauto: "T3"
+          - name: "GAUG06:CC"
+            sensor: "I2"
+            tcauto: "T3"
+          - name: "GAUG07:CC"
+            sensor: "I3"
+            tcauto: "T3"
+          - name: "GAUG08:CC"
+            sensor: "I4"
+            tcauto: "T3"
+        setpoint:
+          opi: "xgs600setpoint"
+          sensors:
+          - name: "GAUG05:CC:SP1"
+            sensor: "I1"
+            number: "1"
+          - name: "GAUG06:CC:SP2"
+            sensor: "I2"
+            number: "2"
+          - name: "GAUG07:CC:SP1"
+            sensor: "I3"
+            number: "1"
+          - name: "GAUG08:CC:SP2"
+            sensor: "I4"
             number: "2"
           
 
