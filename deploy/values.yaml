@@ -809,7 +809,102 @@ epicsConfiguration:
             sensor: "I4"
             number: "2"
           
-
+    - name: "vpcon17"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2505&objectId=129492"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:VAC:VPCON17"
+      iocdir: "agilent-vac"
+      devtype: 4uhv
+      devgroup: vpc
+      autosync: false
+      gitinit: true
+      iocparam:
+        - name: "server"
+          value: 10.16.4.57 # scelimxa16001
+        - name: "port"
+          value: 4002
+      opi: "agilent4uhv"
+      devices:
+          - name: "IONP01"
+            channel: 0
+          - name: "IONP02"
+            channel: 1
+          - name: "IONP03"
+            channel: 2
+          - name: "IONP04"
+            channel: 3
+    - name: "vpcon19"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2505&objectId=129491"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:VAC:VPCON19"
+      iocdir: "agilent-vac"
+      devtype: 4uhv
+      devgroup: vpc
+      autosync: false
+      gitinit: true
+      iocparam:
+        - name: "server"
+          value: 10.16.4.57 # scelimxa16001
+        - name: "port"
+          value: 4004
+      opi: "agilent4uhv"
+      devices:
+          - name: "IONP05"
+            channel: 0
+          - name: "IONP06"
+            channel: 1
+          - name: "IONP07"
+            channel: 2
+          - name: "IONP08"
+            channel: 3
+    - name: "wgsvpcon01"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2505&objectId=111743"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:VAC:WGS1:VPCON01"
+      iocdir: "agilent-vac"
+      devtype: 4uhv
+      devgroup: vpc
+      autosync: false
+      gitinit: true
+      iocparam:
+        - name: "server"
+          value: 10.16.4.58 # scelimxa8001
+        - name: "port"
+          value: 4001
+      opi: "agilent4uhv"
+      devices:
+          - name: "IONP01"
+            channel: 0
+          - name: "IONP02"
+            channel: 1
+          - name: "IONP03"
+            channel: 2
+          - name: "IONP04"
+            channel: 3
+    - name: "wgsvpcon02"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2505&objectId=111743"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:VAC:WGS1:VPCON02"
+      iocdir: "agilent-vac"
+      devtype: 4uhv
+      devgroup: vpc
+      autosync: false
+      gitinit: true
+      iocparam:
+        - name: "server"
+          value: 10.16.4.58 # scelimxa8001
+        - name: "port"
+          value: 4001
+      opi: "agilent4uhv"
+      devices:
+          - name: "IONP05"
+            channel: 0
+          - name: "IONP06"
+            channel: 1
+          - name: "IONP07"
+            channel: 2
+          - name: "IONP08"
+            channel: 3
     - name: "start2-test"
       asset: "https://confluence.infn.it/x/nYD8DQ"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
@@ -934,8 +1029,15 @@ opi:
       - name: "R"
         value: "{{iocroot}}"
   agilentXGS:
-    url: https://baltig.infn.it:infn-epics/agilentXgs600.git
-    main: "opi/{{devtype}}.bob"
+    url: https://baltig.infn.it/infn-epics/vac-opi.git
+    main: "agilentXgs600/agilentXgs600Ctlr.bob"
+    macro:
+      - name: "P"
+        value: "{{iocprefix}}"
+
+  agilent4uhv:
+    url: https://baltig.infn.it/infn-epics/vac-opi.git
+    main: "agilent4uhv/agilent4uhv.bob"
     macro:
       - name: "P"
         value: "{{iocprefix}}"

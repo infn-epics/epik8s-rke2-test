@@ -1,0 +1,10 @@
+apiVersion: v2
+name: eli-beamline-infra
+version: 1.0.1
+
+# dependencies:
+#   - name: epik8-backend
+#     version: "1.0.1"
+#     repository: "https://baltig.infn.it/epics-containers/epik8-backend.git"
+  
+

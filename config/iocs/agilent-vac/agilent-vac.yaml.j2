@@ -3,6 +3,20 @@ description:  Agilent VAC TEMPLATE
 
 entities:
 
+{% if devtype == "4uhv" %}
+- type: agilent.{{devtype}}.controller
+  name: AGILENT4uhv
+  IP: {{server}}
+  TCPPORT: {{port}}
+  P: "{{iocprefix}}"
+{%- for t in devices %}
+- type: agilent.{{devtype}}.pump
+  controller: AGILENT4uhv
+  name: "{{iocprefix}}:{{ t.name }}"
+  channel: {{ t.channel }}
+{%- endfor %}
+{%- endif %}
+
 {% if devtype == "xgs600" %}
 - type: agilent.{{devtype}}.controller
   name: AGILENT001
