@@ -23,8 +23,8 @@ entities:
   IP: {{server}}
   TCPPORT: {{port}}
   P: "{{iocprefix}}"
-{% if devices and devices.img and devices.img.sensors %}
-{%- for t in devices.img.sensors %}
+{% if devices and devices.img and devices.img.channels %}
+{%- for t in devices.img.channels %}
 - type: agilent.xgs600.imgsensor
   controller: AGILENT001
   P: "{{iocprefix}}:{{ t.name }}"
@@ -33,8 +33,8 @@ entities:
 {%- endfor %}
 {%- endif %}
 
-{% if devices and devices.cnv and devices.cnv.sensors %}
-{%- for t in devices.cnv.sensors %}
+{% if devices and devices.cnv and devices.cnv.channels %}
+{%- for t in devices.cnv.channels %}
 - type: agilent.{{devtype}}.cnvsensor
   controller: AGILENT001
   P: "{{iocprefix}}:{{ t.name }}"
@@ -42,8 +42,8 @@ entities:
 {%- endfor %}
 {%- endif %}
 
-{% if devices and devices.setpoint and devices.setpoint.sensors %}
-{%- for t in devices.setpoint.sensors %}
+{% if devices and devices.setpoint and devices.setpoint.channels %}
+{%- for t in devices.setpoint.channels %}
 - type: agilent.{{devtype}}.setpoint
   controller: AGILENT001
   P: "{{iocprefix}}:{{ t.name }}"
