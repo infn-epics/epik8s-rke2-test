@@ -316,68 +316,10 @@ epicsConfiguration:
       usegateway: false
     
     
-    - name: "ibilt-cpsu02"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111621"
-      devtype: ibilt
-      devgroup: mag
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      gitinit: true
-      autosync: false ## restart automatically on changes
-      # carepeater: true ## launch ca repeater, this ioc needs it
-      iocprefix: "LEL:MAG:CPSU02"
-      iocparam:
-        - name: "server"
-          value: 10.16.4.44
-      opi: "ibilt"
-      devices:
-          - name: "HCOR04"
-            id: 1
-            max: 10
-          - name: "VCOR04"
-            id: 2
-            max: 10
-          - name: "HCOR05"
-            id: 3
-            max: 10
-          - name: "VCOR05"
-            id: 4
-            max: 10
-    - name: "ibilt-cpsu01"
+    
+    - name: "biltitest-cpsu03"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111616"
-      devtype: ibilt
-      devgroup: mag
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      gitinit: true
-      autosync: false ## restart automatically on changes
-      # carepeater: true ## launch ca repeater, this ioc needs it
-      iocprefix: "LEL:MAG:CPSU01"
-      iocparam:
-        - name: "server"
-          value: 10.16.4.48
-      opi: "ibilt"
-      devices:
-          - name: "HCOR01"
-            id: 1
-            max: 10
-          - name: "VCOR01"
-            id: 2
-            max: 10
-          - name: "HCOR02"
-            id: 3
-            max: 10
-          - name: "VCOR02"
-            id: 4
-            max: 10
-          - name: "HCOR03"
-            id: 5
-            max: 10
-          - name: "VCOR03"
-            id: 6
-            max: 10
-        
-    - name: "ibilt-cpsu03"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111616"
-      devtype: ibilt
+      devtype: biltitest
       devgroup: mag
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       gitinit: true
@@ -387,7 +329,7 @@ epicsConfiguration:
       iocparam:
         - name: "server"
           value: 10.16.4.49
-      opi: "ibilt"
+      opi: "biltitest"
       devices:
           - name: "HCOR06"
             id: 1
@@ -983,6 +925,23 @@ epicsConfiguration:
             channel: 2
           - name: "IONP08"
             channel: 3
+
+    - name: "sigmaphi_SOL1_SPSU01"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111614"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:MAG:SPSU01"
+      iocdir: "sigmaphi"
+      devtype: sigmaphi
+      devgroup: mag
+      gitinit: true
+      opi: "sigmaphi"
+      iocparam:
+        - name: "server"
+          value: 10.16.4.45
+      devices:
+          - name: "SOL01:COIL01"
+            max: 176
+
     - name: "sigmaphi_SOL01_SPSU02"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111615"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
@@ -998,7 +957,69 @@ epicsConfiguration:
       devices:
           - name: "SOL01:COIL02"
             max: 176
-  
+
+    - name: "biltitest-cpsu01"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111616"
+      devtype: biltitest
+      devgroup: mag
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      gitinit: true
+      autosync: false ## restart automatically on changes
+      # carepeater: true ## launch ca repeater, this ioc needs it
+      iocprefix: "LEL:MAG:CPSU01"
+      iocparam:
+        - name: "server"
+          value: 10.16.4.48
+      opi: "biltitest"
+      devices:
+          - name: "HCOR01"
+            id: 1
+            max: 10
+          - name: "VCOR01"
+            id: 2
+            max: 10
+          - name: "HCOR02"
+            id: 3
+            max: 10
+          - name: "VCOR02"
+            id: 4
+            max: 10
+          - name: "HCOR03"
+            id: 5
+            max: 10
+          - name: "VCOR03"
+            id: 6
+            max: 10
+    - name: "sigmaphi_SOL2_SPSU03"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111617"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:MAG:SPSU03"
+      iocdir: "sigmaphi"
+      devtype: sigmaphi
+      devgroup: mag
+      gitinit: true
+      opi: "sigmaphi"
+      iocparam:
+        - name: "server"
+          value: 10.16.4.46
+      devices:
+          - name: "SOL02:COIL0103"
+            max: 176
+    - name: "sigmaphi_SOL2_SPSU04"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111618"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:MAG:SPSU04"
+      iocdir: "sigmaphi"
+      devtype: sigmaphi
+      devgroup: mag
+      gitinit: true
+      opi: "sigmaphi"
+      iocparam:
+        - name: "server"
+          value: 10.16.4.46
+      devices:
+          - name: "SOL02:COIL0406"
+            max: 176
     - name: "sigmaphi_SOL2_SPSU05"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111615"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
@@ -1031,53 +1052,37 @@ epicsConfiguration:
           - name: "SOL02:COIL1012"
             max: 176
 
-    - name: "sigmaphi_SOL1_SPSU01"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111614"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      iocprefix: "LEL:MAG:SPSU01"
-      iocdir: "sigmaphi"
-      devtype: sigmaphi
+    - name: "biltitest-cpsu02"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111621"
+      devtype: biltitest
       devgroup: mag
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       gitinit: true
-      opi: "sigmaphi"
+      autosync: false ## restart automatically on changes
+      # carepeater: true ## launch ca repeater, this ioc needs it
+      iocprefix: "LEL:MAG:CPSU02"
       iocparam:
         - name: "server"
-          value: 10.16.4.45
+          value: 10.16.4.44
+      opi: "biltitest"
       devices:
-          - name: "SOL01:COIL01"
-            max: 176
+          - name: "HCOR04"
+            id: 1
+            max: 10
+          - name: "VCOR04"
+            id: 2
+            max: 10
+          - name: "HCOR05"
+            id: 3
+            max: 10
+          - name: "VCOR05"
+            id: 4
+            max: 10
+    
 
-    - name: "sigmaphi_SOL2_SPSU03"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111617"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      iocprefix: "LEL:MAG:SPSU03"
-      iocdir: "sigmaphi"
-      devtype: sigmaphi
-      devgroup: mag
-      gitinit: true
-      opi: "sigmaphi"
-      iocparam:
-        - name: "server"
-          value: 10.16.4.46
-      devices:
-          - name: "SOL02:COIL0103"
-            max: 176
+    
 
-    - name: "sigmaphi_SOL2_SPSU04"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111618"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      iocprefix: "LEL:MAG:SPSU04"
-      iocdir: "sigmaphi"
-      devtype: sigmaphi
-      devgroup: mag
-      gitinit: true
-      opi: "sigmaphi"
-      iocparam:
-        - name: "server"
-          value: 10.16.4.46
-      devices:
-          - name: "SOL02:COIL0406"
-            max: 176
+    
 
     - name: "sigmaphi_DPSU01"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111626"
@@ -1142,6 +1147,37 @@ epicsConfiguration:
       devices:
           - name: "QUAD03"
             max: 50
+    - name: "tml-test"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2447&objectId=133401"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL:TEST:TML"
+      usegateway: true
+
+      serial:
+        ip: 10.16.4.35
+        port: 4001
+        ptty: /var/tmp/ttyV0
+        baud: 9600
+      dataVolume:
+        accessMode: 'ReadWriteOnce' ## until not enabled shared
+        size: 8Mi
+      gitinit: true
+      autosync: false ## restart automatically on changes
+      devtype: tml
+      devgroup: motor
+      opi: "tml"
+      iocdir: "motor"  
+      motor:
+        hostid: 6
+        axis:
+          - axid: 6
+            name: MASTER
+            ustep2mm: 684931.506849
+            velo_max: 200
+          - axid: 4
+            name: SLAVE
+            ustep2mm: 684931.506849
+            velo_max: 200
 
     - name: "unimag"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
@@ -1253,9 +1289,9 @@ opi:
     macro:
       - name: "P"
         value: "{{iocprefix}}"
-  ibilt:
+  biltitest:
     url: https://baltig.infn.it/infn-epics/mag-opi.git
-    main: "ibilt/ibilt.bob"
+    main: "biltitest/biltitest.bob"
     macro:
       - name: "P"
         value: "{{iocprefix}}"
