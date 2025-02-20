@@ -2,7 +2,7 @@ beamline: eli
 namespace: eli
 domain: ""
 ingressClassName: "haproxy"
-epik8namespace: "apps.k8s-da.lnf.infn.it"
+epik8namespace: "int.eli-np.ro"
 targetRevision: "main"
 serviceAccountName: "default"
 token: 6r-MzeKyVxfVnhPAxtpP
@@ -31,7 +31,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
       ingress:
         enabled: false
-      loadbalancer: 10.10.6.107
+      loadbalancer: 10.16.4.202
       replicaCount: 1
       exec: start.sh
       auto_security: true
@@ -52,7 +52,7 @@ epicsConfiguration:
         tag: "latest"
       ingress:
         enabled: false
-      loadbalancer: 10.10.6.108
+      loadbalancer: 10.16.4.203
       replicaCount: 1
       exec: start.sh
       auto_security: true
@@ -926,7 +926,7 @@ epicsConfiguration:
           - name: "IONP08"
             channel: 3
 
-    - name: "sigmaphi_SOL1_SPSU01"
+    - name: "sigmaphi-SOL1_SPSU01"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111614"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU01"
@@ -942,7 +942,7 @@ epicsConfiguration:
           - name: "SOL01:COIL01"
             max: 176
 
-    - name: "sigmaphi_SOL01_SPSU02"
+    - name: "sigmaphi-SOL01_SPSU02"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111615"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU02"
@@ -990,7 +990,7 @@ epicsConfiguration:
           - name: "VCOR03"
             id: 6
             max: 10
-    - name: "sigmaphi_SOL2_SPSU03"
+    - name: "sigmaphi-SOL2_SPSU03"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111617"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU03"
@@ -1005,7 +1005,7 @@ epicsConfiguration:
       devices:
           - name: "SOL02:COIL0103"
             max: 176
-    - name: "sigmaphi_SOL2_SPSU04"
+    - name: "sigmaphi-SOL2_SPSU04"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111618"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU04"
@@ -1020,7 +1020,7 @@ epicsConfiguration:
       devices:
           - name: "SOL02:COIL0406"
             max: 176
-    - name: "sigmaphi_SOL2_SPSU05"
+    - name: "sigmaphi-SOL2_SPSU05"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111615"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU02"
@@ -1036,7 +1036,7 @@ epicsConfiguration:
           - name: "SOL02:COIL0709"
             max: 176
 
-    - name: "sigmaphi_SOL2_SPSU06"
+    - name: "sigmaphi-SOL2_SPSU06"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111620"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU06"
@@ -1084,7 +1084,7 @@ epicsConfiguration:
 
     
 
-    - name: "sigmaphi_DPSU01"
+    - name: "sigmaphi-DPSU01"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111626"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:DPSU01"
@@ -1100,7 +1100,7 @@ epicsConfiguration:
           - name: "DIP01"
             max: 138
 
-    - name: "sigmaphi_QPSU01"
+    - name: "sigmaphi-QPSU01"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111623"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:QPSU01"
@@ -1116,7 +1116,7 @@ epicsConfiguration:
           - name: "QUAD01"
             max: 50
     
-    - name: "sigmaphi_QPSU02"
+    - name: "sigmaphi-QPSU02"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111624"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:QPSU02"
@@ -1132,7 +1132,7 @@ epicsConfiguration:
           - name: "QUAD02"
             max: 50
 
-    - name: "sigmaphi_QPSU03"
+    - name: "sigmaphi-QPSU03"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111625"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:QPSU03"
