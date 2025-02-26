@@ -1147,10 +1147,11 @@ epicsConfiguration:
       devices:
           - name: "QUAD03"
             max: 50
-    - name: "tml-test"
+
+    - name: "motor-tml"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2447&objectId=133401"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      iocprefix: "LEL:TEST:TML"
+      iocprefix: "LEL"
       usegateway: true
 
       serial:
@@ -1171,11 +1172,11 @@ epicsConfiguration:
         hostid: 6
         axis:
           - axid: 6
-            name: MASTER
+            name: SCN01:MOT01
             ustep2mm: 684931.506849
             velo_max: 200
           - axid: 4
-            name: SLAVE
+            name: SCN02:MOT01
             ustep2mm: 684931.506849
             velo_max: 200
 
