@@ -926,7 +926,7 @@ epicsConfiguration:
           - name: "IONP08"
             channel: 3
 
-    - name: "sigmaphi-SOL1_SPSU01"
+    - name: "sigmaphi-SOL01-SPSU01"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111614"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU01"
@@ -942,7 +942,7 @@ epicsConfiguration:
           - name: "SOL01:COIL01"
             max: 176
 
-    - name: "sigmaphi-SOL01_SPSU02"
+    - name: "sigmaphi-SOL01-SPSU02"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111615"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU02"
@@ -990,7 +990,7 @@ epicsConfiguration:
           - name: "VCOR03"
             id: 6
             max: 10
-    - name: "sigmaphi-SOL2_SPSU03"
+    - name: "sigmaphi-SOL02-SPSU03"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111617"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU03"
@@ -1005,7 +1005,7 @@ epicsConfiguration:
       devices:
           - name: "SOL02:COIL0103"
             max: 176
-    - name: "sigmaphi-SOL2_SPSU04"
+    - name: "sigmaphi-SOL02-SPSU04"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111618"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU04"
@@ -1020,7 +1020,7 @@ epicsConfiguration:
       devices:
           - name: "SOL02:COIL0406"
             max: 176
-    - name: "sigmaphi-SOL2_SPSU05"
+    - name: "sigmaphi-SOL02-SPSU05"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111615"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU02"
@@ -1036,7 +1036,7 @@ epicsConfiguration:
           - name: "SOL02:COIL0709"
             max: 176
 
-    - name: "sigmaphi-SOL2_SPSU06"
+    - name: "sigmaphi-SOL02-SPSU06"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2457&mode=object&objectId=111620"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       iocprefix: "LEL:MAG:SPSU06"
