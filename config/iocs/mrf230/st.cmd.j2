@@ -25,7 +25,9 @@ dbLoadRecords("elinp-evg.db", "SYS={{iocprefix}}, EVG={{evg.name}}")
 
 {% for evr in devices.evr %}
 mrmEvrSetupPCI("{{evr.name}}",0,{{evr.bus}},{{evr.slot}},{{evr.func}})
-dbLoadRecords("elinp-evr.db", "SYS={{iocprefix}}, EVR={{evr.name}}")
+dbLoadRecords("elinp-evr.db", "SYS={{iocprefix}}, EVR={{evr.name}},EVT=0")
+dbLoadRecords("elinp-evrsoft.db", "SYS={{iocprefix}}, EVR={{evr.name}}, EVT=0, CODE=0")
+
 {% endfor %}
 
 
