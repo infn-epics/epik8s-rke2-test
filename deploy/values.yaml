@@ -553,15 +553,17 @@ epicsConfiguration:
         - name: "CAMERA_STATS_YSIZE"
           value: "768"
 
-    - name: "mrf01-gp09"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2441&objectId=113217"
+    - name: "mrf-evg"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2441&mode=object&objectId=113217"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocprefix: "TMG"
-      devtype: timing
+      iocprefix: "LEL:TIM"
+      devtype: mrf230
+      iocdir: "mrf230"
       devgroup: timing
-      host: "10.16.4.24"
+      host: "10.16.4.23" ## plelievg001
       workdir: "/opt/codac-4.1/apps/elinp-gp09-ioc01/iocBoot/epik8s"
       exec: "start.sh"
+      iocbin: "elinp_gp09_ioc01"
       autosync: false
       nfsMounts:
       - name: data
@@ -582,80 +584,82 @@ epicsConfiguration:
         mountPath: /nfs/config
         opt: "-o credentials=/etc/smbcredentials"
         type: "cifs"
-      iocparam:
-        - name: "EVR_PREFIX"
-          value: "EVR01"
-        - name: "EVG_PREFIX"
-          value: "EVG01"
-      iocinit:
-        - name: "TMG-EVG01:EvtClk-Source-Sel" ## Event Clock, external (MHz)
-          value: "RF"
-        - name: "TMG-EVG01:EvtClk-RFDiv-SP" # Divider of Event Clock frequency
-          value: "1"
-        - name: "TMG-EVG01:EvtClk-RFFreq-SP" # Expected RF frequency
-          value: "62.08"
-        - name: "TMG-EVG01:SoftSeq-1-TsInpMode-Sel" ## Sequencer configuration
-          value: "EGU"  ## Configure sequencer 1 to use time (EGU) to define TOE instead of clock cycles (TICKS)
-        - name: "TMG-EVG01:SoftSeq-1-TsResolution-Sel"
-          value: uSec ## define TOE resolution as microseconds (uSec), valid settings are: Sec, mSec, uSec and nSec
-        - name: "TMG-EVG01:SoftSeq-1-TrigSrc-Sel"
-          value: Front0 ## External sequence trigger (AC mains on EVG TRIG input)
-        - name: "TMG-EVG01:Mxc7-Prescaler-SP"
-          value: 96 ## Sync the sequence trigger to 1/96 of the Event Clock frequency
-        - name: "TMG-EVG01:AcTrig-SyncSrc-Sel"
-          value: "Mxc7"
-        - name: "TMG-EVR01:Pul0-Width-SP"
-          value: "0"
-        - name: "TMG-EVR01:Pul0-Delay-SP"
-          value: "0"
-        - name: "TMG-EVR01:Pul0-Polarity-Sel"
-          value: "0" 
-        - name: "TMG-EVR01:Pul0-Ena-Sel"
-          value: "1"
-        - name: "TMG-EVR01:FrontUnivOut0-Src-Pulse-SP"
-          value: "Pulser 0"
-        - name: "TMG-EVR01:FrontUnivOut0-Ena-SP"
-          value: "1"
-        - name: "TMG-EVR01:Pul1-Width-SP"
-          value: "0"
-        - name: "TMG-EVR01:Pul1-Delay-SP"
-          value: "0"
-        - name: "TMG-EVR01:Pul1-Polarity-Sel"
-          value: "0"
-        - name: "TMG-EVR01:Pul1-Ena-Sel"
-          value: "1"
-        - name: "TMG-EVR01:FrontUnivOut1-Src-Pulse-SP"
-          value: "Pulser 1"
-        - name: "TMG-EVR01:FrontUnivOut1-Ena-SP"
-          value: "1"
-        - name: "TMG-EVR01:Pul2-Width-SP"
-          value: "0"
-        - name: "TMG-EVR01:Pul2-Delay-SP"
-          value: "0"
-        - name: "TMG-EVR01:Pul2-Polarity-Sel"
-          value: "0"
-        - name: "TMG-EVR01:Pul2-Ena-Sel"
-          value: "1"
-        - name: "TMG-EVR01:FrontUnivOut2-Src-Pulse-SP"
-          value: "Pulser 2"
-        - name: "TMG-EVR01:FrontUnivOut2-Ena-SP"
-          value: "1"
-        - name: "TMG-EVR01:Pul3-Width-SP"
-          value: "0"
-        - name: "TMG-EVR01:Pul3-Delay-SP"
-          value: "0"
-        - name: "TMG-EVR01:Pul3-Polarity-Sel"
-          value: "0"
-        - name: "TMG-EVR01:Pul3-Ena-Sel"
-          value: "1"
-        - name: "TMG-EVR01:FrontUnivOut3-Src-Pulse-SP"
-          value: "Pulser 3"
-        - name: "TMG-EVR01:FrontUnivOut3-Ena-SP"
-          value: "1"
-        - name: "TMG-EVR01:Link-Clk-SP"
-          value: "62.08"
-        - name: "TMG-EVR01:Ena-Sel"
-          value: "Enabled"
+      devices:
+        evg:
+          - name: "TMG"
+            bus: "09:09.0"
+            iocinit:
+              - name: "EvtClk-Source-Sel" ## Event Clock, external (MHz)
+                value: "RF"
+              - name: "EvtClk-RFDiv-SP" # Divider of Event Clock frequency
+                value: "1"
+              - name: "EvtClk-RFFreq-SP" # Expected RF frequency
+                value: "62.08"
+              - name: "SoftSeq-1-TsInpMode-Sel" ## Sequencer configuration
+                value: "EGU"  ## Configure sequencer 1 to use time (EGU) to define TOE instead of clock cycles (TICKS)
+              - name: "SoftSeq-1-TsResolution-Sel"
+                value: uSec ## define TOE resolution as microseconds (uSec), valid settings are: Sec, mSec, uSec and nSec
+              - name: "SoftSeq-1-TrigSrc-Sel"
+                value: Front0 ## External sequence trigger (AC mains on EVG TRIG input)
+              - name: "Mxc7-Prescaler-SP"
+                value: 96 ## Sync the sequence trigger to 1/96 of the Event Clock frequency
+              - name: "AcTrig-SyncSrc-Sel"
+                value: "Mxc7"
+
+
+
+              # - name: "TMG-EVR01:Pul0-Width-SP"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul0-Delay-SP"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul0-Polarity-Sel"
+              #   value: "0" 
+              # - name: "TMG-EVR01:Pul0-Ena-Sel"
+              #   value: "1"
+              # - name: "TMG-EVR01:FrontUnivOut0-Src-Pulse-SP"
+              #   value: "Pulser 0"
+              # - name: "TMG-EVR01:FrontUnivOut0-Ena-SP"
+              #   value: "1"
+              # - name: "TMG-EVR01:Pul1-Width-SP"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul1-Delay-SP"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul1-Polarity-Sel"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul1-Ena-Sel"
+              #   value: "1"
+              # - name: "TMG-EVR01:FrontUnivOut1-Src-Pulse-SP"
+              #   value: "Pulser 1"
+              # - name: "TMG-EVR01:FrontUnivOut1-Ena-SP"
+              #   value: "1"
+              # - name: "TMG-EVR01:Pul2-Width-SP"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul2-Delay-SP"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul2-Polarity-Sel"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul2-Ena-Sel"
+              #   value: "1"
+              # - name: "TMG-EVR01:FrontUnivOut2-Src-Pulse-SP"
+              #   value: "Pulser 2"
+              # - name: "TMG-EVR01:FrontUnivOut2-Ena-SP"
+              #   value: "1"
+              # - name: "TMG-EVR01:Pul3-Width-SP"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul3-Delay-SP"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul3-Polarity-Sel"
+              #   value: "0"
+              # - name: "TMG-EVR01:Pul3-Ena-Sel"
+              #   value: "1"
+              # - name: "TMG-EVR01:FrontUnivOut3-Src-Pulse-SP"
+              #   value: "Pulser 3"
+              # - name: "TMG-EVR01:FrontUnivOut3-Ena-SP"
+              #   value: "1"
+              # - name: "TMG-EVR01:Link-Clk-SP"
+              #   value: "62.08"
+              # - name: "TMG-EVR01:Ena-Sel"
+              #   value: "Enabled"
 
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
