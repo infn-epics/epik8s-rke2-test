@@ -563,7 +563,8 @@ epicsConfiguration:
       host: "10.16.4.23" ## plelievg001
       workdir: "/opt/codac-4.1/apps/elinp-gp09-ioc01/iocBoot/epik8s"
       exec: "start.sh"
-      iocbin: "elinp_gp09_ioc01"
+      iocbin: "elinp-gp09-ioc01"
+      iocfunc: "elinp_gp09_ioc01"
       autosync: false
       nfsMounts:
       - name: data
