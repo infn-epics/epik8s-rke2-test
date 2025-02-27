@@ -588,7 +588,9 @@ epicsConfiguration:
       devices:
         evg:
           - name: "TMG"
-            bus: "09:09.0"
+            bus: 9
+            slot: 9 
+            func: 0
             iocinit:
               - name: "EvtClk-Source-Sel" ## Event Clock, external (MHz)
                 value: "RF"
