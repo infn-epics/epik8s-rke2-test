@@ -19,7 +19,7 @@ dbLoadDatabase "dbd/mrf230.dbd"
 ## HW setup                                ##
 #############################################
 {% for evg in devices.evg %}
-mrmEvgSetupPCI("{{evg.name}}",{{evg.pciparm0}},{{evg.pciparm1}},{{evg.pciparm2}})
+mrmEvgSetupPCI("{{evg.name}}","{{evg.bus}}")
 dbLoadRecords("elinp-evg.db", "SYS={{iocprefix}}, EVG={{evg.name}}")
 {% endfor %}
 
