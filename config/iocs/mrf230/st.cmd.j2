@@ -1,0 +1,99 @@
+#!../../bin/linux-x86_64/{{iocbin}}
+# elinp_gp09_ioc01
+
+< envPaths
+< envSystem
+< envUser
+
+cd "${TOP}"
+
+#############################################
+## Register all support components         ##
+#############################################
+
+dbLoadDatabase "dbd/mrf230.dbd"
+{{iocbin}}_registerRecordDeviceDriver pdbbase
+
+
+#############################################
+## HW setup                                ##
+#############################################
+{% for evg in devices.evg %}
+mrmEvgSetupPCI("{{evg.name}}",{{evg.pciparm0}},{{evg.pciparm1}},{{evg.pciparm2}})
+dbLoadRecords("elinp-evg.db", "SYS={{iocprefix}}, EVG={{evg.name}}")
+{% endfor %}
+
+{% for evr in devices.evr %}
+mrmEvrSetupPCI("{{evr.name}}",{{evr.pciparm0}},{{evr.pciparm1}},{{evr.pciparm2}})
+dbLoadRecords("elinp-evr.db", "SYS={{iocprefix}}, EVR={{evr.name}}")
+{% endfor %}
+
+
+#############################################
+## DB Loading                              ##
+#############################################
+#dbLoadTemplate("${TOP}/db/$(IOCMODULE).substitutions")
+
+## Timing DB (EVG)
+
+
+
+#############################################
+## IOC and System Monitor                  ##
+#############################################
+
+# dbLoadRecords("${ELINPIOCMON}/db/elinp-iocmon.db", "P=${IOCNAME}")
+# dbLoadRecords("${ELINPSYSMON}/db/elinp-sysmon.db", "P=${IOCNAME},NETIF=${NETIF}")
+
+
+#############################################
+## Auto Save/Restore                       ##
+#############################################
+# Disabled, to enable also edit envSystem (AUTOSAVE_SYSM_PV_PREFIX)
+#< "${TOP}/iocBoot/$(IOC)/$(IOC)-preSaveRestore.cmd"
+
+
+#############################################
+## IOC Logging                             ##
+#############################################
+
+# iocLogInit
+
+
+#############################################
+## IOC initialization                      ##
+#############################################
+
+#cd "${TOP}/db"
+
+iocInit
+#############################################
+## Timing configuration                    ##
+#############################################
+
+
+# OR load EVG config with internal clock
+#< "${PTTS}/ioc_config/tmg-EVGinternal.cmd"
+
+{% for evg in devices.evg %}
+{%- for param in evg.iocinit %}
+dbpf ("{{iocprefix}}:{{evg.name}}:{{param.name}}","{{param.value}}")
+{% endfor %}
+{% endfor %}
+
+{% for evr in devices.evr %}
+{%- for param in evr.iocinit %}
+dbpf ("{{iocprefix}}:{{evr.name}}:{{param.name}}","{{param.value}}")
+{% endfor %}
+{% endfor %}
+
+
+# dbl > pvlist.txt
+dbl("*") > {{config_dir}}/pvlist.txt
+
+#############################################
+## Auto Save/Restore post init config      ##
+#############################################
+# Disabled
+#< "${TOP}/iocBoot/$(IOC)/$(IOC)-postSaveRestore.cmd"
+
