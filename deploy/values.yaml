@@ -1061,7 +1061,8 @@ epicsConfiguration:
                 value: "62.08"
               - name: "Ena-Sel"
                 value: "Enabled"
-
+        
+          
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
 
@@ -1125,13 +1126,15 @@ epicsConfiguration:
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
 
-    - name: "mrfkey-gp08"
+    - name: "key-gp08"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&mode=object&objectId=119372"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      devtype: timing
-      devgroup: timing
-      host: "10.16.4.25"
-      workdir: "/opt/codac-4.1/apps/elinp-gp08-ioc06/iocBoot/epik8s"
+      devtype: m9210
+      devgroup: adc
+      host: "10.16.4.62"
+      workdir: "/opt/codac-4.1/apps/elinp-gp04-ioc17/epik8s-key"
+      iocbin: "../bin/linux-x86_64/elinp-gp04-ioc17"
+      iocfunc: "elinp_gp04_ioc17"
       exec: "start.sh"
       autosync: false
       nfsMounts:
@@ -1153,19 +1156,19 @@ epicsConfiguration:
         mountPath: /nfs/config
         opt: "-o credentials=/etc/smbcredentials"
         type: "cifs"
-      iocparam:
-        - name: "ADC0_PREFIX"
-          value: "LEL-DIA-FCT01"
-        - name: "ADC1_PREFIX"
-          value: "LEL-DIA-FCT02"
-        - name: "ADC_BUFFER_SIZE"
-          value: "2059"
-        - name: "EVR0_PREFIX"
-          value: "EVR02"
-        - name: "EVR1_PREFIX"
-          value: "EVR03"
-        - name: "TMG_PREFIX"
-          value: "TMG"
+      iocprefix: "LEL:DIA"
+      devices:
+        m9210:
+          - name: "FCT01"
+            dev: "PCI::INSTR0"
+            buffer: 2059
+            eventpv: ":Event-1-Cnt-I"
+            iocinit:
+          - name: "FCT02"
+            dev: "PCI::INSTR1"
+            buffer: 2059
+            iocinit:
+
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
 
@@ -1635,15 +1638,20 @@ epicsConfiguration:
       iocdir: "motor"  
       motor:
         hostid: 6
+        jvel: 30
+        hvel: 30
         axis:
           - axid: 6
             name: SCN01:MOT01
             ustep2mm: 684931.506849
             velo_max: 200
+            jvel: 50
+            hvel: 50
           - axid: 4
             name: SCN02:MOT01
             ustep2mm: 684931.506849
             velo_max: 200
+           
 
     - name: "unimag"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
