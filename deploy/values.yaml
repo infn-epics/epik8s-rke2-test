@@ -558,7 +558,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocprefix: "LEL:TIM"
       devtype: evr230
-      iocdir: "mrf230"
+      iocdir: "cosylabioc"
       devgroup: timing
       host: "10.16.4.24" ## plelievr001
       workdir: "/opt/codac-4.1/apps/elinp-gp06-ioc01/epik8s"
@@ -653,7 +653,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocprefix: "LEL:TIM"
       devtype: evr230
-      iocdir: "mrf230"
+      iocdir: "cosylabioc"
       devgroup: timing
       host: "10.16.4.25" ## plelievr002
       workdir: "/opt/codac-4.1/apps/elinp-gp08-ioc06/epik8s"
@@ -861,7 +861,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocprefix: "LEL:TIM"
       devtype: evr230
-      iocdir: "mrf230"
+      iocdir: "cosylabioc"
       devgroup: timing
       host: "10.16.4.62" ## plelievrkey001
       workdir: "/opt/codac-4.1/apps/elinp-gp04-ioc17/epik8s-mrf"
@@ -1072,7 +1072,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
       iocprefix: "LEL:TIM"
       devtype: mrf230
-      iocdir: "mrf230"
+      iocdir: "cosylabioc"
       devgroup: timing
       host: "10.16.4.23" ## plelievg001
       workdir: "/opt/codac-4.1/apps/elinp-gp09-ioc01/iocBoot/epik8s"
@@ -1652,7 +1652,57 @@ epicsConfiguration:
             ustep2mm: 684931.506849
             velo_max: 200
            
+    - name: "diag-tml"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2447&objectId=133401"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      iocprefix: "LEL"
+      usegateway: true
 
+      serial:
+        ip: 10.16.4.35
+        port: 4001
+        ptty: /var/tmp/ttyV0
+        baud: 9600
+      dataVolume:
+        accessMode: 'ReadWriteOnce' ## until not enabled shared
+        size: 8Mi
+      gitinit: true
+      autosync: false ## restart automatically on changes
+      devtype: tml
+      devgroup: motor
+      opi: "tml"
+      iocdir: "motor"  
+      motor:
+        hostid: 8
+        jvel: 30
+        hvel: 30
+        axis:
+          - axid: 8
+            name: SCN01:MOT01
+            ustep2mm: 684931.506849
+            velo_max: 200
+            jvel: 50
+            hvel: 50
+          - axid: 5
+            name: SCN02:MOT01
+            ustep2mm: 684931.506849
+            velo_max: 200
+          - axid: 12
+            name: SCN03:MOT01
+            ustep2mm: 684931.506849
+            velo_max: 200
+          - axid: 9
+            name: SCN04:MOT01
+            ustep2mm: 684931.506849
+            velo_max: 200
+          - axid: 7
+            name: SCN05:MOT01
+            ustep2mm: 684931.506849
+            velo_max: 200
+          - axid: 13
+            name: SCN06:MOT01
+            ustep2mm: 684931.506849
+            velo_max: 200
     - name: "unimag"
       asset: "https://confluence.infn.it/display/SCS/Magnet+SoftIOC+Devil+Wrapper"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
