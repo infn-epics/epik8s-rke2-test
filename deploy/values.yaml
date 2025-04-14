@@ -356,8 +356,6 @@ epicsConfiguration:
       pva: true
       # hostNetwork: true
       useAffinity: true
-      affinityKey: "gige"
-      affinityValue: "enabled"
       iocprefix: "LEL:CAMERA:SIM"
       autosync: true ## restart automatically on changes
       iocinit:
