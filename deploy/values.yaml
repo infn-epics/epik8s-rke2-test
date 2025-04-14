@@ -355,7 +355,6 @@ epicsConfiguration:
       iocdir: "camera"
       pva: true
       # hostNetwork: true
-      useAffinity: true
       iocprefix: "LEL:CAMERA:SIM"
       autosync: true ## restart automatically on changes
       iocinit:
