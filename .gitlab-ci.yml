@@ -1,0 +1,55 @@
+image: baltig.infn.it:4567/epics-containers/epics-py-base
+
+stages:
+  - build
+  - update-docs
+
+variables:
+  # Enable recursive cloning of submodules
+  GIT_SUBMODULE_STRATEGY: recursive
+  
+before_script:
+  # Update pip to the latest version
+  - python3 -m pip install --upgrade pip
+  - pip install epik8s-tools -U
+  - export PATH=$PATH:$HOME/.local/bin
+
+check-and-create-test-opi:
+  stage: build
+  script:
+    # Run the command to generate the test-opi directory
+    - mkdir -p beamline-control
+    - epik8s-opigen --yaml deploy/values.yaml --projectdir beamline-control/beamline-opi
+    - epik8s-compose --config deploy/values.yaml --host-dir ./config --output docker-compose.yaml --pvaport 5175
+    - mv docker-compose.yaml *.env beamline-control/ && mv config beamline-control/ && mv deploy/values.yaml beamline-control/beamline.yaml
+    - tar czvf beamline-control.tar.gz beamline-control
+  artifacts:
+    name: "beamline-control-$CI_COMMIT_REF_NAME.tar.gz"
+    paths:
+      - beamline-control.tar.gz
+    expire_in: 1 month
+
+update-readme:
+  stage: update-docs
+  script: |
+      set -ex  # Exit immediately if a command exits with a non-zero status
+      cd $CI_PROJECT_DIR
+      git config --global --add safe.directory `pwd`  # Mark the directory as safe
+      git remote set-url origin https://$CI_USER:$CI_TOKEN@baltig.infn.it/$CI_PROJECT_PATH
+      echo "* project path: $CI_PROJECT_PATH REF: $CI_COMMIT_REF_NAME"
+      git fetch origin
+      git checkout $CI_COMMIT_REF_NAME
+      git rebase origin/$CI_COMMIT_REF_NAME || (git rebase --abort && git reset --hard origin/$CI_COMMIT_REF_NAME)
+
+      epik8s-opigen --yaml deploy/values.yaml --projectdir test  # Generate README.md
+      cp test/README.md .
+      git status
+      git diff --exit-code README.md || (
+          git config --local user.name "CI Bot"
+          git config --local user.email "ci-bot@example.com"
+          git add README.md
+          git commit -m "CI: Update README.md with latest configurations"
+          git push origin $CI_COMMIT_REF_NAME
+      )
+  only:
+    - devel  # Only run on the devel branch

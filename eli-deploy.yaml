@@ -10,11 +10,11 @@ spec:
   source:
     repoURL: 'https://baltig.infn.it/lnf-da-control/epik8s-eli.git'
     path: deploy
-    targetRevision: HEAD
+    targetRevision: devel
     helm:
       values: |
           namespace: eli
-          domain: "apps.k8s-da.lnf.infn.it"
+          domain: "int.eli-np.ro"
           ingressClassName: "haproxy"
   destination:
     server: 'https://kubernetes.default.svc'

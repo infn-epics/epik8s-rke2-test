@@ -19,3 +19,6 @@
 [submodule "opi"]
 	path = opi
 	url = https://baltig.infn.it/lnf-da-control/eli-epics-opi.git
+[submodule "config/iocs/unimag/scripts"]
+	path = config/iocs/unimag/scripts
+	url = https://baltig.infn.it/infn-epics/unimag.git

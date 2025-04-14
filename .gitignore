@@ -1,0 +1,7 @@
+__pycache__/
+__docker__/
+.DS_Store*
+*.tar.*
+ophyd-env/
+build/
+*.egg-info
