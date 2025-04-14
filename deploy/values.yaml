@@ -345,49 +345,93 @@ epicsConfiguration:
             id: 4
             max: 10
           
-    - name: "cam-sim02"
-      asset: "Simulate a camera with beam X=250,Y=200 DX=70 DY=50"
+    - name: "camerasim"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126655"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      iocdir: "camera"
-      autosync: true ## restart automatically on changes
+      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camerasim
-      pva: true
-      gitinit: true
       devgroup: diag
-      opi: "camera"
-        
-      iocprefix: "LEL"
-      iocroot: "TST02"
-      iocparam:
-        - name: "CAMERA_TYPE"
-          value: "Int8"
-        - name: "CAMERA_FTVL"
-          value: "UCHAR"
-        - name: "CAMERA_ELEMS"
-          value: "325546"
-        - name: "CAMERA_STATS_XSIZE"
-          value: "1024"
-        - name: "CAMERA_STATS_YSIZE"
-          value: "768"
+      gitinit: true
+      iocdir: "camera"
+      pva: true
+      # hostNetwork: true
+      useAffinity: true
+      affinityKey: "gige"
+      affinityValue: "enabled"
+      iocprefix: "LEL:CAMERA:SIM"
+      autosync: true ## restart automatically on changes
       iocinit:
         - name: "AcquirePeriod"
           value: "1"
-        - name: "Gain"
-          value: "255"
-        - name: "SimMode"
-          value: "Peaks"
-        - name: "PeakStartX"
-          value: "250"
-        - name: "PeakStartY"
-          value: "200"
-        - name: "PeakWidthX"
-          value: "70"
-        - name: "PeakWidthY"
-          value: "50"
-        - name: "PeakVariation"
-          value: "10"
+        - name: "FrameRate"
+          value: "1"
+        - name: "FrameRateEnable"
+          value: "Yes"
+      iocparam:
+        - name: "overlay_enable"
+          value: true
+        - name: "stats_enable"
+          value: true
+        - name: "proc_enable"
+          value: true
+        - name: "tiff_enable"
+          value: true
+        - name: "roi_enable"
+          value: true
+      cameras:
+        - name: "CAM01"
+          iocinit:
+          - name: "AcquirePeriod"
+            value: "1"
+          - name: "Gain"
+            value: "255"
+          - name: "SimMode"
+            value: "Peaks"
+          - name: "PeakStartX"
+            value: "250"
+          - name: "PeakStartY"
+            value: "200"
+          - name: "PeakWidthX"
+            value: "70"
+          - name: "PeakWidthY"
+            value: "50"
+          - name: "PeakVariation"
+            value: "10"
+        
+        - name: "CAM02"
+          iocinit:
+          - name: "Gain"
+            value: "255"
+          - name: "SimMode"
+            value: "Peaks"
+          - name: "PeakStartX"
+            value: "250"
+          - name: "PeakStartY"
+            value: "300"
+          - name: "PeakWidthX"
+            value: "80"
+          - name: "PeakWidthY"
+            value: "60"
+          - name: "PeakVariation"
+            value: "20"
 
-  
+        - name: "CAM03"
+          iocinit:
+          - name: "Gain"
+            value: "255"
+          - name: "SimMode"
+            value: "Peaks"
+          - name: "PeakStartX"
+            value: "100"
+          - name: "PeakStartY"
+            value: "400"
+          - name: "PeakWidthX"
+            value: "80"
+          - name: "PeakWidthY"
+            value: "60"
+          - name: "PeakVariation"
+            value: "20"
+    
     - name: "cam01"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126655"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
@@ -405,7 +449,6 @@ epicsConfiguration:
       affinityKey: "gige"
       affinityValue: "enabled"
       iocprefix: "LEL:SCN01"
-      iocroot: "CAM01"
       autosync: true ## restart automatically on changes
       iocinit:
         - name: "AcquirePeriod"
@@ -415,23 +458,23 @@ epicsConfiguration:
         - name: "FrameRateEnable"
           value: "Yes"
       iocparam:
-      - name: "CAMERA_ID"
-        value: "Basler-a2A1920-51gmBAS-40458493"
-      - name: "CAMERA_CLASS"
-        value: "Basler-a2A2600-20gmBAS"
-      - name: "CAMERA_TYPE"
-        value: "Int8"
-      - name: "CAMERA_FTVL"
-        value: "UCHAR"
-      - name: "CAMERA_ELEMS"
-        value: "325546"
-      - name: "CAMERA_STATS_XSIZE"
-        value: "1024"
-      - name: "CAMERA_STATS_YSIZE"
-        value: "768" 
-
+        - name: "overlay_enable"
+          value: false
+        - name: "stats_enable"
+          value: true
+        - name: "proc_enable"
+          value: false
+        - name: "tiff_enable"
+          value: true
+        - name: "roi_enable"
+          value: false
+      cameras:
+        - name: "CAM01"
+          CAMERA_ID: Basler-a2A1920-51gmBAS-40458493
+          CAMERA_CLASS: Basler-a2A2600-20gmBAS
+        
     - name: "cam02"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126656"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126655"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camera
@@ -447,7 +490,6 @@ epicsConfiguration:
       affinityKey: "gige"
       affinityValue: "enabled"
       iocprefix: "LEL:SCN02"
-      iocroot: "CAM01"
       autosync: true ## restart automatically on changes
       iocinit:
         - name: "AcquirePeriod"
@@ -457,23 +499,24 @@ epicsConfiguration:
         - name: "FrameRateEnable"
           value: "Yes"
       iocparam:
-      - name: "CAMERA_ID"
-        value: "Basler-a2A1920-51gmBAS-40458497"
-      - name: "CAMERA_CLASS"
-        value: "Basler-a2A2600-20gmBAS"
-      - name: "CAMERA_TYPE"
-        value: "Int8"
-      - name: "CAMERA_FTVL"
-        value: "UCHAR"
-      - name: "CAMERA_ELEMS"
-        value: "325546"
-      - name: "CAMERA_STATS_XSIZE"
-        value: "1024"
-      - name: "CAMERA_STATS_YSIZE"
-        value: "768"
+        - name: "overlay_enable"
+          value: false
+        - name: "stats_enable"
+          value: true
+        - name: "proc_enable"
+          value: false
+        - name: "tiff_enable"
+          value: true
+        - name: "roi_enable"
+          value: false
+      cameras:
+        - name: "CAM01"
+          CAMERA_ID: Basler-a2A1920-51gmBAS-40458497
+          CAMERA_CLASS: Basler-a2A2600-20gmBAS
 
+    
     - name: "cam03"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126656"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126655"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camera
@@ -489,7 +532,6 @@ epicsConfiguration:
       affinityKey: "gige"
       affinityValue: "enabled"
       iocprefix: "LEL:SCN03"
-      iocroot: "CAM01"
       autosync: true ## restart automatically on changes
       iocinit:
         - name: "AcquirePeriod"
@@ -499,60 +541,24 @@ epicsConfiguration:
         - name: "FrameRateEnable"
           value: "Yes"
       iocparam:
-      - name: "CAMERA_ID"
-        value: "Basler-a2A1920-51gmBAS-40458491"
-      - name: "CAMERA_CLASS"
-        value: "Basler-a2A2600-20gmBAS"
-      - name: "CAMERA_TYPE"
-        value: "Int8"
-      - name: "CAMERA_FTVL"
-        value: "UCHAR"
-      - name: "CAMERA_ELEMS"
-        value: "325546"
-      - name: "CAMERA_STATS_XSIZE"
-        value: "1024"
-      - name: "CAMERA_STATS_YSIZE"
-        value: "768"
+        - name: "overlay_enable"
+          value: false
+        - name: "stats_enable"
+          value: true
+        - name: "proc_enable"
+          value: false
+        - name: "tiff_enable"
+          value: true
+        - name: "roi_enable"
+          value: false
+      cameras:
+        - name: "CAM01"
+          CAMERA_ID: Basler-a2A1920-51gmBAS-40458491
+          CAMERA_CLASS: Basler-a2A2600-20gmBAS
 
-    - name: "cam-sim01"
-      asset: "https://confluence.infn.it/x/nYD8DQ"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      iocdir: "camera"
-      autosync: true ## restart automatically on changes
-      devtype: camera
-      gitinit: true
-      pva: true
-      devgroup: diag
-      iocprefix: "LEL"
-      iocroot: "TST01"
-      iocinit:
-        - name: "AcquirePeriod"
-          value: "1"
-        - name: "Gain"
-          value: "255"
-        - name: "SimMode"
-          value: "Peaks"
-        - name: "PeakStartX"
-          value: "250"
-        - name: "PeakStartY"
-          value: "200"
-        - name: "PeakWidthX"
-          value: "70"
-        - name: "PeakWidthY"
-          value: "50"
-        - name: "PeakVariation"
-          value: "10"
-      iocparam:
-        - name: "CAMERA_TYPE"
-          value: "Int8"
-        - name: "CAMERA_FTVL"
-          value: "UCHAR"
-        - name: "CAMERA_ELEMS"
-          value: "325546"
-        - name: "CAMERA_STATS_XSIZE"
-          value: "1024"
-        - name: "CAMERA_STATS_YSIZE"
-          value: "768"
+    
+
+    
 
     - name: "mrf-laser-delay"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2441&mode=object&objectId=113215"
