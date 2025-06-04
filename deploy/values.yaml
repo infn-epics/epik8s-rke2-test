@@ -1,64 +1,32 @@
-beamline: eli
-namespace: eli
+beamline: da-test
+namespace: da-test
 domain: ""
-ingressClassName: "haproxy"
-epik8namespace: "int.eli-np.ro"
+ingressClassName: "nginx"
+epik8namespace: "da"
 targetRevision: "main"
 serviceAccountName: "default"
-token: 6r-MzeKyVxfVnhPAxtpP
 ## starting point
-giturl: https://baltig.infn.it/lnf-da-control/epik8s-eli.git
-gitrev: devel
-baseIp: "10.96.0.0/13" ## valid IPs is 10.96.0.0/12
+giturl: https://github.com/infn-epics/epik8s-rke2-test.git
+gitrev: main
+baseIp: "10.43.0.0/16" ## valid IPs is 10.96.0.0/12
 startIp: 1
 openshift: false
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
   address_list: ""
-
-# 10.16.4.26 gen-cs-gp09-ioc01.lnf.infn.it
-## modulator
-# plelillrf001.lnf.infn.it
-# plelillrfs001.lnf.infn.it
-# plelillrfs002.lnf.infn.it
-# plelillrfc001.lnf.infn.it
-# mikelinux.lnf.infn.it 
   max_array_bytes: "10000000"
   # conn_tmo: 120
   services:
-    
-    gateway:
-      charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
-      ingress:
-        enabled: false
-      loadbalancer: 10.16.4.202
-      replicaCount: 1
-      exec: start.sh
-      auto_security: true
-      gitinit: true
-      autosync: true ## restart automatically on changes
-      staticIp: true
-      resources:
-            limits:
-              cpu: 999m
-              memory: 4Gi
-            requests:
-              cpu: 400m
-              memory: 1Gi
     pvagateway:
       charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
-      image:
-        repository: baltig.infn.it:4567/epics-containers/docker-pva-gateway
-        tag: "latest"
+      targetRevision: 'templates'
+      template: "pvagateway"
       ingress:
         enabled: false
-      loadbalancer: 10.16.4.203
+      loadbalancer: 10.10.6.249
       replicaCount: 1
-      exec: start.sh
       auto_security: true
-      gitinit: true
       autosync: true ## restart automatically on changes
-      staticIp: true
       resources:
             limits:
               cpu: 999m
@@ -66,6 +34,31 @@ epicsConfiguration:
             requests:
               cpu: 400m
               memory: 500Mi
+      
+
+    gateway:
+      charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
+      targetRevision: 'templates'
+      template: "gateway"
+      ingress:
+        enabled: false
+      loadbalancer: 10.10.6.248
+      replicaCount: 1
+      auto_security: true
+      autosync: true ## restart automatically on changes
+      svcparams:
+        - name: "disconnect_timeout"
+          value: 60
+
+      resources:
+            limits:
+              cpu: 999m
+              memory: 4Gi
+            requests:
+              cpu: 400m
+              memory: 1Gi
+    
+    
     archiver: 
       charturl: 'https://baltig.infn.it/epics-containers/epics-archiver-chart.git'
 
@@ -76,15 +69,13 @@ epicsConfiguration:
       storage:
         lts:
           path: /storage/lts
-          size: 100Gi
+          size: 1000Gi
           claim: ""
-          storageClassName: "nassparc-k8s-quad02"
           accessMode: ReadWriteOnce
         mts:
           path: /storage/mts
           size: 100Gi
           claim: ""
-          storageClassName: "nassparc-k8s-quad02"
           accessMode: ReadWriteOnce
         sts:
           path: /storage/sts
@@ -96,8 +87,6 @@ epicsConfiguration:
           size: 50Gi
           claim: ""
           accessMode: ReadWriteOnce
-          storageClassName: "nassparc-k8s-quad02"
-
       mysql:
             host: mysql
             dbname: arcappl
@@ -131,7 +120,7 @@ epicsConfiguration:
               cpu: 1000m
               memory: 1Gi
         gitRepoConfig:
-          url: https://baltig.infn.it/lnf-da-control/epik8s-eli.git
+          url: https://baltig.infn.it/lnf-da-control/epik8-sparc.git
           path: opi
           branch: master
         autosync: true ## restart automatically on changes
@@ -151,7 +140,7 @@ epicsConfiguration:
           accessMode: ReadWriteOnce
       enable_ingress: true
       usegateway: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       pip:
         - bluesky
         - infn-ophyd-hal
@@ -165,7 +154,7 @@ epicsConfiguration:
       phoebusservice: "webalarm"
       auto_security: true
       enable_ingress: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       service:
         loglevel: "INFO"
       usegateway: true
@@ -178,7 +167,7 @@ epicsConfiguration:
       phoebusservice: "pvws"
       auto_security: true
       enable_ingress: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       service:
         loglevel: "INFO"
       usegateway: true
@@ -191,15 +180,15 @@ epicsConfiguration:
       phoebusservice: "dbwr"
       auto_security: true
       enable_ingress: true
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       service:
         loglevel: "INFO"
       usegateway: true
       gitRepoConfig:
-          url: https://baltig.infn.it/lnf-da-control/eli-epics-opi.git
+          url: https://baltig.infn.it/lnf-da-control/sparc-epics-opi.git
           path: .
       pvws:
-        host: eli-pws.apps.okd-datest.lnf.infn.it
+        host: sparc-pws.apps.okd-datest.lnf.infn.it
         port: 80
     
 
@@ -209,20 +198,58 @@ epicsConfiguration:
       phoebusservice: "olog"
       auto_security: true
       enable_ingress: true
-      mongodb: "eli-ologAttachments"
-      autosync: true ## restart automatically on changes
+      mongodb: "sparc-ologAttachments"
+      autosync: false ## restart automatically on changes
       service:
         loglevel: "INFO"
+      cors:
+        origins: "http://sparc-webolog.apps.okd-datest.lnf.infn.it"
+      ldap:
+        enable: true
+        user:
+          dn:
+            pattern: "uid"
+        url: "ldap://ds.infn.it"
+        base:
+          dn: "ou=People,dc=infn,dc=it"
       usegateway: true
+    webolog:
+      name: "webolog"
+      image:
+        repository: "baltig.infn.it:4567/epics-containers/phoebus-olog-web"
+        tag: "latest"
+        pullPolicy: "Always"
+      charturl: https://baltig.infn.it/epics-containers/generic-application-chart.git
+      enable_ingress: true
 
+      disable: false ##
+      env:
+        - name: REACT_APP_LEVEL_VALUES
+          value: "[\"Urgent\",\"Suggestion\",\"Info\",\"Request\",\"Problem\"]"
+        - name: REACT_APP_DEFAULT_LEVEL
+          value: "Info"
+        - name: REACT_APP_BASE_URL
+          value: "http://sparc-olog.apps.okd-datest.lnf.infn.it/Olog"
+      exec: ## use default
+      securityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+      service:
+        ports:
+          - name: webolog
+            port: 80
+            targetport: 3000
+            targetname: webolog
+            protocol: TCP
+     
     saveandrestore: 
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/phoebus-services-chart.git
       phoebusservice: "saveandrestore"
       auto_security: true
       enable_ingress: true
-      mongodb: "eli-saveandrestore"
-      autosync: true ## restart automatically on changes
+      mongodb: "sparc-saveandrestore"
+      autosync: false ## restart automatically on changes
       service:
         loglevel: "DEBUG"
     alarmserver: 
@@ -231,7 +258,7 @@ epicsConfiguration:
       phoebusservice: "alarmserver"
       auto_security: true
       enable_ingress: true
-      mongodb: "eli-ologAttachments"
+      mongodb: "sparc-ologAttachments"
       # alarm:
       #  config: "Accelerator,AcceleratorCommand,AcceleratorTalk"
       gitinit: true
@@ -244,21 +271,21 @@ epicsConfiguration:
       phoebusservice: "alarmlogger"
       auto_security: true
       enable_ingress: true
-      mongodb: "eli-ologAttachments"
+      mongodb: "sparc-ologAttachments"
       alarm:
         config: "Accelerator"
         topics: "Accelerato,ALARM,CONFIGS"
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
 
     channelfinder: 
-      autosync: true ## restart automatically on changes
+      autosync: false ## restart automatically on changes
       loglevel: DEBUG
       charturl: https://baltig.infn.it/epics-containers/channelfinder-chart.git
       auto_security: true
       enable_ingress: true
-      mongodb: "eli-channelfinder"
+      mongodb: "sparc-channelfinder"
       aa:
-        urls: "{'default': 'http://eli-archiver.apps.okd-datest.lnf.infn.it'}"
+        urls: "{'default': 'http://sparc-archiver.apps.okd-datest.lnf.infn.it'}"
         default_alias: default
         enabled: true
         pva: false
@@ -272,7 +299,7 @@ epicsConfiguration:
       phoebusservice: "scanserver"
       auto_security: true
       enable_ingress: true
-      mongodb: "eli-ologAttachments"
+      mongodb: "sparc-ologAttachments"
     mysql: 
       name: mysql
       charturl: registry-1.docker.io/bitnamicharts
@@ -284,6 +311,15 @@ epicsConfiguration:
           database: "arcappl"
           username: "arcappl"
           password: "arcappl"
+      primary:
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 4Gi
+          requests:
+            cpu: 100m
+            memory: 2Gi
+            
       serviceAccount:
         create: false
         name: "default"
