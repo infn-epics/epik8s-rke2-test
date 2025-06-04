@@ -331,15 +331,23 @@ epicsConfiguration:
     - name: "camerasim"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126655"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      image: baltig.infn.it:4567/epics-containers/infn-epics-ioc:latest
       devtype: camerasim
       devgroup: diag
-      gitinit: true
-      iocdir: "camera"
-      pva: true
-      # hostNetwork: true
-      iocprefix: "LEL:CAMERA:SIM"
-      autosync: true ## restart automatically on changes
+      template: "adcamera"
+      targetRevision: 'templates'
+      enable_ingress: true
+      service:   
+        http:
+          enable: true
+          port: 8082
+      stream_enable: true
+      roi_enable: true
+      stats_enable: true
+      proc_enable: true
+      overlay_enable: true
+      
+      iocprefix: "SPARC:CAM"
+      autosync: false ## restart automatically on changes
       iocinit:
         - name: "AcquirePeriod"
           value: "1"
@@ -358,8 +366,8 @@ epicsConfiguration:
           value: true
         - name: "roi_enable"
           value: true
-      cameras:
-        - name: "CAM01"
+      devices:
+        - name: "SIM01"
           iocinit:
           - name: "AcquirePeriod"
             value: "1"
@@ -377,40 +385,6 @@ epicsConfiguration:
             value: "50"
           - name: "PeakVariation"
             value: "10"
-        
-        - name: "CAM02"
-          iocinit:
-          - name: "Gain"
-            value: "255"
-          - name: "SimMode"
-            value: "Peaks"
-          - name: "PeakStartX"
-            value: "250"
-          - name: "PeakStartY"
-            value: "300"
-          - name: "PeakWidthX"
-            value: "80"
-          - name: "PeakWidthY"
-            value: "60"
-          - name: "PeakVariation"
-            value: "20"
-
-        - name: "CAM03"
-          iocinit:
-          - name: "Gain"
-            value: "255"
-          - name: "SimMode"
-            value: "Peaks"
-          - name: "PeakStartX"
-            value: "100"
-          - name: "PeakStartY"
-            value: "400"
-          - name: "PeakWidthX"
-            value: "80"
-          - name: "PeakWidthY"
-            value: "60"
-          - name: "PeakVariation"
-            value: "20"
     
     
   
