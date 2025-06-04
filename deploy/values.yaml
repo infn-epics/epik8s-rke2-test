@@ -383,43 +383,27 @@ epicsConfiguration:
             value: "50"
           - name: "PeakVariation"
             value: "10"
-    - name: "mrf-diag-delay"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2441&mode=object&objectId=119372"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
+  
+    - name: "mrf-evg-test"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&objectId=137519"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      targetRevision: 'templates'
       iocprefix: "LEL:TIM"
-      devtype: evr230
+      devtype: mrf230
       iocdir: "cosylabioc"
       devgroup: timing
-      host: "10.16.4.62" ## plelievrkey001
-      workdir: "/opt/codac-4.1/apps/elinp-gp04-ioc17/epik8s-mrf"
+      host: "plelievr003.lnf.infn.it" ## plelievg001
+      workdir: "/opt/codac-4.1/apps/elinp-ab01-ioc01/iocBoot/epik8s"
       exec: "start.sh"
-      iocbin: "../bin/linux-x86_64/elinp-gp04-ioc17"
-      iocfunc: "elinp_gp04_ioc17"
+      iocbin: "../../bin/linux-x86_64/elinp-ab01-ioc01"
+      iocfunc: "elinp_ab01_ioc01"
       autosync: false
-      nfsMounts:
-      - name: data
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/data
-        mountPath: /nfs/data
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
-      - name: autosave
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/autosave
-        mountPath: /nfs/autosave
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
-      - name: config
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/config
-        mountPath: /nfs/config
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
+      template: "mrf-pci-230"
       devices:
-        evr:
-          - name: "EVR-BPMCAM"
+          - name: "EVR-LAS"
+            devtype: "evr230"
             bus: 9
-            slot: 9
+            slot: 9 
             func: 0
             iocinit:
               - name: "Pul0-Width-SP"
@@ -474,64 +458,8 @@ epicsConfiguration:
                 value: "62.08"
               - name: "Ena-Sel"
                 value: "Enabled"
-          - name: "EVR-CAM"
-            bus: 9
-            slot: 10
-            func: 0
-            iocinit:
-              - name: "Pul0-Width-SP"
-                value: "0"
-              - name: "Pul0-Delay-SP"
-                value: "0"
-              - name: "Pul0-Polarity-Sel"
-                value: "0"
-              - name: "Pul0-Ena-Sel"
-                value: "1"
-              - name: "FrontUnivOut0-Src-Pulse-SP"
-                value: "Pulser 0"
-              - name: "FrontUnivOut0-Ena-SP"
-                value: "1"
-              - name: "Pul1-Width-SP"
-                value: "0"
-              - name: "Pul1-Delay-SP"
-                value: "0"
-              - name: "Pul1-Polarity-Sel"
-                value: "0"
-              - name: "Pul1-Ena-Sel"
-                value: "1"
-              - name: "FrontUnivOut1-Src-Pulse-SP"
-                value: "Pulser 1"
-              - name: "FrontUnivOut1-Ena-SP"
-                value: "1"
-              - name: "Pul2-Width-SP"
-                value: "0"
-              - name: "Pul2-Delay-SP"
-                value: "0"
-              - name: "Pul2-Polarity-Sel"
-                value: "0"
-              - name: "Pul2-Ena-Sel"
-                value: "1"
-              - name: "FrontUnivOut2-Src-Pulse-SP"
-                value: "Pulser 2"
-              - name: "FrontUnivOut2-Ena-SP"
-                value: "1"
-              - name: "Pul3-Width-SP"
-                value: "0"
-              - name: "Pul3-Delay-SP"
-                value: "0"
-              - name: "Pul3-Polarity-Sel"
-                value: "0"
-              - name: "Pul3-Ena-Sel"
-                value: "1"
-              - name: "FrontUnivOut3-Src-Pulse-SP"
-                value: "Pulser 3"
-              - name: "FrontUnivOut3-Ena-SP"
-                value: "1"
-              - name: "Link-Clk-SP"
-                value: "62.08"
-              - name: "Ena-Sel"
-                value: "Enabled"
-          - name: "EVR-ADC"
+          - name: "EVR-LLRF"
+            devtype: "evr230"
             bus: 9
             slot: 11
             func: 0
@@ -588,112 +516,87 @@ epicsConfiguration:
                 value: "62.08"
               - name: "Ena-Sel"
                 value: "Enabled"
-        
-          
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
-    - name: "mrf-evg"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2441&mode=object&objectId=113217"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      iocprefix: "LEL:TIM"
-      devtype: mrf230
-      iocdir: "cosylabioc"
-      devgroup: timing
-      host: "10.16.4.23" ## plelievg001
-      workdir: "/opt/codac-4.1/apps/elinp-gp09-ioc01/iocBoot/epik8s"
+
+    - name: "key-test"
+      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&objectId=137521"
+      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      targetRevision: 'templates'
+      host: "plelievr004.lnf.infn.it" 
+      workdir: "/opt/codac-4.1/apps/elinp-gp06-ioc02/epik8s-key"
+      iocbin: "../../bin/linux-x86_64/elinp-gp06-ioc02"
+      iocfunc: "elinp_gp06_ioc02"
       exec: "start.sh"
-      iocbin: "../../bin/linux-x86_64/elinp-gp09-ioc01"
-      iocfunc: "elinp_gp09_ioc01"
+      template: "mrf-pci-230"
       autosync: false
-      nfsMounts:
-      - name: data
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/data
-        mountPath: /nfs/data
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
-      - name: autosave
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/autosave
-        mountPath: /nfs/autosave
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
-      - name: config
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/config
-        mountPath: /nfs/config
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
+      iocprefix: "LEL:DIA"
       devices:
-        evg:
-          - name: "TMG"
+          - name: "EVR-LAS"
+            devtype: "evr230"
             bus: 9
             slot: 9 
             func: 0
             iocinit:
-              - name: "EvtClk-Source-Sel" ## Event Clock, external (MHz)
-                value: "RF"
-              - name: "EvtClk-RFDiv-SP" # Divider of Event Clock frequency
+              - name: "Pul0-Width-SP"
+                value: "0"
+              - name: "Pul0-Delay-SP"
+                value: "0"
+              - name: "Pul0-Polarity-Sel"
+                value: "0"
+              - name: "Pul0-Ena-Sel"
                 value: "1"
-              - name: "EvtClk-RFFreq-SP" # Expected RF frequency
+              - name: "FrontUnivOut0-Src-Pulse-SP"
+                value: "Pulser 0"
+              - name: "FrontUnivOut0-Ena-SP"
+                value: "1"
+              - name: "Pul1-Width-SP"
+                value: "0"
+              - name: "Pul1-Delay-SP"
+                value: "0"
+              - name: "Pul1-Polarity-Sel"
+                value: "0"
+              - name: "Pul1-Ena-Sel"
+                value: "1"
+              - name: "FrontUnivOut1-Src-Pulse-SP"
+                value: "Pulser 1"
+              - name: "FrontUnivOut1-Ena-SP"
+                value: "1"
+              - name: "Pul2-Width-SP"
+                value: "0"
+              - name: "Pul2-Delay-SP"
+                value: "0"
+              - name: "Pul2-Polarity-Sel"
+                value: "0"
+              - name: "Pul2-Ena-Sel"
+                value: "1"
+              - name: "FrontUnivOut2-Src-Pulse-SP"
+                value: "Pulser 2"
+              - name: "FrontUnivOut2-Ena-SP"
+                value: "1"
+              - name: "Pul3-Width-SP"
+                value: "0"
+              - name: "Pul3-Delay-SP"
+                value: "0"
+              - name: "Pul3-Polarity-Sel"
+                value: "0"
+              - name: "Pul3-Ena-Sel"
+                value: "1"
+              - name: "FrontUnivOut3-Src-Pulse-SP"
+                value: "Pulser 3"
+              - name: "FrontUnivOut3-Ena-SP"
+                value: "1"
+              - name: "Link-Clk-SP"
                 value: "62.08"
-              - name: "SoftSeq-1-TsInpMode-Sel" ## Sequencer configuration
-                value: "EGU"  ## Configure sequencer 1 to use time (EGU) to define TOE instead of clock cycles (TICKS)
-              - name: "SoftSeq-1-TsResolution-Sel"
-                value: uSec ## define TOE resolution as microseconds (uSec), valid settings are: Sec, mSec, uSec and nSec
-              - name: "SoftSeq-1-TrigSrc-Sel"
-                value: Front0 ## External sequence trigger (AC mains on EVG TRIG input)
-              - name: "Mxc7-Prescaler-SP"
-                value: 96 ## Sync the sequence trigger to 1/96 of the Event Clock frequency
-              - name: "AcTrig-SyncSrc-Sel"
-                value: "Mxc7"
-
-      ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
-      scpoptions: "-O"
-
-    - name: "key-gp08"
-      asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&mode=object&objectId=119372"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-launcher-chart.git'
-      devtype: m9210
-      devgroup: adc
-      host: "10.16.4.62"
-      workdir: "/opt/codac-4.1/apps/elinp-gp04-ioc17/epik8s-key"
-      iocbin: "../bin/linux-x86_64/elinp-gp04-ioc17"
-      iocfunc: "elinp_gp04_ioc17"
-      exec: "start.sh"
-      iocdir: "cosylabioc"
-      autosync: false
-      nfsMounts:
-      - name: data
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/data
-        mountPath: /nfs/data
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
-      - name: autosave
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/autosave
-        mountPath: /nfs/autosave
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
-      - name: config
-        server: "192.168.197.157"
-        path: /data_epik8s/eli/config
-        mountPath: /nfs/config
-        opt: "-o credentials=/etc/smbcredentials"
-        type: "cifs"
-      iocprefix: "LEL:DIA"
-      devices:
-        m9210:
+              - name: "Ena-Sel"
+                value: "Enabled"
           - name: "FCT01"
+            devtype: "m9210"
             dev: "PCI::INSTR0"
             buffer: 2059
             eventpv: ":Event-1-Cnt-I"
             iocinit:
-          - name: "FCT02"
-            dev: "PCI::INSTR1"
-            buffer: 2059
-            iocinit:
+          
 
       ssh_options: "-o HostKeyAlgorithms=ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
       scpoptions: "-O"
