@@ -390,7 +390,6 @@ epicsConfiguration:
       targetRevision: 'templates'
       iocprefix: "LEL:TIM"
       devtype: mrf230
-      iocdir: "cosylabioc"
       devgroup: timing
       host: "plelievr003.lnf.infn.it" ## plelievg001
       workdir: "/opt/codac-4.1/apps/elinp-ab01-ioc01/iocBoot/epik8s"
@@ -400,10 +399,66 @@ epicsConfiguration:
       autosync: false
       template: "mrf-pci-230"
       devices:
+          - name: "TMG"
+            devtype: evg230
+            bus: 9
+            slot: 9 
+            func: 0
+            iocinit:
+              - name: "EvtClkRFFreq-SP"
+                value: "714 MHz"
+              - name: "TrigEvt0TrigSrc-Sel"
+                value: "9"
+              - name: "EvtClkRFDiv-SP"
+                value: "9"
+              - name: "EvtClkFracSynFreq-SP"
+                value: "79.333 MHz"
+              - name: "PpsInp-Sel"
+                value: "Sys Clk"
+              - name: "EvtClkSource-Sel"
+                value: "1" ## RF
+              - name: "Mxc0Prescaler-SP"
+                value: "79333000"
+              - name: "Mxc1Prescaler-SP"
+                value: "7933300"
+              - name: "Mxc2Prescaler-SP"
+                value: "124920"
+              - name: "Mxc3Prescaler-SP"
+                value: "124920"
+              - name: "Mxc4Prescaler-SP"
+                value: "124920"
+              - name: "Mxc5Prescaler-SP"
+                value: "124920"
+              - name: "Mxc6Prescaler-SP"
+                value: "124920"
+              - name: "Mxc7Prescaler-SP"
+                value: "79333"
+              - name: "TrigEvt0EvtCode-SP"
+                value: "1"
+              - name: "TrigEvt1EvtCode-SP"
+                value: "2"
+              - name: "TrigEvt2EvtCode-SP"
+                value: "3"
+              - name: TrigEvt0TrigSrc-Sel
+                value: "Mxc1"
+              - name: TrigEvt1TrigSrc-Sel
+                value: "Mxc7"
+              - name: TrigEvt2TrigSrc-Sel
+                value: "Mxc0"
+              - name: "AcTrigDivider-SP"
+                value: "5"
+              - name: "AcTrigPhase-SP"
+                value: "0 msec"
+              - name: "AcTrigBypass-Sel"
+                value: "Off"
+              - name: "AcTrigSyncSrc-Sel"
+                value: "Mxc7"
+              - name: "Enable-Sel"
+                value: "1" 
           - name: "EVR-LAS"
             devtype: "evr230"
             bus: 9
-            slot: 9 
+            slot: 10
             func: 0
             iocinit:
               - name: "Pul0-Width-SP"
