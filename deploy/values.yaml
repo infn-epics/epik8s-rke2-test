@@ -10,6 +10,8 @@ giturl: https://github.com/infn-epics/epik8s-rke2-test.git
 gitrev: main
 baseIp: "10.43.0.0/16" ## valid IPs is 10.96.0.0/12
 startIp: 1
+epik8s_secrets: epik8s-secret
+
 openshift: false
 epicsConfiguration:
   name: "epics-configuration" # name of existing configMap that set CA parameters
