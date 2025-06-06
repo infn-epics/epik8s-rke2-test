@@ -581,7 +581,7 @@ epicsConfiguration:
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
       targetRevision: 'templates'
       host: "plelievr004.lnf.infn.it" 
-      workdir: "/opt/codac-4.1/apps/elinp-gp06-ioc02/epik8s-key"
+      workdir: "/opt/codac-4.1/apps/elinp-gp06-ioc02/iocBoot/epik8s-key"
       iocbin: "../../bin/linux-x86_64/elinp-gp06-ioc02"
       iocfunc: "elinp_gp06_ioc02"
       exec: "start.sh"
