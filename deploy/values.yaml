@@ -25,7 +25,7 @@ epicsConfiguration:
       template: "pvagateway"
       ingress:
         enabled: false
-      loadbalancer: 10.10.6.249
+      loadbalancer: 10.10.6.242
       replicaCount: 1
       auto_security: true
       autosync: true ## restart automatically on changes
@@ -44,7 +44,7 @@ epicsConfiguration:
       template: "gateway"
       ingress:
         enabled: false
-      loadbalancer: 10.10.6.248
+      loadbalancer: 10.10.6.241
       replicaCount: 1
       auto_security: true
       autosync: true ## restart automatically on changes
