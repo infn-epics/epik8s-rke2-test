@@ -21,7 +21,6 @@ epicsConfiguration:
   services:
     pvagateway:
       charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
-      targetRevision: 'templates'
       template: "pvagateway"
       ingress:
         enabled: false
@@ -42,7 +41,6 @@ epicsConfiguration:
 
     gateway:
       charturl: 'https://baltig.infn.it/epics-containers/ca-gateway-chart.git'
-      targetRevision: 'templates'
       template: "gateway"
       ingress:
         enabled: false
@@ -338,7 +336,7 @@ epicsConfiguration:
       devtype: camerasim
       devgroup: diag
       template: "adcamera"
-      targetRevision: 'templates'
+      
       enable_ingress: true
       service:   
         http:
@@ -393,7 +391,7 @@ epicsConfiguration:
     - name: "mrf-evg-test"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&objectId=137519"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      targetRevision: 'templates'
+      
       iocprefix: "LEL:TIM"
       devtype: mrf230
       devgroup: timing
@@ -583,7 +581,7 @@ epicsConfiguration:
     - name: "key-test"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&objectId=137521"
       charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
-      targetRevision: 'templates'
+      
       host: "plelievr004.lnf.infn.it" 
       workdir: "/opt/codac-4.1/apps/elinp-gp06-ioc02/iocBoot/epik8s-key"
       iocbin: "../../bin/linux-x86_64/elinp-gp06-ioc02"
