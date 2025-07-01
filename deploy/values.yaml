@@ -25,7 +25,9 @@ epicsConfiguration:
       template: "pvagateway"
       ingress:
         enabled: false
-      loadbalancer: 10.10.6.242
+      loadbalancer: 192.168.109.241
+      nodeSelector:
+        lb-network-access: vlan-109
       replicaCount: 1
       auto_security: true
       autosync: true ## restart automatically on changes
@@ -44,7 +46,9 @@ epicsConfiguration:
       template: "gateway"
       ingress:
         enabled: false
-      loadbalancer: 10.10.6.241
+      loadbalancer: 192.168.109.240
+      nodeSelector:
+        lb-network-access: vlan-109
       replicaCount: 1
       auto_security: true
       autosync: true ## restart automatically on changes

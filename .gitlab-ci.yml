@@ -24,10 +24,19 @@ check-and-create-test-opi:
     - mv docker-compose.yaml *.env beamline-control/ && mv config beamline-control/ && mv deploy/values.yaml beamline-control/beamline.yaml
     - tar czvf beamline-control.tar.gz beamline-control
   artifacts:
-    name: "beamline-control-$CI_COMMIT_REF_NAME.tar.gz"
-    paths:
-      - beamline-control.tar.gz
-    expire_in: 1 month
+      name: "beamline-control-$CI_COMMIT_REF_NAME.tar.gz"
+      paths:
+        - beamline-control.tar.gz
+        - beamline-control/beamline-opi/README.md
+      expire_in: 1 month
+      name: "beamline-control-$CI_COMMIT_REF_NAME"
+  
+
+  reports:
+      name: "beamline-opi-README-$CI_COMMIT_REF_NAME.md"
+      paths:
+        - beamline-control/beamline-opi/README.md
+      expire_in: 1 month
 
 update-readme:
   stage: update-docs
