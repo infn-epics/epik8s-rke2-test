@@ -332,11 +332,11 @@ epicsConfiguration:
         
     - name: "camerasim"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126655"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      charturl: 'https://github.com/infn-epics/ioc-chart.git'     
       devtype: camerasim
-      devgroup: diag
+      devgroup: cam
       template: "adcamera"
-      
+      pva: true
       enable_ingress: true
       service:   
         http:
@@ -347,9 +347,8 @@ epicsConfiguration:
       stats_enable: true
       proc_enable: true
       overlay_enable: true
-      
       iocprefix: "SPARC:CAM"
-      autosync: false ## restart automatically on changes
+      autosync: true ## restart automatically on changes
       iocinit:
         - name: "AcquirePeriod"
           value: "1"
@@ -390,7 +389,7 @@ epicsConfiguration:
   
     - name: "mrf-evg-test"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&objectId=137519"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      charturl: 'https://github.com/infn-epics/ioc-chart.git'
       
       iocprefix: "LEL:TIM"
       devtype: mrf230
@@ -580,7 +579,7 @@ epicsConfiguration:
 
     - name: "key-test"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2446&objectId=137521"
-      charturl: 'https://baltig.infn.it/epics-containers/ioc-chart.git'
+      charturl: 'https://github.com/infn-epics/ioc-chart.git'
       
       host: "plelievr004.lnf.infn.it" 
       workdir: "/opt/codac-4.1/apps/elinp-gp06-ioc02/iocBoot/epik8s-key"
