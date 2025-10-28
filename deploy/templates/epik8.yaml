@@ -2,18 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{.Values.beamline}}-deploy-all
-  namespace: {{ .Values.namespace | default "argocd" }}
+  namespace: {{ .Values.argocdNamespace | default "argocd" }}
   labels:
     deploy: {{ .Values.beamline }}
 spec:
-  project: {{ .Values.argocdProject | default "default"}}
+  project: default
   source:
     repoURL: 'https://github.com/infn-epics/epik8s-chart.git'
     path: .
-    targetRevision: {{ .Values.targetRevision | default "HEAD" }}
+    targetRevision: HEAD
     helm:
       values: |
           {{- toYaml .Values | nindent 12 }}
+
 
   destination:
     server: 'https://kubernetes.default.svc'
