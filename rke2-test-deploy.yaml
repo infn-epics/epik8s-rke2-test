@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rke2-test-deploy
-  namespace: argocd
+  namespace: da-test
   labels:
       deploy: da-test
 spec:
@@ -16,6 +16,7 @@ spec:
           namespace: da-test
           domain: "da"
           ingressClassName: "nginx"
+          argocdProject: "da-test"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: da-test

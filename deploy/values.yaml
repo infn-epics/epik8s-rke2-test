@@ -6,7 +6,7 @@ epik8namespace: "da"
 targetRevision: "main"
 serviceAccountName: "default"
 argocdProject: "da-test"
-argocdNamespace: "da-test"
+# argocdNamespace: "da-test"
 ## starting point
 giturl: https://github.com/infn-epics/epik8s-rke2-test.git
 gitrev: main
