@@ -6,7 +6,7 @@ metadata:
   labels:
     deploy: {{ .Values.beamline }}
 spec:
-  project: default
+  project: da-test
   source:
     repoURL: 'https://baltig.infn.it/epics-containers/epik8-chart.git'
     path: .
