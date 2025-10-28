@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{.Values.beamline}}-deploy-all
-  namespace: argocd
+  namespace: {{ .Values.namespace | default "argocd" }}
   labels:
     deploy: {{ .Values.beamline }}
 spec:
