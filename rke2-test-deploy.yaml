@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rke2-test-deploy
-  namespace: da-test
+  namespace: argocd
   labels:
       deploy: da-test
 spec:
