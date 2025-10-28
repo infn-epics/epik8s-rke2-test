@@ -8,9 +8,9 @@ metadata:
 spec:
   project: {{ .Values.argocdProject | default "default"}}
   source:
-    repoURL: 'https://baltig.infn.it/epics-containers/epik8-chart.git'
+    repoURL: 'https://github.com/infn-epics/epik8s-chart.git'
     path: .
-    targetRevision: {{ .Values.targetRevision }}
+    targetRevision: {{ .Values.targetRevision | default "HEAD" }}
     helm:
       values: |
           {{- toYaml .Values | nindent 12 }}
