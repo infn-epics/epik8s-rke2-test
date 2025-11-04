@@ -332,10 +332,10 @@ epicsConfiguration:
   
   iocs:
 
-    - name: "hazemeyer-tcp-001"
+    - name: "hazemeyer-tcp-002"
       asset: "https://confluence.infn.it/…"
       charturl: 'https://github.com/infn-epics/ioc-chart.git'
-      iocprefix: "SPARC:MAG:HZ"
+      iocprefix: "TEST:MAG:HZ"
       autosync: false ## restart automatically on changes
       zones: SABINA
       devtype: haz-iocast
