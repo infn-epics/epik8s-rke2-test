@@ -331,7 +331,31 @@ epicsConfiguration:
         name: "default"
   
   iocs:
-        
+
+    - name: "hazemeyer-tcp-001"
+      asset: "https://confluence.infn.it/…"
+      charturl: 'https://github.com/infn-epics/ioc-chart.git'
+      iocprefix: "SPARC:MAG:HZ"
+      autosync: false ## restart automatically on changes
+      zones: SABINA
+      devtype: haz-iocast
+      devgroup: mag
+      opi: "hazemeyer/hz_iocast.bob"
+      template: "hazemeyer"
+      iocparam:
+        - name: "port"  
+          value: "502"
+      devices: 
+        - name: "SBNQUA04" 
+          ip: "192.168.0.115" 
+        - name: "SBNQUA05" 
+          ip: "192.168.0.116" 
+        - name: "SBNQUA06" 
+          ip: "192.168.0.117" 
+        - name: "SBNQUA07" 
+          ip: "192.168.0.118"
+
+
     - name: "camerasim"
       asset: "https://servicedesk.infn.it/secure/ObjectSchema.jspa?id=44&typeId=2748&objectId=126655"
       charturl: 'https://github.com/infn-epics/ioc-chart.git'     
