@@ -1,8 +1,7 @@
 beamline: da-test
 namespace: da-test
-domain: ""
 ingressClassName: "nginx"
-epik8namespace: "da"
+epik8namespace: "k8sda.lnf.infn.it"
 targetRevision: "main"
 serviceAccountName: "default"
 argocdProject: "da-test"
@@ -10,7 +9,7 @@ argocdProject: "da-test"
 ## starting point
 giturl: https://github.com/infn-epics/epik8s-rke2-test.git
 gitrev: main
-baseIp: "10.43.0.0/16" ## valid IPs is 10.96.0.0/12
+baseIp: "10.43.252.0/23" ## valid service IPs are 10.43.252.1 to 10.43.253.254
 startIp: 1
 epik8s_secrets: epik8s-secret
 
@@ -26,9 +25,9 @@ epicsConfiguration:
       template: "pvagateway"
       ingress:
         enabled: false
-      loadbalancer: 192.168.109.241
+      loadbalancer: 192.168.108.240
       nodeSelector:
-        lb-network-access: vlan-109
+        lb-network-access: vlan-108
       replicaCount: 1
       auto_security: true
       autosync: true ## restart automatically on changes
@@ -46,9 +45,9 @@ epicsConfiguration:
       template: "gateway"
       ingress:
         enabled: false
-      loadbalancer: 192.168.109.240
+      loadbalancer: 192.168.108.241
       nodeSelector:
-        lb-network-access: vlan-109
+        lb-network-access: vlan-108
       replicaCount: 1
       auto_security: true
       autosync: true ## restart automatically on changes
@@ -311,6 +310,8 @@ epicsConfiguration:
       charturl: registry-1.docker.io/bitnamicharts
       targetRevision: '9.21.1'
       chart: mysql
+      image:
+        repository: bitnamilegacy/mysql
       auth:
           rootPassword: "arcappl"
           createDatabase: true

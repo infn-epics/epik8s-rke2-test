@@ -14,7 +14,7 @@ spec:
     helm:
       values: |
           namespace: da-test
-          domain: "da"
+          domain: "k8sda.lnf.infn.it"
           ingressClassName: "nginx"
           argocdProject: "da-test"
   destination:
