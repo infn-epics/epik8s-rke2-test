@@ -717,14 +717,18 @@ backend:
   mongo:
     host: mongodb
     port: 27017
-    user:
-    pwd:
   elasticsearch:
-    host: elasticsearch
+    host: elasticsearch-es-http
     clusterName: elasticsearch
     port: 9200
+    protocol: https
+    pubcertsecret: elasticsearch-es-http-certs-public #secret containing the public cert
+    authorization:
+      username: elastic
+      password: GJkrSqzVRka9PC7b2N2cHmBM
+
   kafka:
-    host: kafka-headless
+    host: eph-kafka-kafka-brokers
     port: 9092
 
 syncPolicy:
